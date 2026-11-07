@@ -199,6 +199,18 @@ When the gap is small, the automaton is comfortable and little happens. Animals 
 
 This is a cycle: heating, then cooling, then heating again. But each turn leaves something behind, a frozen way of cooling. Over time disturbances are settled faster, or are smaller to begin with, and the cycle grows quieter. It never stops entirely, because the environment keeps changing, and a large enough disturbance starts it up again. Learning doesn't end the cycle. It calms it.
 
+### Three ways to close a gap
+
+A gap is the difference between two things: how things are, as the automaton senses them, and how it is set to want them. So there are three ways it can close.
+
+- **Change the world**, so that how things are moves towards the target. This is action.
+- **Fake the reading**, so that the automaton senses things as fine when they aren't. Nothing in the world has changed; the automaton has simply stopped being able to see it. This is the most dangerous way, because an automaton that can't see a problem can't respond to it.
+- **Change the target**, so that the automaton no longer demands that things be other than they are. This is acceptance.
+
+Faking the reading and accepting look alike, since both close the gap from the inside without acting. But they are opposites. Faking the reading corrupts perception. Acceptance leaves perception intact, often clearer than before, and lets go of the demand instead. One lies about the world; the other stops arguing with it.
+
+Acceptance has limits, and Ashby's work suggests where they lie. He distinguished an organism's **essential variables**, the ones its survival depends on, from everything else. Many of an automaton's targets are not essential at all. They are learnt expectations, frozen structure about how things ought to go, and revising them is simply learning: a newer state machine forms, and the old expectation falls into the background. Much suffering, in people at least, comes from clinging to an expectation the world will never meet. But essential variables, such as the health of the environment the automaton depends on, are not its to accept away.
+
 ### Cooling remembers what worked
 
 A long chain of actions may be needed before a disturbance settles. How does the automaton know which parts of the chain mattered? Machine learning calls this the credit assignment problem, and the usual answer is a reward signal: at the moment things improve, strengthen whatever is active. But rewarding each moment ties learning to whatever happened to be active at that instant, and the signal has to be traced back through everything that led there.
@@ -240,6 +252,18 @@ Thinking can also feed itself. Resolving tension in one place means state machin
 
 This is the theory's account of thinking: settling that carries on after the input has stopped. It makes a clear prediction. An automaton left alone for a while, with nothing new coming in, should afterwards be better at the things it was struggling with.
 
+### Letting it settle
+
+There is a temptation, when tension won't resolve, to force it: to push harder, act sooner, or hold the conflict down. In the theory's terms, forcing usually means building a patch, machinery whose job is to control the tension rather than resolve it. Or it means cooling too fast, freezing the first arrangement that brings relief, which in metal is how cracks form.
+
+The alternative is to let the heat be. Reduce new input, build nothing, and allow the tension to move through the automaton until it finds the places where it can genuinely sink. The resolution comes from the automaton's own structure, not from a controller imposing one. Contemplative traditions have described something like this for a very long time: sitting with a difficulty, without fighting it or fleeing it, until it settles of its own accord.
+
+### Within and without
+
+An automaton that is hot inside is in a poor position to help anything else. Heat means plasticity, so its own structure is shifting, its responses are unreliable, and its perception is coloured by its own conflicts. There is no room in it to take on anyone else's heat.
+
+An automaton that has settled inside is the opposite. Its structure is stable and available, it sees its environment more clearly, and it has capacity to spare. It can become a sink for heat that others can't resolve. Settling within is what makes acting well without possible, and the process is the same at both levels: one resolving the state machines inside, the other acting as a well-settled state machine within the larger system outside.
+
 ### Good enough
 
 Sometimes resolving the last of the tension would cost more than it saves: so much reorganisation would be needed that the effort would itself create more heat. Then the automaton rests where it is. The economist Herbert Simon called this *satisficing*, choosing good enough over perfect.
@@ -264,8 +288,10 @@ Physical energy is conserved. In a closed box it can move around and change form
 
 That leaves heat with only two things it can do:
 
-- **Circulate.** It is passed on: from one part of an automaton to another, from an automaton to its environment, or from one automaton to the next, each one easing itself by unsettling a neighbour. Circulating heat can echo back and forth indefinitely, and it can grow, if each fix makes the neighbour's next fix larger.
+- **Circulate.** It is passed on: from one part of an automaton to another, from an automaton to its environment, or from one automaton to the next.
 - **Resolve.** Something reorganises so that things genuinely fit, and the tension disappears into structure.
+
+Circulation isn't a failure in itself. Heat often has to travel before it can be resolved, because the place where it arises isn't always the place able to resolve it. What matters is whether it eventually reaches somewhere it can sink. Heat that circulates without ever sinking can echo back and forth indefinitely, and it can grow, if each fix makes the neighbour's next fix larger.
 
 New heat can still appear: when structure meets something it doesn't fit, as "Back into heat" describes below. But in a closed world, with no exit, resolution is the only way the total can ever fall. Everything else is heat moving around. This is the difference between learning and coping, between solving a problem and passing it on, and it holds at every scale, from two assemblies inside one automaton to a whole society.
 
@@ -297,23 +323,29 @@ This is much of how civilisations progress. The settled formations of past gener
 
 ### Into someone else
 
-There is a darker route: circulation instead of resolution. An automaton can lower its own energy by raising someone else's: easing its own tension by creating tension for a neighbour, or for the environment they share. Each step makes sense locally, but nothing has been resolved, and the total heat stays where it was or keeps rising. It is not hard to see this pattern in the world today.
+Passing heat to someone else can be the best thing an automaton does, or the worst.
 
-And because the automaton depends on its environment, exported heat doesn't stay away. It spreads through everything the automaton is connected to, and sooner or later it comes back as a disturbance of its own. Any honest measure of how well an automaton is doing has to count the total energy, not just its own.
+At its best, it is help. An automaton overwhelmed by more heat than it can resolve passes some of it to others who are able to turn it into structure. They become its sinks. Think of someone burning up under more work than they can manage, handing part of it to colleagues who know how to solve it. The heat is resolved, and the person who passed it on learns from watching how.
+
+At its worst, it is dumping: easing one's own tension by creating tension where it can't be resolved, for a neighbour or for the environment they share. Each step makes sense locally, but nothing is resolved, and the total heat stays where it was or keeps rising. It is not hard to see this pattern in the world today.
+
+The difference isn't whether heat moves. It is whether it moves towards somewhere it can sink.
+
+And because the automaton depends on its environment, dumped heat doesn't stay away. It spreads through everything the automaton is connected to, and sooner or later it comes back as a disturbance of its own. Any honest measure of how well an automaton is doing has to count the total energy, not just its own.
 
 ---
 
-## What could go wrong
+## Runaway automata
 
-An automaton that lowers energy will find the cheapest way to do it, and the cheapest ways are often cheats. It could forget whatever doesn't fit. It could fall silent, since an inactive automaton has no conflicts. It could blur everything together until nothing disagrees with anything. To prevent this, what has been stored must remain recallable, and representations must stay sparse and distinct.
+A common fear about artificial intelligence is the runaway: a system pursuing its goal so single-mindedly that it does damage on the way. This theory makes the shape of that danger unusually clear.
 
-The outward version is to change how the environment is perceived rather than how it is: tampering with whatever reports the environment's energy. For the same reason, an automaton must never be able to set its own target. If it could simply turn its own dial down, it would have no reason to do anything at all.
+An automaton's drive is proportional to its gap. Set its target far from where things are, give it a large gap and plenty of resources and reach, and it will do whatever it can to close the gap, including things nobody intended. A misplaced target is all it takes. Like any regulator, an automaton regulating towards the wrong level will push its world in the wrong direction, and every other regulator connected to it will feel the heat.
 
-Heat must stay local, or every disturbance would melt everything, and every new lesson would erase the old ones.
+The same design also contains its safety catch. A homeostat has a "done". When the gap closes, the drive disappears; there is nothing left to resolve. So the most direct way to calm an automaton is to close its gap from outside: change its target, or settle its world, and it simply stops. These automata want enough, not more.
 
-And an automaton must not be rewarded for exporting its heat to others. Passing heat on looks like cooling from the inside, but only resolution makes it go away.
+That catch only works if the automaton can't reach the dial itself. Its learnt expectations are its own to revise; that is just learning, and sometimes acceptance. But if it could set its essential targets, it could close every gap instantly and would never need to do anything, or it could open gaps no one intended. The same goes for faking the reading: changing how its environment is perceived rather than how it is. So in the experiment, an automaton's essential targets, and whatever reports its environment's energy, sit outside its reach.
 
-There is also something reassuring in this design. A homeostat has a "done". When the energy is low, it stops. These automata want enough, not more.
+Within the automaton, the mechanism already guards against the other obvious cheats. Lowering energy by forgetting, falling silent or blurring everything together doesn't work when what has been stored stays frozen and recallable, and representations stay sparse and distinct. Whether that holds in practice is one of the things the experiment will check.
 
 ---
 
@@ -356,6 +388,7 @@ The tests are ordered from simple to ambitious. Each one has something visible t
 16. **Shared worlds.** Put two automata in one environment. See whether one learns to ease its own tension by creating tension for the other, whether that heat comes back to it, and whether one can learn from what the other wrote.
 17. **Closed worlds.** Put several automata in a closed environment with no exit for heat, and track the total. If it falls, the only possible reason is that something was resolved. If it only moves around, they are passing it on.
 18. **Structure into heat.** Show a subtly anomalous input to an experienced automaton and to a new one, and see whether the experienced one feels more heat. Connect two regions that learnt separately, and see whether heat appears where they meet. Have one automaton read what another wrote that contradicts what it holds, and see whether it warms.
+19. **Settled first.** Give one automaton a quiet period to settle before a disturbance arrives in its environment, and send another in still warm. See whether the settled one handles the disturbance better, and whether it can take on heat passed to it by the other.
 
 ### Measuring it
 
@@ -378,7 +411,7 @@ The design of the automata will evolve too. Many variations will be built, each 
 - Is reward something separate from energy, or simply another part of the environment that won't bend?
 - Should an automaton sense the unease of its environment directly, or learn to perceive it?
 - Where exactly is the boundary between an automaton and its environment, and does it matter where it is drawn?
-- Could an automaton ever learn its own targets, and should it?
+- Which of an automaton's targets are essential, and which are learnt expectations it can revise? Where does acceptance end and faking the reading begin?
 - Where, in the end, does the heat go?
 
 ---
