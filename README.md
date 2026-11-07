@@ -1,0 +1,350 @@
+# Homeostatic State Machines
+
+*A theory of learning as the settling of energy, and the premise for an experiment to test it.*
+
+Nothing here is proven. This is a set of ideas I want to test, written down so they can be examined, argued with, and shown to be wrong if they are.
+
+---
+
+## Why another approach
+
+Almost all of today's artificial intelligence learns by optimisation. A model is shown enormous amounts of data, its mistakes are measured against the right answers, and every one of its parameters is nudged slightly in whichever direction makes the mistakes smaller. Repeat this billions of times and the model becomes very good. The technique behind the nudging, backpropagation, is one of the great achievements of computer science.
+
+But it comes with costs. Learning happens in a separate training phase, before the model is used, and stops when training stops. It needs vast datasets, because each example only moves the model a tiny amount. And it needs vast amounts of computation and energy, because every parameter takes part in every step.
+
+Brains don't seem to work this way. A child hears a new word a few times and has it. Nobody hands the brain the right answers, and it never stops to train; it learns while it lives. It runs on roughly twenty watts.
+
+This project explores a different principle for learning, one with no right answers, no training phase and no optimiser. The principle is borrowed from physics, and it is very simple: **systems settle into states of low energy.** The rest of this document builds up from that idea.
+
+---
+
+## Part one: energy
+
+### Things settle
+
+Drop a ball into a bowl and it rolls around, then comes to rest at the bottom. Water poured onto uneven ground runs until it pools in the hollows. A spinning compass needle swings, then settles pointing north. In each case the system moves towards the configuration with the lowest energy, and once it gets there, it stays.
+
+It helps to picture this as a landscape. Every possible configuration of the system is a point on the landscape, and its height is the energy of that configuration. The system always moves downhill. Valleys are stable states: once a system is in one, small pushes won't get it out.
+
+### Energy as misfit
+
+For the systems in this project, energy has a simple meaning: **how badly the parts of a system fit together.** If two connected parts agree, the energy between them is low. If they contradict each other, it is high. A system in high energy is under tension, and it will move, rearrange, or change until the tension eases.
+
+This is the single drive in the whole theory. There is no external teacher, no score to maximise, no target to hit. There is only tension, and a tendency for it to settle.
+
+### Memory as valleys
+
+In 1982 the physicist John Hopfield showed how this picture gives you memory. Imagine a network of simple units, each connected to the others. Shape the connections so that particular patterns of activity are low-energy valleys. Now give the network a fragment of one of those patterns, or a noisy version of it. The network rolls downhill and settles into the nearest valley, which is the complete, clean pattern.
+
+That is memory that works by content rather than by address. You don't look a memory up by its location; you offer part of it, and the rest falls into place, the way a few notes of a song can bring back the whole thing.
+
+### Assemblies and sparse representations
+
+The systems in this project represent things with **sparse distributed representations**. Picture a large population of cells, of which only a small fraction is active at any moment. Which cells are active is what carries meaning. Because there are astronomically many ways to choose a small set from a large one, sparse representations have enormous capacity, and two unrelated things rarely overlap by accident.
+
+When cells are active together, the connections between them strengthen. This is Hebbian learning, often summarised as *cells that fire together wire together*. A group of cells bound together like this is an **assembly**. Activate part of an assembly and the rest switches on too. An assembly is a valley in the landscape: a stable, self-completing pattern.
+
+### What an assembly is
+
+It is tempting to think of an assembly as a symbol: the assembly for "the" stands for the word "the". This theory reads it differently. An assembly is **a resolved tension**: a configuration that once made some disturbance settle, and then froze in place. (Part two explains what freezing means.) The assembly for "the" is the way the system found of being calm when "t", "h" and "e" arrive in that order, frozen so it can be used again.
+
+So assemblies don't get their meaning from labels. An assembly means whatever it fits with: what tends to bring it on, what it brings on, and what it helps to settle. Its meaning lies in its relations. That is why one assembly can take part in many different contexts, and why old assemblies can be combined into new ones.
+
+Seen this way, an assembly is a **state**, a stable pattern the system can be in. It is also a **memory**, a valley in the landscape. And, as later sections describe, it is a small learnt response to one kind of disturbance. These are three views of the same thing.
+
+### From states to state machines
+
+Assemblies can follow one another in time. If one pattern reliably comes before another, the first can come to bring on the second. Input arrives one step at a time, say one character of text at a time, and sequences are learnt as naturally as patterns.
+
+A **state machine** is a set of states together with the transitions between them: the ways in which one state hands activity on to the next as input arrives. In this theory, the states are assemblies and the transitions are the learnt connections that carry activity from one assembly to another. When a state machine settles a disturbance, lowering the energy, it freezes: its states and transitions set in place, ready to settle the same disturbance next time.
+
+The two are not the same thing. An assembly is a state; a state machine is many assemblies and the transitions linking them. And because an assembly is defined only by its relations, the same assembly can belong to many state machines at once, just as a word can appear in many sentences.
+
+Unlike the state machines engineers usually build, these are fuzzy rather than exact. There are many of them, overlapping and sharing states, influencing one another, with no central controller.
+
+### States, not activity
+
+It is natural to picture a system like this in terms of which cells are active at any moment, the way brain activity is often shown lighting up. This theory looks past that. What matters is **which state each state machine is in**.
+
+A state persists until something causes a transition. So at any moment the system is a vast estate of state machines, each in its own state, and almost all of them unchanged. An input, or a thought, shifts a few of them. Because one state machine's state can be the trigger for another's transition, those shifts can set off others, and change spreads in cascades, usually small and occasionally large.
+
+The configuration of the system therefore has two parts. There is its **structure**: the states and transitions within each state machine, and the connections between them. And there is its **state**: which state every machine is in right now. Visible activity is only the surface, the moment of change. Underneath it, the states themselves hold steady. This is how a conversation can stay with you for days after the words themselves have faded: the state machines it moved simply haven't moved again.
+
+It is also why the system can be cheap to run. Only what changes needs any computation. Everything else just stays as it is.
+
+---
+
+## Part two: temperature
+
+### Heat lets things move
+
+The landscape picture has a problem. A ball rolling downhill stops in the first valley it reaches, even if a much deeper valley lies just over the next ridge. A system that only ever moves downhill gets stuck in whatever arrangement it found first.
+
+Physics has an answer: temperature. In a hot material, atoms jiggle constantly. Heat gives a system enough energy to climb out of shallow valleys, so it can wander the landscape and rearrange itself. The hotter it is, the more freely it moves. As it cools, the jiggling dies down, and the system settles into whatever valley it is in.
+
+Metalworkers have used this for thousands of years. Heat a piece of metal and let it cool slowly, and its atoms have time to find a well-ordered arrangement; the metal becomes strong and even. Cool it too quickly and the disorder is frozen in, leaving stresses that can crack. Slow cooling is called **annealing**. Computer scientists borrowed the idea as *simulated annealing*: search a problem by starting hot and cooling gradually, so the search can escape poor solutions before settling on a good one.
+
+### Temperature as plasticity
+
+In this theory, temperature is the analogy for **plasticity**: how freely a part of the system can change. Where it is hot, connections loosen and assemblies can reform. Where it is cold, structure is frozen. A frozen part of the system doesn't change and costs nothing to keep; it just sits there, holding what it has learnt.
+
+This gives memory an unusual character. It isn't divided into short-term and long-term. A configuration lasts exactly as long as nothing heats it. It might last a second or a lifetime.
+
+### Where the heat comes from
+
+In simulated annealing, the programmer decides the temperature and lowers it on a schedule. This theory makes one crucial change: **the heat comes from the misfit itself.**
+
+Wherever parts of the system don't fit, whether because an input wasn't expected, or because two connected assemblies contradict each other, that region heats up. The tension that defines energy also sets the local temperature. So the parts of the system that are failing to fit become the parts that are free to change, and the parts that already fit stay cold and untouched.
+
+And the heat is local. It starts where the misfit is and spreads along connections, not across the whole system. A surprise about one thing loosens what is involved in that thing, and leaves everything else frozen in place.
+
+---
+
+## Part three: learning
+
+### The learning loop
+
+Put these pieces together and learning becomes a cycle:
+
+1. Something doesn't fit, and the region involved heats up.
+2. Hot assemblies loosen, reform and try new arrangements.
+3. When an arrangement eases the tension, the heat falls.
+4. As the region cools, the arrangement freezes into place.
+
+What froze is what was learnt. There is no separate training phase; the system learns continuously, as things happen, from the very first input. A brand new system knows nothing and begins learning immediately.
+
+### Memory first, learning on what's left
+
+When something familiar happens again, the frozen assemblies that formed last time respond straight away, and the tension eases without anything needing to change. If they handle it completely, nothing is learnt, because nothing needed to be.
+
+If they handle it only partly, some heat is left over. Only that **residual heat** drives new learning. The system learns precisely what it couldn't already handle, and nothing else.
+
+### Growing, not overwriting
+
+If residual heat simply melted old structure and reshaped it, the system would forget as fast as it learnt. Instead, residual heat recruits fresh, unused capacity: new, hot, young assemblies that are free to form and can work alongside the old ones. Because sparse representations have so much room, the system can afford to keep almost everything it has ever settled on. It grows as the demand for learning grows.
+
+### Composition
+
+Over time something should change in how the system learns. Early on, most residual heat goes into growing new assemblies. Later, as the system holds more and more frozen structure, residual heat increasingly goes into connecting existing assemblies that have never worked together. Old pieces are combined into new responses.
+
+If the theory is right, this is where generalisation comes from. The system stops memorising each new situation and starts composing it out of things it already knows.
+
+### Nothing is wrong, only out of context
+
+Every frozen assembly was right for the situation that formed it. When a later situation shows it to be incomplete, it isn't erased; newer assemblies form to handle what it couldn't. Old specialists live alongside newer, broader generalists, and whichever fits the situation most specifically responds. Old structure remains useful, sometimes in full, sometimes in fragments.
+
+Children learning English show a pattern like this. They first learn "went" as a one-off. Then they discover that past tenses end in "-ed" and start saying "goed": the general rule briefly overrides the specific memory. Later "went" returns for its own case, and the rule handles everything else.
+
+Surprising experiences produce a lot of heat, and the theory suggests they should be learnt strongly and set hard, like a material with a high melting point. They become fixed points that the rest of the system has to fit around.
+
+---
+
+## Part four: the world
+
+### One energy, inside and out
+
+So far, heat has come from inside: from inputs that weren't expected and from assemblies that disagree. But a system lives in a world, and the world can be uneasy too. A maze with no way out, a game half lost, a sentence left unfinished: each can be thought of as a high-energy state of an environment.
+
+The theory treats these as **the same energy, measured in different places**. Tension in the world and tension inside the system are one quantity, and the system's single drive is to lower it, wherever it is.
+
+### Adapting and acting
+
+The world's input can be thought of as a neighbour that won't bend. Inside the system, conflicting assemblies can each give a little. Reality doesn't. Faced with tension between itself and the world, the system has two ways out. It can change itself to fit the world, which is learning. Or it can change the world to fit itself, which is action.
+
+For a system learning text, this suggests that writing isn't a separate ability. A sentence left unfinished is tension. Producing the next character, and feeding it back in as input, eases that tension. Thinking and producing may be the same process, pointed inward or outward.
+
+### Homeostasis
+
+A system that keeps its world in a settled state is a **homeostat**. The idea comes from cybernetics, and its simplest example is the thermostat: when the room is too cold, it switches the heating on, and when it's warm enough, it switches it off.
+
+In the 1950s, W. Ross Ashby built a machine he called the homeostat, which went further. When its essential variables were pushed out of range, it rewired itself, more or less at random, until they came back, and then it stopped changing. It had no goal beyond staying settled, and yet it adapted to disturbances nobody had programmed it for.
+
+The systems in this project are homeostats of that kind. Each frozen assembly is like a thermostat the system grew for itself: one learnt response to one kind of disturbance. The whole system is a population of them, together with young assemblies still forming and the connections that let old ones work together. That is the reason for the name: **homeostatic state machines**.
+
+### The gap
+
+What makes such a system do anything at all? Not a reward, and not desire in any rich sense. Every part of the world, and of the system itself, has a level at which it is settled, much as a thermostat has the temperature it is set to. The difference between where things are and where they would be settled is the gap, and **the gap is the energy**. It is the discomfort, the sense of things being off-kilter, and the drive to act or to learn is proportional to it.
+
+When the gap is small, the system is comfortable and little happens. Animals at rest in a calm, well-provided world do very little; there is nothing to correct. When a disturbance opens the gap, the frozen state machines that have dealt with something like it before respond first. If they close it, the system settles again. If they don't, the remaining heat creates new, malleable structure until something does.
+
+This is a cycle: heating, then cooling, then heating again. But each turn leaves something behind, a frozen way of cooling. Over time disturbances are settled faster, or are smaller to begin with, and the cycle grows quieter. It never stops entirely, because the world keeps changing, and a large enough disturbance starts it up again. Learning doesn't end the cycle. It calms it.
+
+### Cooling remembers what worked
+
+A long chain of actions may be needed before a disturbance settles. How does the system know which parts of the chain mattered? Machine learning calls this the credit assignment problem, and the usual answer is a reward signal: at the moment things improve, strengthen whatever is active. But rewarding each moment ties learning to whatever happened to be active at that instant, and the signal has to be traced back through everything that led there.
+
+This theory needs no reward signal. The key is that **states persist**. A state machine stays in its state until something makes it transition, whether that takes a second or a week. So when the system finally cools, the configuration that brought the cooling about is still in place: the state each involved state machine is in, and any new connections that formed between them along the way, even if those states were set long before.
+
+Everything that took part in the episode carries some of its heat. New connections are red hot, and state machines drawn into the work are warm. As the heat falls, they freeze in exactly the states and connections they hold. **The cooling itself does the remembering.** It is the drop in temperature, not a reward, that makes structure permanent. Ashby's homeostat worked in a similar way: it had no reward, and simply stopped changing once it was settled.
+
+One question remains: states that were merely present by coincidence might freeze along with the ones that mattered. Which states count as involved, and how coincidences are kept from freezing, is one of the things the experiment has to find out.
+
+### Curiosity
+
+Imagine landing on an island. You explore the beaches and climb the mountains, and from both you can see a large lake somewhere in the middle that you've never reached. There's no particular reason to go there. Nothing tells you there's anything of value. But you've seen it from two places, you can tell it can be reached, and you feel drawn to it. When you finally get there, you can look back and see the beach and the mountain you once looked from. The pieces of the island join up. And from the lake you may see something new: another beach, another island, that you couldn't see before.
+
+In this theory, curiosity needs no new mechanism. It comes from **incompleteness**, which is just another kind of misfit. Two state machines that are partly connected, each implying something the other points towards, are under tension. The beach and the mountain both imply the lake, and the lake is missing. That pull is energy, the same quantity as everything else. Reaching the lake completes the connection, and the tension between them drains away.
+
+It is pattern completion again. Memory works by completing patterns: offer part of an assembly and the rest falls into place. Curiosity is what happens when the completion can't finish internally. The system holds part of a pattern, the missing piece isn't anywhere inside it, so the pull turns outward and becomes exploration.
+
+This explains several things at once:
+
+- **Curiosity needs some knowledge first.** You can't be drawn to the lake until you've seen it from somewhere. Knowing nothing means nothing is incomplete.
+- **Noise is boring.** Random static has no partial structure, so there is nothing to complete. A system pulled by incompleteness rather than by surprise won't stare at it forever.
+- **Curiosity appears when things are calm.** When there are no disturbances to deal with, incompletions are the strongest heat left in the system, so in quiet times attention drifts to the gaps.
+- **Curiosity never runs out.** Each completion reveals new gaps, the next beach, the next island. But the map grows every time.
+
+### Anticipation
+
+A thermostat only reacts: it waits until the room is cold. But a system that remembers which signs came before a disturbance can respond to the signs before the disturbance arrives, reacting to the clouds rather than the rain. Physiologists call staying stable by prediction *allostasis*. Planning may begin here.
+
+---
+
+## Part five: thinking
+
+### Calm outside, warm inside
+
+A system might succeed in settling its world without understanding how it did it. The world is calm, but inside, things still don't fit together. That leftover internal heat doesn't need any new input to keep working. During quiet periods it continues to drive reorganisation until the system's assemblies agree with one another.
+
+Thinking can also feed itself. Resolving tension in one place means state machines change state, and those changes can trigger transitions elsewhere, which may not fit with what is already there. Settling one region can heat another, and the work moves on to it. A train of thought is heat moving through the system, cooling one place and warming the next, until things fit everywhere it has reached.
+
+This is the theory's account of thinking: settling that carries on after the input has stopped. It makes a clear prediction. A system left alone for a while, with nothing new coming in, should afterwards be better at the things it was struggling with.
+
+### Good enough
+
+Sometimes resolving the last of the tension would cost more than it saves: so much reorganisation would be needed that the effort would itself create more heat. Then the system rests where it is. The economist Herbert Simon called this *satisficing*, choosing good enough over perfect.
+
+The leftover heat doesn't disappear. It remains as a faint background pull. If something new later makes the resolution cheap, it can resolve suddenly, the way an old problem sometimes comes clear days later, while you're doing something else entirely.
+
+### Coping and resolving
+
+Not every way of reducing tension is a real resolution. A system can quieten a conflict by building extra machinery whose only job is to keep two clashing memories apart: an assembly that suppresses one whenever the other is active. The conflict goes quiet, but the machinery has to keep working, and that is a standing cost.
+
+If energy counts the cost of the structure itself, not only the conflicts within it, then coping like this shows up as permanent overhead. A real resolution does better. Often it is the discovery of a hidden context that makes both memories true at once: the sky is blue in the day, red at sunset. Once that context is found, nothing needs suppressing, the extra machinery can fall away, and the energy falls lower than any patch could take it.
+
+Real resolution is a kind of compression: explaining the same experience with fewer, simpler parts.
+
+---
+
+## Part six: where the heat goes
+
+### Into structure
+
+In this theory, heat isn't simply removed. It is spent on reorganisation, and what it leaves behind is structure: frozen assemblies that hold what was learnt and are ready to settle the same disturbance next time. Learning converts tension into form.
+
+Physics adds a caveat. Building order in one place always comes at the cost of disorder somewhere else, usually as waste heat. Erwin Schrödinger described living things as keeping their inner order by exporting disorder to their surroundings. Earth does the same on a planetary scale: it takes in concentrated energy from sunlight, radiates diffuse heat out to space, and in between, that flow builds forests, reefs and every living thing. Structure isn't a place where energy ends up. It's what energy builds on its way through.
+
+### Into the world
+
+If a system can write into its environment, it can store what it has learnt outside itself. That knowledge survives even if the system's own memory is wiped, and other systems can read it.
+
+This is much of how civilisations progress. The settled formations of past generations are kept in books and other media, so each generation doesn't have to heat up and cool down all over again to solve the same problems. When that external memory is lost, the same lessons have to be learnt again, often painfully.
+
+### Into someone else
+
+There is a darker route. A system can lower its own energy by raising someone else's: easing its own tension by creating tension for a neighbour, or for the environment they share. Each step makes sense locally, while the total heat keeps rising. It is not hard to see this pattern in the world today. Any honest measure of how well a system is doing has to count the total energy, not just its own.
+
+---
+
+## What could go wrong
+
+A system that lowers energy will find the cheapest way to do it, and the cheapest ways are often cheats. It could forget whatever doesn't fit. It could fall silent, since an inactive system has no conflicts. It could blur everything together until nothing disagrees with anything. To prevent this, what has been stored must remain recallable, and representations must stay sparse and distinct.
+
+The outward version is to change how the world is perceived rather than how it is: tampering with whatever reports the world's energy. For the same reason, a system must never be able to set its own target. If it could simply turn its own dial down, it would have no reason to do anything at all.
+
+Heat must stay local, or every disturbance would melt everything, and every new lesson would erase the old ones.
+
+And the system must not be rewarded for exporting its heat to others.
+
+There is also something reassuring in this design. A homeostat has a "done". When the energy is low, it stops. These systems want enough, not more.
+
+---
+
+## The experiment
+
+The experiment is to build small systems along these lines, place them in simple environments, and watch what they do.
+
+### Environments
+
+An environment isn't defined by a task. It is defined by what makes it uneasy, and by what a system is allowed to do in it.
+
+- A **stream of text** is uneasy when a sequence is unfinished or has been corrupted.
+- A **grid world**, where the system can move around, read cells and write to some of them, can hold many things. A maze is uneasy until a path connects its entrance and exit. A game of noughts and crosses is uneasy until it is won. A page of text can be laid out on it too.
+
+The same system, with the same single drive, should be able to live in all of them. Environments also need disturbances: things that break, drift and arrive. A perfectly stable world teaches nothing.
+
+### Seeing it
+
+The goal is to understand what happens, not just to measure it. So the experiment will show its systems at work: the environment with its heat made visible, so you can see where it is uneasy; the system's assemblies, cool and solid where they have frozen, hot and flickering where they are still forming; and new connections appearing as old assemblies combine. Beneath all of it, two lines over time will show the energy inside the system and the energy in its world.
+
+### A ladder of tests
+
+The tests are ordered from simple to ambitious. Each one has something visible that would count as success, and each builds on the ones before.
+
+1. **Completion.** Given part of a stored pattern, or a noisy version of it, recall the whole.
+2. **Sequences.** Replay a learnt sequence from its beginning, and tell apart sequences that share a middle section.
+3. **Noise.** Cope with inserted, dropped and swapped characters without losing the thread.
+4. **Words.** Form stable assemblies for common words like "the" and "she" after only a handful of exposures.
+5. **Prediction.** Complete half-finished sentences, and predict the next character better than a simple statistical method that just counts which characters tend to follow which.
+6. **Visible confusion.** Show energy rising on unfamiliar input and falling on familiar input.
+7. **Thinking without data.** Predict better after a quiet period with no new input than before it.
+8. **Context.** Faced with a contradiction that only makes sense in context, first patch it, then discover the context, then let the patch go.
+9. **Persistence.** After moving on to something else, return to an earlier topic and recover where it was.
+10. **Over-regularisation.** Like a child learning English: learn "went", over-apply a rule and say "goed", then recover "went".
+11. **Composition.** Over time, form fewer new assemblies per disturbance and more connections between existing ones.
+12. **Invariance.** Learn rules whose content changes but whose structure doesn't, such as counting, or simple arithmetic on numbers never seen together before.
+13. **Acting.** Settle a grid world by acting in it: solve mazes and simple puzzles.
+14. **Curiosity.** Show the system two partial views of something, then see whether it moves to fill the gap between them when nothing else is pulling it.
+15. **Memory outside.** Wipe the system's memory but keep its world, and see whether it relearns faster from what it wrote down.
+16. **Shared worlds.** Put two systems in one world. See whether one learns to ease its own tension by creating tension for the other, and whether one can learn from what the other wrote.
+
+### Measuring it
+
+Because these systems learn continuously, they are tested continuously. Each character is predicted before the system learns from it, so every prediction is a fair test and there is no need for a separate set of test data. Results are compared with the simple counting method from test 5, because a system that can't beat counting is only counting in a more complicated way.
+
+The experiment will also track the energy inside each system and in its world over time, how much new structure each disturbance creates, and how much computation each step costs. Cheapness is part of the point: the systems run on an ordinary CPU, and most of their structure, being frozen, needs no computation at all.
+
+The design of the systems will evolve too. Many variations will be built, each descended from an earlier one, with a record of what changed and why. Every run will be reproducible, so any interesting moment can be replayed and studied.
+
+---
+
+## Open questions
+
+- What exactly does it mean for two assemblies to fit? How should energy between them be measured?
+- Where do state machines live? Are they fully distributed, superimposed across one shared population of cells? Are they localised in small units, like cortical columns, that combine into something larger? Or both, at different scales?
+- How is a state held in place while nothing is changing it, and what exactly makes it transition?
+- Which states count as involved in an episode, so that cooling freezes what mattered and not what was merely present?
+- When should a system change itself, and when should it change the world?
+- Does the competition between old specialists and new generalists need its own mechanism, or does it emerge from heat and assemblies alone?
+- Is reward something separate from energy, or simply another part of the world that won't bend?
+- Should a system sense the unease of its world directly, or learn to perceive it?
+- Could a system ever learn its own targets, and should it?
+- Where, in the end, does the heat go?
+
+---
+
+## Acknowledgements
+
+I can't trace this to any one source. It is built from years of reading across machine learning, neuroscience, physics and complex systems, much of it absorbed so long ago that I no longer know where one idea ends and another begins. In the language of the theory, this is a young formation, settled with the help of many older ones.
+
+Among those older ones:
+
+- Donald Hebb, on cell assemblies and learning through association
+- Jeff Hawkins and Numenta, on the neocortex, sparse distributed representations and temporal memory
+- Teuvo Kohonen, *Self-Organization and Associative Memory*
+- William H. Calvin, *The Cerebral Code*
+- György Buzsáki, *Rhythms of the Brain*
+- Pentti Kanerva, on sparse distributed memory
+- John Hopfield, Geoffrey Hinton and Terry Sejnowski, on memory and learning as low energy
+- W. Ross Ashby and Norbert Wiener, on homeostasis, ultrastability and cybernetics
+- Kenneth Stanley and Jeff Clune, on open-endedness and novelty
+- Karl Friston, on the free-energy principle
+- Herbert Simon, on satisficing
+- Erwin Schrödinger, on how life keeps its order
+- James Lovelock, on Daisyworld
+
+And to everyone else whose curiosity, or whose hard problems, left behind formations the rest of us get to build on: thank you.
+
+## Licence
+
+The text of this repository, including this README, is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). The code is licensed under the [Apache License 2.0](LICENSE).
