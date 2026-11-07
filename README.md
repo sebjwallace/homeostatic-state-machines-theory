@@ -36,7 +36,7 @@ Energy in this sense has one property that physical energy lacks, and it runs un
 
 ### Memory as valleys
 
-In 1982 the physicist John Hopfield showed how this picture gives you memory. Imagine a network of simple units, each connected to the others. Shape the connections so that particular patterns of activity are low-energy valleys. Now give the network a fragment of one of those patterns, or a noisy version of it. The network rolls downhill and settles into the nearest valley, which is the complete, clean pattern.
+In 1982 the physicist John Hopfield showed how this picture gives you memory. Imagine a network of simple units, each connected to the others. Shape the connections so that particular patterns of activity are low-energy valleys. Now give the network a fragment of one of those patterns, or a noisy version of it. The network rolls downhill and sinks into the nearest valley, which is the complete, clean pattern.
 
 That is memory that works by content rather than by address. You don't look a memory up by its location; you offer part of it, and the rest falls into place, the way a few notes of a song can bring back the whole thing.
 
@@ -115,7 +115,7 @@ Put these pieces together and learning becomes a cycle:
 1. Something doesn't fit, and the region involved heats up.
 2. Hot assemblies loosen, reform and try new arrangements.
 3. When an arrangement eases the tension, the heat falls.
-4. As the region cools, the arrangement freezes into place.
+4. As the region cools, the arrangement sinks into place and freezes there.
 
 What froze is what was learnt. And the heat that drove it hasn't been moved somewhere else; it was used up in the fitting. There is no separate training phase; the automaton learns continuously, as things happen, from the very first input. A brand new automaton knows nothing and begins learning immediately.
 
@@ -290,6 +290,8 @@ That leaves heat with only two things it can do:
 
 - **Circulate.** It is passed on: from one part of an automaton to another, from an automaton to its environment, or from one automaton to the next.
 - **Resolve.** Something reorganises so that things genuinely fit, and the tension disappears into structure.
+
+Heat rises; settled things sink. Throughout this document, to sink and to cool are the same movement: a sink is simply a place where heat can come to rest as structure.
 
 Circulation isn't a failure in itself. Heat often has to travel before it can be resolved, because the place where it arises isn't always the place able to resolve it. What matters is whether it eventually reaches somewhere it can sink. Heat that circulates without ever sinking can echo back and forth indefinitely, and it can grow, if each fix makes the neighbour's next fix larger.
 
