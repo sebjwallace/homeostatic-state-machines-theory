@@ -1,0 +1,17 @@
+n:coin>n:c42 missing link 1 -> ans n:attic
+   ties 3 | n:coin ev:is n:old | heat 0.88
+   ties 2 | n:c10 ev:is n:old time:afternoon | heat 0.75
+   ties 3 | n:c10 ev:in n:attic | heat 0.00
+n:marble>n:c15 missing link 0 -> ans n:attic
+   ties 4 | n:marble ev:is n:old day:7 | heat 0.88
+   ties 2 | n:c10 ev:is n:old time:afternoon | heat 0.75
+   ties 3 | n:c10 ev:in n:attic | heat 0.00
+n:stamp>n:c22 missing link 1 -> ans n:attic
+   ties 7 | n:stamp ev:in n:c22 | heat 0.88
+   ties 18 | n:c22 ev:is n:blue | heat 0.88
+   ties 2 | n:c10 ev:is n:blue | heat 0.75
+   ties 3 | n:c10 ev:in n:attic | heat 0.00
+n:button>n:c26 missing link 1 -> ans n:attic
+   ties 22 | n:button ev:is n:red | heat 1.00
+   ties 1 | n:c10 ev:is n:red | heat 0.75
+   ties 3 | n:c10 ev:in n:attic | heat 0.00

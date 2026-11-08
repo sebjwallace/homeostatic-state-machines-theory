@@ -1,0 +1,161 @@
+seeds 1,2,3,4,5  COLUMNS 400 x 8 cells = 3200 THETA 4 LEARN false TOPIC false k 8 sentences 800 HARD 3
+
+hardness by link kind (strong links, pooled seeds):  n  %hard  median  hist h=1 | 2 | 3-9 | 10+
+  pairing (subj x slot->filler)    150542    18      1    58 24 16 1
+  sym: template                     25707    92     14    5 3 22 71
+  sym: slot->filler                 94104    47      2    34 19 32 16
+  seq(prev x cur): slot->filler    128529    38      2    40 22 28 11
+  sym: filler->relation             18969    93     14    0 7 25 68
+  seq(prev x cur): filler->relation [filler in state]  18338    93     14    0 7 23 69
+  seq(prev x cur): template [filler in state]  30444    75      8    20 5 37 38
+  seq(prev x cur): template          8302    88     12    7 5 29 59
+OV O x O                                                       0.16
+OV O x heldO                                                   0.17
+OV O x X                                                       0.17
+OV O x heldC                                                   0.15
+OV O x R                                                       0.18
+OV O x S                                                       0.15
+OV O x P                                                       0.15
+OV O x j0                                                      0.16
+OV heldO x heldO                                               0.27
+OV heldO x j0                                                  0.10
+OV X x heldO                                                   0.16
+OV X x X                                                       0.15
+OV X x heldC                                                   0.17
+OV X x j0                                                      0.19
+OV C x O                                                       0.16
+OV C x heldO                                                   0.16
+OV C x X                                                       0.14
+OV C x C                                                       0.13
+OV C x heldC                                                   0.16
+OV C x R                                                       0.15
+OV C x S                                                       0.16
+OV C x P                                                       0.14
+OV C x j0                                                      0.11
+OV heldC x heldO                                               0.10
+OV heldC x heldC                                               0.20
+OV heldC x j0                                                  0.07
+OV R x heldO                                                   0.24
+OV R x X                                                       0.18
+OV R x heldC                                                   0.23
+OV R x R                                                       0.47
+OV R x S                                                       0.16
+OV R x j0                                                      0.35
+OV S x heldO                                                   0.09
+OV S x X                                                       0.15
+OV S x heldC                                                   0.11
+OV S x S                                                       0.09
+OV S x j0                                                      0.13
+OV P x heldO                                                   0.16
+OV P x X                                                       0.17
+OV P x heldC                                                   0.14
+OV P x R                                                       0.13
+OV P x S                                                       0.14
+OV P x P                                                       0.17
+OV P x j0                                                      0.35
+OV j0 x O                                                      0.16
+OV j0 x heldO                                                  0.10
+OV j0 x X                                                      0.19
+OV j0 x C                                                      0.11
+OV j0 x heldC                                                  0.07
+OV j0 x R                                                      0.35
+OV j0 x S                                                      0.13
+OV j0 x P                                                      0.35
+CELL j0 con vs obj: cols seen in both / of those with different mode cell 8.00 / 2.00
+CELL j0 cols shared w/ objects (n, of which diff cell by role) 2.60 / 0.40
+CELL j0 cols shared w/ containers (n, of which diff cell by role) 1.00 / 0.20
+CELL c5 opened vs slot-in: cols seen in both / of those with different mode cell 8.00 / 6.40
+CELL c5 cols shared w/ objects (n, of which diff cell by role) 2.40 / 1.80
+CELL c5 cols shared w/ containers (n, of which diff cell by role) 0.80 / 0.60
+CELL o5 has vs subj-in: cols seen in both / of those with different mode cell 8.00 / 8.00
+CELL o5 cols shared w/ objects (n, of which diff cell by role) 2.60 / 2.60
+CELL o5 cols shared w/ containers (n, of which diff cell by role) 1.80 / 1.80
+L1a all heldO in -> container                                    60%  (n=20)
+L1a all heldO in -> room                                         40%  (n=20)
+L1a all seenO in -> container                                    98%  (n=40)
+L1b all heldC in -> room                                         27%  (n=15)
+L1b all heldC in -> container                                    73%  (n=15)
+L1a all heldO in -> kind                                       c:12 r:8
+L1b all heldC in -> kind                                       r:4 c:11
+L1c all heldC is -> in                                           27%  (n=15)
+L1d all sat on the -> surface                                   100%  (n=40)
+L1d all has a -> object                                          98%  (n=40)
+L1d all heldO is on the -> surface                              100%  (n=20)
+L1a hard heldO in -> container                                   55%  (n=20)
+L1a hard heldO in -> room                                        45%  (n=20)
+L1a hard seenO in -> container                                   88%  (n=40)
+L1b hard heldC in -> room                                        40%  (n=15)
+L1b hard heldC in -> container                                   60%  (n=15)
+L1a hard heldO in -> kind                                      c:11 r:9
+L1b hard heldC in -> kind                                      r:6 c:9
+L1c hard heldC is -> in                                          47%  (n=15)
+L1d hard sat on the -> surface                                  100%  (n=40)
+L1d hard has a -> object                                         93%  (n=40)
+L1d hard heldO is on the -> surface                             100%  (n=20)
+E heat slot2 normal                                            0.85
+E heat slot2 novel right-kind                                  0.93
+E kindheat slot2 normal                                        0.17
+E kindheat slot2 novel right-kind                              0.23
+E heat slot2 break #1                                          0.97
+E heat slot2 break #5                                          0.97
+E kindheat slot2 break #1                                      0.88
+E kindheat slot2 break #5                                      0.72
+E none person-in-slot before/after-break/after-quiet           0.00 / 0.21 / 0.21
+E none container-in-slot after-break/after-quiet               0.76 / 0.76
+E none w((in,the)->person) before/after-break/after-quiet      0.20 / 0.26 / 0.26
+E none (in,the)->container hardness min/mean before -> after   1.00 / 3.08 / 1.00 / 3.09
+E quiet person-in-slot before/after-break/after-quiet          0.00 / 0.21 / 0.21
+E quiet container-in-slot after-break/after-quiet              0.76 / 0.76
+E quiet w((in,the)->person) before/after-break/after-quiet     0.20 / 0.26 / 0.26
+E quiet (in,the)->container hardness min/mean before -> after  1.00 / 3.08 / 1.00 / 3.16
+E quiet-nobreak person-in-slot before/after-break/after-quiet  0.00 / 0.00 / 0.00
+E quiet-nobreak container-in-slot after-break/after-quiet      0.95 / 0.96
+E quiet-nobreak w((in,the)->person) before/after-break/after-quiet 0.20 / 0.20 / 0.20
+E quiet-nobreak (in,the)->container hardness min/mean before -> after 1.00 / 3.08 / 1.00 / 3.14
+L2 noquiet train ->Z                                             86%  (n=50)
+L2 noquiet train ->Y                                              4%  (n=50)
+L2 noquiet train in-context ->Z                                  86%  (n=50)
+L2 noquiet train in-context ->Y                                   4%  (n=50)
+L2 noquiet train ->other room                                     2%  (n=50)
+L2 noquiet test ->Z                                               6%  (n=50)
+L2 noquiet test ->Y                                              86%  (n=50)
+L2 noquiet test in-context ->Z                                    6%  (n=50)
+L2 noquiet test in-context ->Y                                   86%  (n=50)
+L2 noquiet test ->other room                                      6%  (n=50)
+L2 noquiet control Y in -> Z                                    100%  (n=50)
+L2 noquiet test learn-on premises ->Z                             2%  (n=50)
+L2 noquiet test learn-on premises ->Y                            98%  (n=50)
+L2 noquiet test learn-on premises pred overlap with Z / Y (of 8) 0.16 / 7.76
+L2 replays (all seeds) total                                   650
+L2 replays containing a test X                                 7
+L2 replays running X..Y..Z                                     0
+L2 quiet train ->Z                                               86%  (n=50)
+L2 quiet train ->Y                                                4%  (n=50)
+L2 quiet train in-context ->Z                                    82%  (n=50)
+L2 quiet train in-context ->Y                                     4%  (n=50)
+L2 quiet train ->other room                                       2%  (n=50)
+L2 quiet test ->Z                                                 2%  (n=50)
+L2 quiet test ->Y                                                88%  (n=50)
+L2 quiet test in-context ->Z                                      2%  (n=50)
+L2 quiet test in-context ->Y                                     88%  (n=50)
+L2 quiet test ->other room                                        2%  (n=50)
+L2 quiet control Y in -> Z                                      100%  (n=50)
+L2 quiet test learn-on premises ->Z                               2%  (n=50)
+L2 quiet test learn-on premises ->Y                              98%  (n=50)
+L2 quiet test learn-on premises pred overlap with Z / Y (of 8) 0.20 / 7.74
+
+replay sample (seed 1 ):
+    o5 is in the c9 . . . . . .
+    in the c3 . . . . . . . .
+    p2 opened the c9 . . . . . . .
+    c11 is in the r3 . . . . . .
+    . the o1 is on the s4 . . . .
+    on the s2 . . . . . . . .
+    . the o1 is on the s4 . . . .
+    in the c3 . . . . . . . .
+    opened the
+    . the o1 is on the s4 . . . .
+    s2 . . . . . . . . . .
+    c9 is in the r3 . . . . . .
+
+per-seed overlaps of ambiguous j0: O 0.3,0.1,0.1,0.2,0.1 | heldO 0.0,0.3,0.0,0.0,0.3 | C 0.1,0.1,0.1,0.2,0.0 | heldC 0.0,0.0,0.3,0.0,0.0

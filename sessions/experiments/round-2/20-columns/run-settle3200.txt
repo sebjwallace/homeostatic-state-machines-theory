@@ -1,0 +1,218 @@
+seeds 1,2,3,4,5  SETTLING ASSEMBLY COLUMNS 400 TWO true ETA 0.2 LAMBDA 1 TSET 5 x 8 cells = 3200 GROW false THETA 4 LEARN true TOPIC false k 8 sentences 800 HARD 3
+
+hardness by link kind (strong links, pooled seeds):  n  %hard  median  hist h=1 | 2 | 3-9 | 10+
+  pairing (subj x slot->filler)    211582    20      1    57 23 18 2
+  sym: template                      5080   100    272    0 0 0 100
+  sym: slot->filler                 67028    73      8    17 10 27 46
+  seq(prev x cur): slot->filler     83467    75      7    16 9 34 41
+  sym: filler->relation             31356    89     13    2 9 27 62
+  seq(prev x cur): filler->relation [filler in state]  30448    89     13    2 9 27 61
+  seq(prev x cur): template [filler in state]  42400    66      6    26 7 38 28
+  seq(prev x cur): template          1968   100    185    0 0 0 100
+OV O x O                                                       1.52
+OVCELL O x O                                                   0.09
+OV O x heldO                                                   1.72
+OVCELL O x heldO                                               0.14
+OV O x X                                                       0.57
+OVCELL O x X                                                   0.03
+OV O x heldC                                                   0.06
+OVCELL O x heldC                                               0.00
+OV O x R                                                       0.11
+OVCELL O x R                                                   0.01
+OV O x S                                                       0.13
+OVCELL O x S                                                   0.01
+OV O x P                                                       0.11
+OVCELL O x P                                                   0.00
+OV O x j0                                                      0.61
+OVCELL O x j0                                                  0.03
+OV heldO x heldO                                               2.03
+OVCELL heldO x heldO                                           0.03
+OV heldO x j0                                                  0.40
+OVCELL heldO x j0                                              0.00
+OV X x heldO                                                   0.58
+OVCELL X x heldO                                               0.03
+OV X x X                                                       0.29
+OVCELL X x X                                                   0.00
+OV X x heldC                                                   0.15
+OVCELL X x heldC                                               0.00
+OV X x j0                                                      0.21
+OVCELL X x j0                                                  0.04
+OV C x O                                                       0.20
+OVCELL C x O                                                   0.01
+OV C x heldO                                                   0.09
+OVCELL C x heldO                                               0.01
+OV C x X                                                       0.16
+OVCELL C x X                                                   0.01
+OV C x C                                                       2.48
+OVCELL C x C                                                   0.11
+OV C x heldC                                                   2.44
+OVCELL C x heldC                                               0.13
+OV C x R                                                       0.92
+OVCELL C x R                                                   0.02
+OV C x S                                                       0.13
+OVCELL C x S                                                   0.01
+OV C x P                                                       0.09
+OVCELL C x P                                                   0.01
+OV C x j0                                                      2.11
+OVCELL C x j0                                                  0.07
+OV heldC x heldO                                               0.03
+OVCELL heldC x heldO                                           0.00
+OV heldC x heldC                                               2.07
+OVCELL heldC x heldC                                           0.07
+OV heldC x j0                                                  2.07
+OVCELL heldC x j0                                              0.20
+OV R x heldO                                                   0.28
+OVCELL R x heldO                                               0.03
+OV R x X                                                       0.19
+OVCELL R x X                                                   0.01
+OV R x heldC                                                   1.08
+OVCELL R x heldC                                               0.08
+OV R x R                                                       3.60
+OVCELL R x R                                                   0.13
+OV R x S                                                       0.13
+OVCELL R x S                                                   0.00
+OV R x j0                                                      0.15
+OVCELL R x j0                                                  0.00
+OV S x heldO                                                   0.07
+OVCELL S x heldO                                               0.01
+OV S x X                                                       0.15
+OVCELL S x X                                                   0.00
+OV S x heldC                                                   0.07
+OVCELL S x heldC                                               0.00
+OV S x S                                                       4.01
+OVCELL S x S                                                   0.01
+OV S x j0                                                      0.07
+OVCELL S x j0                                                  0.00
+OV P x heldO                                                   0.13
+OVCELL P x heldO                                               0.01
+OV P x X                                                       0.15
+OVCELL P x X                                                   0.00
+OV P x heldC                                                   0.16
+OVCELL P x heldC                                               0.00
+OV P x R                                                       0.08
+OVCELL P x R                                                   0.00
+OV P x S                                                       0.12
+OVCELL P x S                                                   0.00
+OV P x P                                                       1.51
+OVCELL P x P                                                   0.00
+OV P x j0                                                      0.17
+OVCELL P x j0                                                  0.00
+OV j0 x O                                                      0.61
+OVCELL j0 x O                                                  0.03
+OV j0 x heldO                                                  0.40
+OVCELL j0 x heldO                                              0.00
+OV j0 x X                                                      0.21
+OVCELL j0 x X                                                  0.04
+OV j0 x C                                                      2.11
+OVCELL j0 x C                                                  0.07
+OV j0 x heldC                                                  2.07
+OVCELL j0 x heldC                                              0.20
+OV j0 x R                                                      0.15
+OVCELL j0 x R                                                  0.00
+OV j0 x S                                                      0.07
+OVCELL j0 x S                                                  0.00
+OV j0 x P                                                      0.17
+OVCELL j0 x P                                                  0.00
+DIAG same-frame objects: shared columns / shared cells (per pair) 1.52 / 0.09
+DIAG same-frame objects: subject-state overlap (fraction)      0.09
+DIAG assembly cells owned by >1 word (fraction)                0.19
+DIAG cells grown                                               0.00
+J0 cols shared with objects / of those, cell also shared       2.80 / 0.60
+J0 cols shared with containers / of those, cell also shared    3.20 / 0.60
+L1a all heldO in -> container                                    90%  (n=20)
+L1a all heldO in -> room                                          0%  (n=20)
+L1a all seenO in -> container                                    98%  (n=40)
+L1b all heldC in -> room                                         87%  (n=15)
+L1b all heldC in -> container                                    13%  (n=15)
+L1a all heldO in -> kind                                       s:1 c:18 j:1
+L1b all heldC in -> kind                                       r:13 c:2
+L1c all heldC is -> in                                           67%  (n=15)
+L1d all sat on the -> surface                                   100%  (n=40)
+L1d all has a -> object                                          93%  (n=40)
+L1d all heldO is on the -> surface                              100%  (n=20)
+L1a hard heldO in -> container                                   90%  (n=20)
+L1a hard heldO in -> room                                        10%  (n=20)
+L1a hard seenO in -> container                                   98%  (n=40)
+L1b hard heldC in -> room                                       100%  (n=15)
+L1b hard heldC in -> container                                    0%  (n=15)
+L1a hard heldO in -> kind                                      c:18 r:2
+L1b hard heldC in -> kind                                      r:15
+L1c hard heldC is -> in                                          73%  (n=15)
+L1d hard sat on the -> surface                                  100%  (n=40)
+L1d hard has a -> object                                         98%  (n=40)
+L1d hard heldO is on the -> surface                             100%  (n=20)
+SET level-1 probes: full stored assembly / mixture (>=4) / no word 0.69 / 0.31 / 0.00
+SET training steps: settled = full actual / mixture, actual on top / other word on top 0.63 / 0.01 / 0.36
+CUE keep 6: settles to full assembly / read out as the right word 0.86 / 1.00
+CUE keep 4: settles to full assembly / read out as the right word 0.76 / 0.99
+CUE keep 2: settles to full assembly / read out as the right word 0.65 / 0.91
+CUE corrupt 2: settles to full assembly / read out as the right word 0.00 / 1.00
+CUE corrupt 4: settles to full assembly / read out as the right word 0.00 / 1.00
+CUE test chain -> Y (level-1 net): full context / half the primed cells dropped 0.84 / 0.44
+E heat slot2 normal                                            0.78
+E heat slot2 novel right-kind                                  0.75
+E kindheat slot2 normal                                        0.13
+E kindheat slot2 novel right-kind                              0.35
+E heat slot2 break #1                                          1.00
+E heat slot2 break #5                                          1.00
+E kindheat slot2 break #1                                      1.00
+E kindheat slot2 break #5                                      0.80
+E none person-in-slot before/after-break/after-quiet           0.00 / 0.17 / 0.17
+E none container-in-slot after-break/after-quiet               0.82 / 0.82
+E none w((in,the)->person) before/after-break/after-quiet      0.04 / 0.55 / 0.55
+E none (in,the)->container hardness min/mean before -> after   4.60 / 18.35 / 4.60 / 18.35
+E quiet person-in-slot before/after-break/after-quiet          0.00 / 0.17 / 0.17
+E quiet container-in-slot after-break/after-quiet              0.82 / 0.81
+E quiet w((in,the)->person) before/after-break/after-quiet     0.04 / 0.55 / 0.55
+E quiet (in,the)->container hardness min/mean before -> after  4.60 / 18.35 / 4.60 / 18.75
+E quiet-nobreak person-in-slot before/after-break/after-quiet  0.00 / 0.00 / 0.00
+E quiet-nobreak container-in-slot after-break/after-quiet      0.98 / 0.97
+E quiet-nobreak w((in,the)->person) before/after-break/after-quiet 0.04 / 0.04 / 0.04
+E quiet-nobreak (in,the)->container hardness min/mean before -> after 4.60 / 18.35 / 4.60 / 19.23
+L2 noquiet train ->Z                                             92%  (n=50)
+L2 noquiet train ->Y                                              6%  (n=50)
+L2 noquiet train in-context ->Z                                  92%  (n=50)
+L2 noquiet train in-context ->Y                                   6%  (n=50)
+L2 noquiet train ->other room                                     0%  (n=50)
+L2 noquiet test ->Z                                               0%  (n=50)
+L2 noquiet test ->Y                                              84%  (n=50)
+L2 noquiet test in-context ->Z                                    0%  (n=50)
+L2 noquiet test in-context ->Y                                   84%  (n=50)
+L2 noquiet test ->other room                                      0%  (n=50)
+L2 noquiet control Y in -> Z                                    100%  (n=50)
+L2 noquiet test learn-on premises ->Z                             0%  (n=50)
+L2 noquiet test learn-on premises ->Y                            94%  (n=50)
+L2 noquiet test learn-on premises pred overlap with Z / Y (cells, of 8) 0.06 / 5.58
+L2 replays (all seeds) total                                   650
+L2 replays containing a test X                                 33
+L2 replays running X..Y..Z                                     0
+L2 quiet train ->Z                                               92%  (n=50)
+L2 quiet train ->Y                                                6%  (n=50)
+L2 quiet train in-context ->Z                                    92%  (n=50)
+L2 quiet train in-context ->Y                                     6%  (n=50)
+L2 quiet train ->other room                                       0%  (n=50)
+L2 quiet test ->Z                                                 0%  (n=50)
+L2 quiet test ->Y                                                82%  (n=50)
+L2 quiet test in-context ->Z                                      0%  (n=50)
+L2 quiet test in-context ->Y                                     82%  (n=50)
+L2 quiet test ->other room                                        0%  (n=50)
+L2 quiet control Y in -> Z                                      100%  (n=50)
+L2 quiet test learn-on premises ->Z                               0%  (n=50)
+L2 quiet test learn-on premises ->Y                              94%  (n=50)
+L2 quiet test learn-on premises pred overlap with Z / Y (cells, of 8) 0.08 / 5.74
+
+replay sample (seed 1 ):
+    s0 . the p7 has a o18 . the p7 has
+    c9 is in the r0 . the p7 has a o18
+    s1 . the p7 has a o18 . the p7 has
+    on the s2 . the p7 has a o18 . the
+    c11 . the p7 has a o18 . the p7 has
+    p2 has a x2 . the p7 has a o18 .
+    in the c8 is in the c8 is in the c8
+    is in the c8 is in the c8 is in the
+    o22 is on the s2 . the p7 has a o18
+    has a x9 . the p7 has a o18 . the
+    c8 is in the c8 is in the c8 is in
+    on the s2 . the p7 has a o18 . the
+
+per-seed overlaps of ambiguous j0: O 0.1,1.7,0.1,0.8,0.5 | heldO 0.0,2.0,0.0,0.0,0.0 | C 3.3,0.0,3.6,1.2,2.4 | heldC 3.0,0.0,2.7,0.7,4.0

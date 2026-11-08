@@ -1,0 +1,88 @@
+seeds 1,2,3,4,5  N 3200 k 8 sentences 800 HARD 3
+
+hardness by link kind (strong links, pooled seeds):  n  %hard  median  hist h=1 | 2 | 3-9 | 10+
+  pairing (subj x slot->filler)    154377    14      1    63 23 13 1
+  sym: template                      2560   100    265    0 0 0 100
+  sym: slot->filler                 34887    74      7    17 9 29 45
+  seq(prev x cur): slot->filler     44180    78      8    14 8 31 47
+  sym: filler->relation             22434    88     13    1 11 26 62
+  seq(prev x cur): filler->relation [filler in state]  21886    88     13    1 11 26 63
+  seq(prev x cur): template [filler in state]  27168    63      5    29 8 44 19
+  seq(prev x cur): template           992   100    178    0 0 0 100
+L1a all heldO in -> container                                    40%  (n=20)
+L1a all heldO in -> room                                         20%  (n=20)
+L1a all seenO in -> container                                   100%  (n=40)
+L1b all heldC in -> room                                         33%  (n=15)
+L1b all heldC in -> container                                    67%  (n=15)
+L1a all heldO in -> kind                                       c:8 r:4 s:8
+L1b all heldC in -> kind                                       r:5 c:10
+L1c all heldC is -> in                                           67%  (n=15)
+L1d all sat on the -> surface                                   100%  (n=40)
+L1d all has a -> object                                         100%  (n=40)
+L1d all heldO is on the -> surface                              100%  (n=20)
+L1a hard heldO in -> container                                   70%  (n=20)
+L1a hard heldO in -> room                                        25%  (n=20)
+L1a hard seenO in -> container                                   70%  (n=40)
+L1b hard heldC in -> room                                        33%  (n=15)
+L1b hard heldC in -> container                                   67%  (n=15)
+L1a hard heldO in -> kind                                      c:14 r:5 s:1
+L1b hard heldC in -> kind                                      r:5 c:10
+L1c hard heldC is -> in                                          60%  (n=15)
+L1d hard sat on the -> surface                                   95%  (n=40)
+L1d hard has a -> object                                        100%  (n=40)
+L1d hard heldO is on the -> surface                             100%  (n=20)
+E heat slot2 normal                                            0.80
+E heat slot2 novel right-kind                                  0.68
+E heat slot2 break #1                                          1.00
+E heat slot2 break #5                                          1.00
+E none person-in-slot before/after-break/after-quiet           0.00 / 0.22 / 0.22
+E none container-in-slot after-break/after-quiet               0.78 / 0.78
+E none w((in,the)->person) before/after-break/after-quiet      0.03 / 0.51 / 0.51
+E none (in,the)->container hardness min/mean before -> after   13.80 / 19.39 / 13.80 / 19.40
+E quiet person-in-slot before/after-break/after-quiet          0.00 / 0.22 / 0.22
+E quiet container-in-slot after-break/after-quiet              0.78 / 0.78
+E quiet w((in,the)->person) before/after-break/after-quiet     0.03 / 0.51 / 0.51
+E quiet (in,the)->container hardness min/mean before -> after  13.80 / 19.39 / 13.80 / 19.53
+E quiet-nobreak person-in-slot before/after-break/after-quiet  0.00 / 0.00 / 0.00
+E quiet-nobreak container-in-slot after-break/after-quiet      1.00 / 1.00
+E quiet-nobreak w((in,the)->person) before/after-break/after-quiet 0.03 / 0.03 / 0.03
+E quiet-nobreak (in,the)->container hardness min/mean before -> after 13.80 / 19.39 / 13.80 / 19.92
+L2 noquiet train ->Z                                             90%  (n=50)
+L2 noquiet train ->Y                                             10%  (n=50)
+L2 noquiet train in-context ->Z                                  90%  (n=50)
+L2 noquiet train in-context ->Y                                  10%  (n=50)
+L2 noquiet train ->other room                                     0%  (n=50)
+L2 noquiet test ->Z                                               0%  (n=50)
+L2 noquiet test ->Y                                              98%  (n=50)
+L2 noquiet test in-context ->Z                                    0%  (n=50)
+L2 noquiet test in-context ->Y                                   98%  (n=50)
+L2 noquiet test ->other room                                      0%  (n=50)
+L2 noquiet control Y in -> Z                                    100%  (n=50)
+L2 replays (all seeds) total                                   600
+L2 replays containing a test X                                 158
+L2 replays running X..Y..Z                                     2
+L2 quiet train ->Z                                               90%  (n=50)
+L2 quiet train ->Y                                               10%  (n=50)
+L2 quiet train in-context ->Z                                    90%  (n=50)
+L2 quiet train in-context ->Y                                    10%  (n=50)
+L2 quiet train ->other room                                       0%  (n=50)
+L2 quiet test ->Z                                                 0%  (n=50)
+L2 quiet test ->Y                                                96%  (n=50)
+L2 quiet test in-context ->Z                                      0%  (n=50)
+L2 quiet test in-context ->Y                                     96%  (n=50)
+L2 quiet test ->other room                                        0%  (n=50)
+L2 quiet control Y in -> Z                                      100%  (n=50)
+
+replay sample (seed 1 ):
+    p3 sat on the s3 . the c8 is in the
+    on the s3 . the c8 is in the r0 .
+    in the r0 . the c8 is in the r0 .
+    c11 . the c8 is in the r0 . the c8
+    o20 is on the s3 . the c8 is in the
+    c1 . the c8 is in the r0 . the c8
+    c8 is in the r0 . the c8 is in the
+    c3 . the c8 is in the r0 . the c8
+    is in the r0 . the c8 is in the r0
+    c9 is in the r0 . the c8 is in the
+    o5 . the c8 is in the r0 . the c8
+    on the s5 . the c8 is in the r0 .

@@ -1,0 +1,120 @@
+seeds 1  N 3200 k 8 sentences 800 HARD 3
+
+hardness by link kind (strong links, pooled seeds):  n  %hard  median  hist h=1 | 2 | 3-9 | 10+
+  pairing (subj x slot->filler)     29024    15      1    63 22 14 1
+  sym: template                       512   100    277    0 0 0 100
+  sym: slot->filler                  7016    74      7    17 9 29 45
+  seq(prev x cur): slot->filler      8414    77      8    15 8 32 45
+  sym: filler->relation              4488    90     13    2 8 25 65
+  seq(prev x cur): filler->relation [filler in state]   4328    89     12    2 9 27 62
+  seq(prev x cur): template [filler in state]   5480    65      5    29 6 44 20
+  seq(prev x cur): template           256   100    173    0 0 0 100
+
+groups seed 1 (members by kind; * = held-out word; next = what the class cell predicts):
+   z5 n=35  {S=o|is×18, o|is×16, sat}  next c:0.26 in:0.25 on:0.25
+   z4 n=34  {o|is×18, S=o|is×16}  next in:0.32 on:0.29 s:0.21
+   z0 n=26  {c×9, the|c×9, o×8}  next .:0.43 is:0.39 o:0.18
+   z1 n=16  {p×8, the|p×8}  next c:0.22 sat:0.17 has:0.17
+   z2 n=14  {the|p×8, p×6}  next c:0.27 has:0.19 sat:0.18
+   z9 n=12  {S=o|the×8, S=p|the×4}  next c:0.58 s:0.28 o:0.09
+   z19 n=8  {S=o|is×4, o|is×3, p|sat}  next on:0.45 in:0.44 o:0.06
+   z7 n=7  {S=o|the×4, S=p|the×2, S=o*|the}  next c:0.52 s:0.31 o:0.10
+   z8 n=7  {o×5, the|c, c}  next .:0.45 is:0.36 o:0.18
+   z11 n=6  {S=p|the×2, S=o|the×2, on|the, S=o*|the}  next c:0.45 s:0.41 o:0.09
+   z12 n=5  {o|is×3, S=o|is×2}  next in:0.44 on:0.39 o:0.08
+   z21 n=4  {S=o|the×4}  next c:0.56 s:0.31 o:0.08
+   z24 n=4  {S=o|the×4}  next c:0.54 s:0.33 o:0.08
+   z6 n=3  {S=o|the×2, S=p|the}  next c:0.57 s:0.29 o:0.08
+   z13 n=3  {S=p|the×3}  next c:0.53 s:0.33 o:0.11
+   z25 n=3  {S=o|the×3}  next c:0.55 s:0.31 o:0.09
+   z26 n=3  {S=o|the×3}  next c:0.62 s:0.22 o:0.10
+   z3 n=2  {opened|the, in|the}  next c:0.62 r:0.17 o:0.08
+   z10 n=2  {the|o×2}  next is:0.45 c:0.35 s:0.12
+   z14 n=2  {S=p|the, S=o|the}  next c:0.61 s:0.25 o:0.07
+   z15 n=2  {S=p|the, S=o|the}  next c:0.45 s:0.37 o:0.09
+   z16 n=2  {S=o|the×2}  next s:0.44 c:0.41 o:0.09
+   z17 n=2  {S=o|the×2}  next c:0.60 s:0.21 o:0.07
+   z18 n=2  {S=o|the, S=p|the}  next s:0.55 c:0.30 o:0.09
+   z20 n=2  {on|the, S=o*|the}  next s:0.83 o:0.08 p:0.03
+   z22 n=2  {S=o|the, S=p|the}  next s:0.44 c:0.37 o:0.09
+   z23 n=2  {S=o|the×2}  next s:0.58 c:0.29 o:0.08
+class cells (live) / memberships / ctx cells with >=1 class    27.00 / 210.00 / 124.00
+held-out word state has a class (obj)                             0%  (n=4)
+held-out word state has a class (con)                             0%  (n=3)
+L1a all heldO in -> container                                   100%  (n=4)
+L1a all heldO in -> room                                          0%  (n=4)
+L1a all seenO in -> container                                   100%  (n=8)
+L1b all heldC in -> room                                          0%  (n=3)
+L1b all heldC in -> container                                   100%  (n=3)
+L1a all heldO in -> kind                                       c:4
+L1b all heldC in -> kind                                       c:3
+L1c all heldC is -> in                                           33%  (n=3)
+L1d all sat on the -> surface                                   100%  (n=8)
+L1d all has a -> object                                         100%  (n=8)
+L1d all heldO is on the -> surface                              100%  (n=4)
+L1a hard heldO in -> container                                  100%  (n=4)
+L1a hard heldO in -> room                                         0%  (n=4)
+L1a hard seenO in -> container                                  100%  (n=8)
+L1b hard heldC in -> room                                         0%  (n=3)
+L1b hard heldC in -> container                                  100%  (n=3)
+L1a hard heldO in -> kind                                      c:4
+L1b hard heldC in -> kind                                      c:3
+L1c hard heldC is -> in                                          67%  (n=3)
+L1d hard sat on the -> surface                                  100%  (n=8)
+L1d hard has a -> object                                        100%  (n=8)
+L1d hard heldO is on the -> surface                             100%  (n=4)
+E heat slot2 normal                                            0.00
+E heat slot2 novel right-kind                                  1.00
+E heat slot2 break #1                                          1.00
+E heat slot2 break #5                                          1.00
+E none person-in-slot before/after-break/after-quiet           0.00 / 0.25 / 0.25
+E none container-in-slot after-break/after-quiet               0.75 / 0.75
+E none w((in,the)->person) before/after-break/after-quiet      0.03 / 0.31 / 0.31
+E none (in,the)->container hardness min/mean before -> after   15.00 / 19.80 / 15.00 / 19.80
+E quiet person-in-slot before/after-break/after-quiet          0.00 / 0.25 / 0.25
+E quiet container-in-slot after-break/after-quiet              0.75 / 0.75
+E quiet w((in,the)->person) before/after-break/after-quiet     0.03 / 0.31 / 0.31
+E quiet (in,the)->container hardness min/mean before -> after  15.00 / 19.80 / 15.00 / 21.04
+E quiet-nobreak person-in-slot before/after-break/after-quiet  0.00 / 0.00 / 0.00
+E quiet-nobreak container-in-slot after-break/after-quiet      1.00 / 1.00
+E quiet-nobreak w((in,the)->person) before/after-break/after-quiet 0.03 / 0.03 / 0.03
+E quiet-nobreak (in,the)->container hardness min/mean before -> after 15.00 / 19.80 / 15.00 / 21.06
+L2 noquiet train ->Z                                             70%  (n=10)
+L2 noquiet train ->Y                                             30%  (n=10)
+L2 noquiet train in-context ->Z                                  70%  (n=10)
+L2 noquiet train in-context ->Y                                  30%  (n=10)
+L2 noquiet train ->other room                                     0%  (n=10)
+L2 noquiet test ->Z                                               0%  (n=10)
+L2 noquiet test ->Y                                             100%  (n=10)
+L2 noquiet test in-context ->Z                                    0%  (n=10)
+L2 noquiet test in-context ->Y                                  100%  (n=10)
+L2 noquiet test ->other room                                      0%  (n=10)
+L2 noquiet control Y in -> Z                                    100%  (n=10)
+L2 replays (all seeds) total                                   120
+L2 replays containing a test X                                 11
+L2 replays running X..Y..Z                                     0
+L2 quiet train ->Z                                               90%  (n=10)
+L2 quiet train ->Y                                               10%  (n=10)
+L2 quiet train in-context ->Z                                    90%  (n=10)
+L2 quiet train in-context ->Y                                    10%  (n=10)
+L2 quiet train ->other room                                       0%  (n=10)
+L2 quiet test ->Z                                                 0%  (n=10)
+L2 quiet test ->Y                                                90%  (n=10)
+L2 quiet test in-context ->Z                                      0%  (n=10)
+L2 quiet test in-context ->Y                                     90%  (n=10)
+L2 quiet test ->other room                                        0%  (n=10)
+L2 quiet control Y in -> Z                                       90%  (n=10)
+
+replay sample (seed 1 ):
+    o17 . the c8 is in the r0 . the c8
+    o21 . the c8 is in the r0 . the c8
+    c1 . the c8 is in the r0 . the c8
+    c10 is in the c3 . the c8 is in the
+    in the c3 . the c8 is in the r0 .
+    c9 is in the c3 . the c8 is in the
+    on the s5 . the c8 is in the r0 .
+    on the s5 . the c8 is in the r0 .
+    in the c3 . the c8 is in the r0 .
+    o20 is on the s5 . the c8 is in the
+    p0 has a x9 . the c8 is in the r0
+    o21 . the c8 is in the r0 . the c8

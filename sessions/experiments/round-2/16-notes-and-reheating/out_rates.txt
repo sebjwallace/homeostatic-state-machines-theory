@@ -1,0 +1,13 @@
+| 2 | 2 | 24 |  56  17  33  68 |  85   6  21  89 |   0   0   0   0 |  18  40  54  28 | 0.78/130.8 0.56/13.4 0.56/30.6 0.52/72.5 0.52/130.1 0.52/120.7 | 3488+1665 | 340/1756 (re 111/506) | 102215 0 |
+   hardness hd: in 3.7  moved 0.5  is 0.5  near 0.2  took 0.2  went 0.2
+   per-kind confirm rate c/u: in 18%  moved 31%  is 18%  near 19%  took 16%  went 14%
+| 2 | 5 | 24 |  14  29  50  35 |  50   0  42  50 |   0   0   0   0 |   6  24  29  10 | 0.60/171.9 0.74/10.1 0.68/43.9 0.72/131.7 0.71/139.1 0.71/114.3 | 4188+2322 | 467/2366 (re 164/798) | 259767 0 |
+   hardness hd: in 0.0  moved 0.3  is 0.2  near 0.5  took 0.3  went 0.3
+   per-kind confirm rate c/u: in 17%  moved 19%  is 18%  near 16%  took 16%  went 16%
+| 3 | 2 | 24 |  39  24  42  54 | 100   0  38 100 |   0   0   0   0 |  10  32  46  28 | 0.68/183.2 0.64/5.9 0.40/60.5 0.56/117.4 0.60/144.7 0.60/125.1 | 5410+2689 | 385/2105 (re 126/642) | 246628 0 |
+   hardness hd: in 0.8  moved 1.7  is 0.2  near 0.5  took 0.5  went 0.5
+   per-kind confirm rate c/u: in 15%  moved 30%  is 18%  near 17%  took 16%  went 16%
+| 3 | 5 | 24 |  24  22  33  19 |   0   4   4   8 |   0   0   0   0 |   8  25  46  24 | 0.57/199.1 0.75/6.2 0.60/76.6 0.45/158.4 0.68/149.3 0.70/126.9 | 6686+4063 | 542/3386 (re 207/1266) | 657637 0 |
+   hardness hd: in 0.3  moved 1.0  is 0.5  near 0.0  took 0.7  went 0.5
+   per-kind confirm rate c/u: in 13%  moved 23%  is 16%  near 16%  took 16%  went 15%
+cols: L | D | Ntrain | S16 join right / wrong-conf / half confab / direct right | S15 count (same) | S15 rate (same) | RAND | trust/heat per kind ev:in ev:moved ev:is ev:near ev:took ev:went (end) | notes written + rederived | confirmed/contradicted (of which rederived) | would-be self-confirmations if notes read as facts, source errors

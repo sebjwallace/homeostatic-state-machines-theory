@@ -1,0 +1,268 @@
+seeds 1,2,3,4,5  N 3200 k 8 sentences 800 HARD 3
+
+hardness by link kind (strong links, pooled seeds):  n  %hard  median  hist h=1 | 2 | 3-9 | 10+
+  pairing (subj x slot->filler)    154587    14      1    63 23 13 1
+  sym: template                      2560   100    265    0 0 0 100
+  sym: slot->filler                 34887    74      7    17 9 29 45
+  seq(prev x cur): slot->filler     44180    78      8    14 8 31 47
+  sym: filler->relation             22434    88     13    1 11 26 62
+  seq(prev x cur): filler->relation [filler in state]  21886    88     13    1 11 26 63
+  seq(prev x cur): template [filler in state]  27168    63      5    29 8 45 19
+  seq(prev x cur): template           992   100    178    0 0 0 100
+
+groups seed 1 (members by kind; * = held-out word; next = what the class cell predicts):
+   z5 n=35  {S=o|is×18, o|is×16, sat}  next c:0.26 in:0.25 on:0.25
+   z4 n=34  {o|is×18, S=o|is×16}  next in:0.32 on:0.29 s:0.21
+   z0 n=26  {c×9, the|c×9, o×8}  next .:0.43 is:0.39 o:0.18
+   z1 n=16  {p×8, the|p×8}  next c:0.22 sat:0.17 has:0.17
+   z2 n=14  {the|p×8, p×6}  next c:0.27 has:0.19 sat:0.18
+   z9 n=12  {S=o|the×8, S=p|the×4}  next c:0.58 s:0.28 o:0.09
+   z19 n=8  {S=o|is×4, o|is×3, p|sat}  next on:0.45 in:0.44 o:0.06
+   z7 n=7  {S=o|the×4, S=p|the×2, S=o*|the}  next c:0.52 s:0.31 o:0.10
+   z8 n=7  {o×5, the|c, c}  next .:0.45 is:0.36 o:0.18
+   z11 n=6  {S=p|the×2, S=o|the×2, on|the, S=o*|the}  next c:0.45 s:0.41 o:0.09
+   z12 n=5  {o|is×3, S=o|is×2}  next in:0.44 on:0.39 o:0.08
+   z21 n=4  {S=o|the×4}  next c:0.56 s:0.31 o:0.08
+   z24 n=4  {S=o|the×4}  next c:0.54 s:0.33 o:0.08
+   z6 n=3  {S=o|the×2, S=p|the}  next c:0.57 s:0.29 o:0.08
+   z13 n=3  {S=p|the×3}  next c:0.53 s:0.33 o:0.11
+   z25 n=3  {S=o|the×3}  next c:0.55 s:0.31 o:0.09
+   z26 n=3  {S=o|the×3}  next c:0.62 s:0.22 o:0.10
+   z3 n=2  {opened|the, in|the}  next c:0.62 r:0.17 o:0.08
+   z10 n=2  {the|o×2}  next is:0.45 c:0.35 s:0.12
+   z14 n=2  {S=p|the, S=o|the}  next c:0.61 s:0.25 o:0.07
+   z15 n=2  {S=p|the, S=o|the}  next c:0.45 s:0.37 o:0.09
+   z16 n=2  {S=o|the×2}  next s:0.44 c:0.41 o:0.09
+   z17 n=2  {S=o|the×2}  next c:0.60 s:0.21 o:0.07
+   z18 n=2  {S=o|the, S=p|the}  next s:0.55 c:0.30 o:0.09
+   z20 n=2  {on|the, S=o*|the}  next s:0.83 o:0.08 p:0.03
+   z22 n=2  {S=o|the, S=p|the}  next s:0.44 c:0.37 o:0.09
+   z23 n=2  {S=o|the×2}  next s:0.58 c:0.29 o:0.08
+class cells (live) / memberships / ctx cells with >=1 class    32.80 / 198.80 / 123.60
+active class cells at "the heldO is in the ___" (ctx state that woke it) p:in|the:9 p:in|the+s:o|the+s:o|the:2 p:in|the+s:o|the:9
+active class cells at "the heldC is in the ___" (ctx state that woke it) p:in|the:15
+active class cells at "the seenO is in the ___" (ctx state that woke it) p:in|the+s:o|the+s:o|the:20
+held-out word state has a class (obj)                             5%  (n=20)
+held-out word state has a class (con)                             0%  (n=15)
+L1a all heldO in -> container                                    55%  (n=20)
+L1a all heldO in -> room                                         20%  (n=20)
+L1a all seenO in -> container                                   100%  (n=40)
+L1b all heldC in -> room                                          7%  (n=15)
+L1b all heldC in -> container                                    87%  (n=15)
+L1a all heldO in -> kind                                       c:11 r:4 s:4 o:1
+L1b all heldC in -> kind                                       c:13 r:1 o:1
+L1c all heldC is -> in                                           60%  (n=15)
+L1d all sat on the -> surface                                   100%  (n=40)
+L1d all has a -> object                                         100%  (n=40)
+L1d all heldO is on the -> surface                              100%  (n=20)
+L1a hard heldO in -> container                                   95%  (n=20)
+L1a hard heldO in -> room                                         5%  (n=20)
+L1a hard seenO in -> container                                  100%  (n=40)
+L1b hard heldC in -> room                                         7%  (n=15)
+L1b hard heldC in -> container                                   93%  (n=15)
+L1a hard heldO in -> kind                                      c:19 r:1
+L1b hard heldC in -> kind                                      c:14 r:1
+L1c hard heldC is -> in                                          60%  (n=15)
+L1d hard sat on the -> surface                                  100%  (n=40)
+L1d hard has a -> object                                        100%  (n=40)
+L1d hard heldO is on the -> surface                             100%  (n=20)
+E heat slot2 normal                                            0.78
+E heat slot2 novel right-kind                                  0.82
+E heat slot2 break #1                                          1.00
+E heat slot2 break #5                                          1.00
+E none person-in-slot before/after-break/after-quiet           0.00 / 0.23 / 0.23
+E none container-in-slot after-break/after-quiet               0.77 / 0.77
+E none w((in,the)->person) before/after-break/after-quiet      0.03 / 0.51 / 0.51
+E none (in,the)->container hardness min/mean before -> after   13.80 / 19.39 / 13.80 / 19.40
+E quiet person-in-slot before/after-break/after-quiet          0.00 / 0.23 / 0.23
+E quiet container-in-slot after-break/after-quiet              0.77 / 0.77
+E quiet w((in,the)->person) before/after-break/after-quiet     0.03 / 0.51 / 0.51
+E quiet (in,the)->container hardness min/mean before -> after  13.80 / 19.39 / 13.80 / 19.73
+E quiet-nobreak person-in-slot before/after-break/after-quiet  0.00 / 0.00 / 0.00
+E quiet-nobreak container-in-slot after-break/after-quiet      1.00 / 1.00
+E quiet-nobreak w((in,the)->person) before/after-break/after-quiet 0.03 / 0.03 / 0.03
+E quiet-nobreak (in,the)->container hardness min/mean before -> after 13.80 / 19.39 / 13.80 / 19.90
+L2 noquiet train ->Z                                             84%  (n=50)
+L2 noquiet train ->Y                                             16%  (n=50)
+L2 noquiet train in-context ->Z                                  84%  (n=50)
+L2 noquiet train in-context ->Y                                  16%  (n=50)
+L2 noquiet train ->other room                                     0%  (n=50)
+L2 noquiet test ->Z                                               0%  (n=50)
+L2 noquiet test ->Y                                              96%  (n=50)
+L2 noquiet test in-context ->Z                                    0%  (n=50)
+L2 noquiet test in-context ->Y                                   96%  (n=50)
+L2 noquiet test ->other room                                      2%  (n=50)
+L2 noquiet control Y in -> Z                                    100%  (n=50)
+L2 replays (all seeds) total                                   600
+L2 replays containing a test X                                 144
+L2 replays running X..Y..Z                                     2
+L2 quiet train ->Z                                               92%  (n=50)
+L2 quiet train ->Y                                                8%  (n=50)
+L2 quiet train in-context ->Z                                    92%  (n=50)
+L2 quiet train in-context ->Y                                     8%  (n=50)
+L2 quiet train ->other room                                       0%  (n=50)
+L2 quiet test ->Z                                                 0%  (n=50)
+L2 quiet test ->Y                                                94%  (n=50)
+L2 quiet test in-context ->Z                                      0%  (n=50)
+L2 quiet test in-context ->Y                                     94%  (n=50)
+L2 quiet test ->other room                                        2%  (n=50)
+L2 quiet control Y in -> Z                                       98%  (n=50)
+
+replay sample (seed 1 ):
+    o17 . the c8 is in the r0 . the c8
+    o21 . the c8 is in the r0 . the c8
+    c1 . the c8 is in the r0 . the c8
+    c10 is in the c3 . the c8 is in the
+    in the c3 . the c8 is in the r0 .
+    c9 is in the c3 . the c8 is in the
+    on the s5 . the c8 is in the r0 .
+    on the s5 . the c8 is in the r0 .
+    in the c3 . the c8 is in the r0 .
+    o20 is on the s5 . the c8 is in the
+    p0 has a x9 . the c8 is in the r0
+    o21 . the c8 is in the r0 . the c8
+
+groups seed 2 (members by kind; * = held-out word; next = what the class cell predicts):
+   z9 n=38  {o|is×19, S=o|is×19}  next in:0.22 on:0.22 c:0.22
+   z5 n=32  {S=o|is×17, o|is×15}  next on:0.36 in:0.35 o:0.22
+   z2 n=18  {the|c×9, c×8, o}  next c:0.22 .:0.22 is:0.21
+   z0 n=16  {p×8, the|p×8}  next has:0.24 sat:0.24 opened:0.24
+   z1 n=16  {the|c×9, c×7}  next is:0.41 .:0.41 o:0.09
+   z17 n=9  {o|is×5, S=o|is×4}  next c:0.25 in:0.23 on:0.20
+   z14 n=6  {S=p|the×4, S=o|the×2}  next c:0.51 s:0.30 o:0.13
+   z7 n=5  {S=o*|the×2, S=o|the×2, on|the}  next s:0.40 c:0.40 o:0.14
+   z11 n=5  {S=o|the×3, S=p|the×2}  next c:0.50 s:0.31 o:0.13
+   z8 n=4  {S=o|the×3, S=p|the}  next c:0.47 s:0.32 o:0.15
+   z19 n=4  {S=o|the×3, S=p|the}  next c:0.54 s:0.27 o:0.14
+   z3 n=2  {opened|the, in|the}  next c:0.61 r:0.19 o:0.12
+   z4 n=2  {o*, o}  next c:0.32 is:0.17 s:0.16
+   z6 n=2  {c, o}  next .:0.30 is:0.30 o:0.21
+   z10 n=2  {o×2}  next is:0.24 c:0.22 .:0.19
+   z12 n=2  {S=p|the, S=o|the}  next c:0.54 s:0.27 o:0.13
+   z13 n=2  {S=o|the×2}  next c:0.45 s:0.32 o:0.14
+   z15 n=2  {o×2}  next is:0.47 .:0.33 p:0.11
+   z16 n=2  {the|o×2}  next is:0.33 c:0.23 s:0.16
+   z18 n=2  {S=p|the, S=o|the}  next c:0.51 s:0.28 o:0.13
+   z20 n=2  {S=p|the×2}  next c:0.45 s:0.33 o:0.16
+   z21 n=2  {S=o|the, S=p|the}  next s:0.51 c:0.27 o:0.12
+   z22 n=2  {S=o|the×2}  next s:0.59 c:0.23 o:0.14
+   z23 n=2  {S=o|the×2}  next c:0.46 s:0.31 o:0.14
+   z24 n=2  {S=o|the×2}  next c:0.51 s:0.25 o:0.15
+   z25 n=2  {S=p|the, S=o|the}  next c:0.46 s:0.31 o:0.13
+   z26 n=2  {S=p|the, S=o|the}  next s:0.52 c:0.29 o:0.14
+   z27 n=2  {S=o|the×2}  next c:0.53 s:0.29 o:0.13
+   z28 n=2  {S=p|the, S=o|the}  next c:0.54 s:0.29 o:0.12
+   z29 n=2  {S=o|the×2}  next c:0.53 s:0.31 o:0.09
+   z30 n=2  {S=p|a×2}  next o:0.94 c:0.03 the:0.02
+   z31 n=2  {S=o|the×2}  next c:0.43 s:0.33 o:0.16
+   z32 n=2  {S=p|a×2}  next o:0.87 c:0.04 s:0.03
+
+groups seed 3 (members by kind; * = held-out word; next = what the class cell predicts):
+   z3 n=46  {S=o|is×20, o|is×20, S=c|is×2, o*|is×2, c|is, S=o*|is}  next on:0.31 in:0.29 o:0.23
+   z1 n=17  {c×8, the|c×8, o}  next .:0.38 is:0.37 p:0.16
+   z0 n=16  {p×8, the|p×8}  next o:0.23 c:0.20 has:0.15
+   z2 n=7  {S=o|the×4, S=p|the×2, on|the}  next c:0.42 s:0.40 o:0.12
+   z6 n=4  {o×4}  next is:0.38 .:0.35 p:0.17
+   z7 n=4  {S=o|the×3, S=p|the}  next c:0.54 s:0.32 o:0.10
+   z10 n=4  {S=o|the×3, S=p|the}  next c:0.53 s:0.33 o:0.10
+   z13 n=4  {S=o|the×3, S=p|the}  next c:0.53 s:0.33 o:0.09
+   z9 n=3  {S=o|the×3}  next c:0.60 s:0.26 o:0.10
+   z11 n=3  {S=o|the×3}  next c:0.50 s:0.33 o:0.12
+   z12 n=3  {S=o|the×2, S=p|the}  next c:0.55 s:0.32 o:0.11
+   z17 n=3  {S=o|the×2, S=p|the}  next c:0.48 s:0.39 o:0.09
+   z19 n=3  {S=o|the×2, S=p|the}  next s:0.51 c:0.36 o:0.10
+   z4 n=2  {opened|the, in|the}  next c:0.68 r:0.19 o:0.10
+   z5 n=2  {o×2}  next is:0.40 .:0.33 p:0.14
+   z8 n=2  {S=o|the×2}  next c:0.76 s:0.12 o:0.08
+   z14 n=2  {S=o|the×2}  next c:0.43 s:0.42 o:0.11
+   z15 n=2  {S=p|the×2}  next c:0.55 s:0.30 o:0.10
+   z16 n=2  {S=o|the, S=p|the}  next c:0.47 s:0.36 o:0.12
+   z18 n=2  {S=p|the, S=o|the}  next c:0.52 s:0.26 o:0.13
+   z20 n=2  {S=o|the, S=p|the}  next c:0.56 s:0.30 o:0.11
+   z21 n=2  {S=o|the, S=p|the}  next c:0.51 s:0.34 o:0.12
+   z22 n=2  {S=o|the×2}  next c:0.57 s:0.22 o:0.13
+   z23 n=2  {S=o|the×2}  next c:0.69 s:0.16 o:0.10
+   z24 n=2  {o×2}  next c:0.32 is:0.22 .:0.20
+   z25 n=2  {S=p|the, S=o|the}  next c:0.55 s:0.32 o:0.11
+   z26 n=2  {S=o|the×2}  next c:0.60 s:0.25 o:0.10
+   z27 n=2  {the|o×2}  next o:0.50 is:0.47 s:0.01
+   z28 n=2  {on|the, S=o*|the}  next s:0.79 o:0.15 r:0.04
+   z29 n=2  {S=p|a×2}  next o:0.91 has:0.02 s:0.02
+
+groups seed 4 (members by kind; * = held-out word; next = what the class cell predicts):
+   z9 n=33  {o|is×19, S=o|is×14}  next o:0.31 in:0.29 on:0.24
+   z0 n=18  {the|c×8, c×8, o×2}  next c:0.27 is:0.21 .:0.20
+   z6 n=18  {o|is×11, S=o|is×7}  next in:0.38 on:0.37 o:0.10
+   z2 n=16  {p×8, the|p×8}  next opened:0.30 has:0.27 sat:0.27
+   z5 n=15  {the|p×8, p×7}  next opened:0.30 sat:0.29 has:0.29
+   z14 n=10  {S=o|is×10}  next in:0.42 on:0.40 o:0.09
+   z17 n=10  {o|is×7, S=o|is×2, sat}  next on:0.45 in:0.43 o:0.06
+   z4 n=9  {the|c×5, c×4}  next is:0.38 .:0.37 o:0.24
+   z20 n=8  {S=o|the×6, S=p|the×2}  next c:0.56 s:0.28 o:0.13
+   z11 n=6  {S=p|the×3, S=o|the×3}  next c:0.59 s:0.29 o:0.08
+   z13 n=6  {o×4, c, the|c}  next o:0.34 is:0.22 .:0.19
+   z8 n=5  {o|is×3, S=o|is×2}  next in:0.43 on:0.39 o:0.09
+   z15 n=4  {S=o|is×4}  next in:0.32 on:0.31 s:0.21
+   z16 n=4  {S=o|the×4}  next c:0.54 s:0.34 o:0.09
+   z21 n=4  {S=o|the×4}  next c:0.60 s:0.27 o:0.07
+   z22 n=4  {S=o|the×3, S=p|the}  next c:0.53 s:0.34 o:0.09
+   z7 n=3  {c, o, the|c}  next is:0.25 .:0.25 c:0.23
+   z10 n=3  {S=o|the×2, S=p|the}  next c:0.60 s:0.28 o:0.09
+   z12 n=3  {S=o|the×2, S=p|the}  next c:0.54 s:0.34 o:0.08
+   z18 n=3  {S=p|the×2, S=o|the}  next c:0.55 s:0.33 o:0.08
+   z30 n=3  {S=o|the×2, S=p|the}  next c:0.64 s:0.24 o:0.08
+   z32 n=3  {S=o|the×2, S=p|the}  next s:0.45 c:0.33 o:0.19
+   z35 n=3  {S=o*|the×2, on|the}  next s:0.84 o:0.07 p:0.02
+   z1 n=2  {in|the, opened|the}  next c:0.69 r:0.16 o:0.10
+   z3 n=2  {o, the|c*}  next .:0.42 is:0.33 o:0.24
+   z19 n=2  {o×2}  next c:0.31 is:0.18 s:0.16
+   z23 n=2  {S=p|the, S=o|the}  next c:0.58 s:0.31 o:0.06
+   z24 n=2  {S=o|the×2}  next c:0.56 s:0.34 o:0.08
+   z25 n=2  {S=p|the, S=o|the}  next c:0.57 s:0.32 o:0.09
+   z26 n=2  {S=o|the×2}  next c:0.65 s:0.20 o:0.09
+   z27 n=2  {S=p|the×2}  next c:0.54 s:0.36 o:0.07
+   z28 n=2  {c|is, S=c|is}  next in:0.63 o:0.17 p:0.16
+   z29 n=2  {S=c|is, S=o|is}  next on:0.40 in:0.39 o:0.11
+   z31 n=2  {S=o|the×2}  next s:0.45 c:0.43 o:0.08
+   z33 n=2  {S=p|a×2}  next o:0.60 c:0.18 s:0.12
+   z34 n=2  {S=p|a×2}  next o:0.94 c:0.03 s:0.01
+   z36 n=2  {S=o|the×2}  next c:0.56 s:0.30 o:0.07
+   z37 n=2  {S=o*|the, on|the}  next s:0.85 o:0.06 p:0.02
+   z38 n=2  {S=p|a×2}  next o:0.88 c:0.04 s:0.03
+
+groups seed 5 (members by kind; * = held-out word; next = what the class cell predicts):
+   z5 n=41  {S=o|is×20, o|is×19, S=c|is×2}  next in:0.43 on:0.38 o:0.18
+   z4 n=30  {S=o|is×15, o|is×15}  next in:0.43 on:0.38 o:0.19
+   z3 n=18  {the|c×8, c×7, o×3}  next .:0.37 is:0.34 c:0.14
+   z2 n=13  {the|p×8, p×5}  next opened:0.31 has:0.29 sat:0.29
+   z6 n=13  {the|p×7, p×6}  next o:0.31 opened:0.22 has:0.18
+   z7 n=10  {c×4, the|c×4, o×2}  next .:0.37 is:0.34 c:0.14
+   z11 n=7  {S=o|the×6, S=p|the}  next c:0.57 s:0.26 o:0.12
+   z15 n=6  {c|is×2, S=o|is×2, S=c|is, o|is}  next in:0.41 on:0.37 o:0.22
+   z22 n=6  {S=o|the×5, S=p|the}  next c:0.51 s:0.31 o:0.12
+   z1 n=4  {p×3, the|p}  next c:0.26 opened:0.18 has:0.17
+   z20 n=4  {S=o|the×4}  next c:0.52 s:0.30 o:0.15
+   z21 n=4  {S=o|the×2, S=p|the, on|the}  next c:0.48 s:0.34 o:0.12
+   z8 n=3  {S=o|the×2, S=p|the}  next c:0.54 s:0.27 o:0.13
+   z9 n=3  {o×3}  next is:0.42 .:0.30 c:0.15
+   z12 n=3  {S=o|the×3}  next c:0.54 s:0.29 o:0.13
+   z13 n=3  {o|is×2, S=o|is}  next in:0.25 c:0.23 on:0.22
+   z14 n=3  {S=o|the×2, S=p|the}  next c:0.44 s:0.38 o:0.13
+   z16 n=3  {S=p|the×2, S=o|the}  next c:0.54 s:0.28 o:0.13
+   z17 n=3  {S=p|the×2, S=o|the}  next c:0.44 s:0.37 o:0.12
+   z18 n=3  {S=p|the×2, S=o|the}  next c:0.52 s:0.27 o:0.14
+   z19 n=3  {S=p|the×2, S=o|the}  next c:0.48 s:0.34 o:0.12
+   z23 n=3  {S=o|the×3}  next c:0.51 s:0.31 o:0.14
+   z34 n=3  {S=o*|the×2, on|the}  next s:0.81 o:0.13 opened:0.02
+   z0 n=2  {opened|the, in|the}  next c:0.59 r:0.18 o:0.16
+   z10 n=2  {S=o|the, S=p|the}  next c:0.48 s:0.32 o:0.15
+   z24 n=2  {S=o|the×2}  next s:0.47 c:0.35 o:0.14
+   z25 n=2  {c, o}  next is:0.32 .:0.32 c:0.13
+   z26 n=2  {the|c, o}  next is:0.35 .:0.31 c:0.14
+   z27 n=2  {S=p|the, S=o|the}  next c:0.46 s:0.32 o:0.15
+   z28 n=2  {S=p|a×2}  next o:0.85 c:0.04 opened:0.03
+   z29 n=2  {S=o|the, S=p|the}  next c:0.51 s:0.32 o:0.11
+   z30 n=2  {S=p|a×2}  next o:0.67 c:0.21 r:0.06
+   z31 n=2  {S=p|a×2}  next o:0.85 c:0.08 p:0.02
+   z32 n=2  {S=o*|the×2}  next s:0.51 c:0.27 o:0.11
+   z33 n=2  {S=p|a×2}  next o:0.92 p:0.03 s:0.02

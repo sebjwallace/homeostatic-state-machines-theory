@@ -1,0 +1,152 @@
+seeds 1,2,3,4,5  N 3200 k 8 sentences 800 HARD 3
+
+hardness by link kind (strong links, pooled seeds):  n  %hard  median  hist h=1 | 2 | 3-9 | 10+
+  pairing (subj x slot->filler)    163811    14      1    63 23 13 1
+  sym: template                      2560   100    272    0 0 0 100
+  sym: slot->filler                 35395    74      8    17 9 29 46
+  seq(prev x cur): slot->filler     45275    79      8    13 8 32 47
+  sym: filler->relation             22913    88     13    2 10 24 64
+  seq(prev x cur): filler->relation [filler in state]  22358    89     14    1 10 24 65
+  seq(prev x cur): template [filler in state]  28152    67      6    26 7 41 26
+  seq(prev x cur): template           992   100    185    0 0 0 100
+OV O x O                                                       0.02
+OV O x heldO                                                   0.02
+OV O x X                                                       0.02
+OV O x heldC                                                   0.03
+OV O x R                                                       0.02
+OV O x S                                                       0.03
+OV O x P                                                       0.01
+OV O x j0                                                      0.03
+OV heldO x heldO                                               0.03
+OV heldO x j0                                                  0.05
+OV X x heldO                                                   0.02
+OV X x X                                                       0.02
+OV X x heldC                                                   0.04
+OV X x j0                                                      0.03
+OV C x O                                                       0.02
+OV C x heldO                                                   0.02
+OV C x X                                                       0.02
+OV C x C                                                       0.02
+OV C x heldC                                                   0.04
+OV C x R                                                       0.05
+OV C x S                                                       0.00
+OV C x P                                                       0.02
+OV C x j0                                                      0.02
+OV heldC x heldO                                               0.02
+OV heldC x heldC                                               0.00
+OV heldC x j0                                                  0.00
+OV R x heldO                                                   0.03
+OV R x X                                                       0.02
+OV R x heldC                                                   0.02
+OV R x R                                                       0.03
+OV R x S                                                       0.04
+OV R x j0                                                      0.00
+OV S x heldO                                                   0.01
+OV S x X                                                       0.02
+OV S x heldC                                                   0.02
+OV S x S                                                       0.00
+OV S x j0                                                      0.03
+OV P x heldO                                                   0.03
+OV P x X                                                       0.02
+OV P x heldC                                                   0.02
+OV P x R                                                       0.01
+OV P x S                                                       0.02
+OV P x P                                                       0.01
+OV P x j0                                                      0.03
+OV j0 x O                                                      0.03
+OV j0 x heldO                                                  0.05
+OV j0 x X                                                      0.03
+OV j0 x C                                                      0.02
+OV j0 x heldC                                                  0.00
+OV j0 x R                                                      0.00
+OV j0 x S                                                      0.03
+OV j0 x P                                                      0.03
+L1a all heldO in -> container                                    35%  (n=20)
+L1a all heldO in -> room                                         15%  (n=20)
+L1a all seenO in -> container                                    98%  (n=40)
+L1b all heldC in -> room                                         27%  (n=15)
+L1b all heldC in -> container                                    73%  (n=15)
+L1a all heldO in -> kind                                       s:9 c:7 r:3 o:1
+L1b all heldC in -> kind                                       r:4 c:11
+L1c all heldC is -> in                                           67%  (n=15)
+L1d all sat on the -> surface                                   100%  (n=40)
+L1d all has a -> object                                         100%  (n=40)
+L1d all heldO is on the -> surface                              100%  (n=20)
+L1a hard heldO in -> container                                   55%  (n=20)
+L1a hard heldO in -> room                                        30%  (n=20)
+L1a hard seenO in -> container                                   78%  (n=40)
+L1b hard heldC in -> room                                        40%  (n=15)
+L1b hard heldC in -> container                                   60%  (n=15)
+L1a hard heldO in -> kind                                      c:11 s:3 r:6
+L1b hard heldC in -> kind                                      r:6 c:9
+L1c hard heldC is -> in                                          80%  (n=15)
+L1d hard sat on the -> surface                                   98%  (n=40)
+L1d hard has a -> object                                         98%  (n=40)
+L1d hard heldO is on the -> surface                             100%  (n=20)
+E heat slot2 normal                                            0.80
+E heat slot2 novel right-kind                                  0.97
+E kindheat slot2 normal                                        0.15
+E kindheat slot2 novel right-kind                              0.70
+E heat slot2 break #1                                          0.97
+E heat slot2 break #5                                          1.00
+E kindheat slot2 break #1                                      0.97
+E kindheat slot2 break #5                                      0.85
+E none person-in-slot before/after-break/after-quiet           0.00 / 0.12 / 0.12
+E none container-in-slot after-break/after-quiet               0.85 / 0.85
+E none w((in,the)->person) before/after-break/after-quiet      0.03 / 0.55 / 0.55
+E none (in,the)->container hardness min/mean before -> after   14.20 / 19.96 / 14.20 / 19.97
+E quiet person-in-slot before/after-break/after-quiet          0.00 / 0.12 / 0.11
+E quiet container-in-slot after-break/after-quiet              0.85 / 0.86
+E quiet w((in,the)->person) before/after-break/after-quiet     0.03 / 0.55 / 0.55
+E quiet (in,the)->container hardness min/mean before -> after  14.20 / 19.96 / 14.20 / 20.17
+E quiet-nobreak person-in-slot before/after-break/after-quiet  0.00 / 0.00 / 0.00
+E quiet-nobreak container-in-slot after-break/after-quiet      0.96 / 0.96
+E quiet-nobreak w((in,the)->person) before/after-break/after-quiet 0.03 / 0.03 / 0.03
+E quiet-nobreak (in,the)->container hardness min/mean before -> after 14.20 / 19.96 / 14.20 / 20.66
+L2 noquiet train ->Z                                             98%  (n=50)
+L2 noquiet train ->Y                                              2%  (n=50)
+L2 noquiet train in-context ->Z                                 100%  (n=50)
+L2 noquiet train in-context ->Y                                   0%  (n=50)
+L2 noquiet train ->other room                                     0%  (n=50)
+L2 noquiet test ->Z                                               0%  (n=50)
+L2 noquiet test ->Y                                             100%  (n=50)
+L2 noquiet test in-context ->Z                                    0%  (n=50)
+L2 noquiet test in-context ->Y                                   82%  (n=50)
+L2 noquiet test ->other room                                      0%  (n=50)
+L2 noquiet control Y in -> Z                                    100%  (n=50)
+L2 noquiet test learn-on premises ->Z                             0%  (n=50)
+L2 noquiet test learn-on premises ->Y                           100%  (n=50)
+L2 noquiet test learn-on premises pred overlap with Z / Y (of 8) 0.04 / 7.82
+L2 replays (all seeds) total                                   650
+L2 replays containing a test X                                 144
+L2 replays running X..Y..Z                                     0
+L2 quiet train ->Z                                               98%  (n=50)
+L2 quiet train ->Y                                                2%  (n=50)
+L2 quiet train in-context ->Z                                   100%  (n=50)
+L2 quiet train in-context ->Y                                     0%  (n=50)
+L2 quiet train ->other room                                       0%  (n=50)
+L2 quiet test ->Z                                                 0%  (n=50)
+L2 quiet test ->Y                                                98%  (n=50)
+L2 quiet test in-context ->Z                                      0%  (n=50)
+L2 quiet test in-context ->Y                                     88%  (n=50)
+L2 quiet test ->other room                                        0%  (n=50)
+L2 quiet control Y in -> Z                                      100%  (n=50)
+L2 quiet test learn-on premises ->Z                               0%  (n=50)
+L2 quiet test learn-on premises ->Y                             100%  (n=50)
+L2 quiet test learn-on premises pred overlap with Z / Y (of 8) 0.04 / 7.82
+
+replay sample (seed 1 ):
+    s2 . the x19 is on the s5 . the c7
+    in the r0 . the x19 is on the s5 .
+    c1 . the x19 is on the s5 . the c7
+    s1 . the x19 is on the s5 . the c7
+    is in the r0 . the x19 is on the s5
+    o5 . the x16 is on the s4 . the c9
+    on the s3 . the x18 is on the s0 .
+    . the x13 is on the s4 . the o17 is
+    opened the c1 . the x19 is on the s5 .
+    on the s3 . the
+    o8 . the
+    s0 . the
+
+per-seed overlaps of ambiguous j0: O 0.1,0.0,0.0,0.1,0.1 | heldO 0.0,0.0,0.3,0.0,0.0 | C 0.0,0.0,0.0,0.1,0.0 | heldC 0.0,0.0,0.0,0.0,0.0
