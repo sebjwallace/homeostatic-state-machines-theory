@@ -1,0 +1,70 @@
+Sketch 10: earned joins. 16 chains (12 full, 4 half), 6 rooms (chance 17%), seeds 1,2,3,4,5. Queries with all machine states empty.
+condition              | join: right% bits perm% day-state% | half-chain ctrl: right% bits | free-run reaches room: empty / day-state / half-chain any room | direct: K in->C(rank)% C in->R decode/rank% | went% rule% ruleGen% | rows replayed
+1 none                 | subj-route: right room   0.00 half-chain max   0.00
+1 none                 |     23   0.08   10   12 |          10  -0.45         |       7    2    0  |       100               95 /  97        |   92  100  100    | top-1 after (K,in) is C:   97 | 0 (hot   68% of rows)
+2 after, all/restore   | subj-route: right room   0.00 half-chain max   0.00
+2 after, all/restore   |     23   0.07   10   12 |          10  -0.45         |       3    0    0  |       100               95 /  97        |   99  100  100    | top-1 after (K,in) is C:   97 | 549 (hot   68% of rows)
+2 after, hot/restore   | subj-route: right room   0.00 half-chain max   0.00
+2 after, hot/restore   |     23   0.07   10   12 |          10  -0.45         |       7    2    0  |       100               97 /  97        |   93  100  100    | top-1 after (K,in) is C:   97 | 376 (hot   68% of rows)
+2 after, hot/stream    | subj-route: right room   0.00 half-chain max   0.00
+2 after, hot/stream    |     23   0.07   10   12 |          10  -0.45         |       7    7   20  |       100               95 /  95        |   92   34   70    | top-1 after (K,in) is C:   97 | 376 (hot   68% of rows)
+3 before, all/restore  | subj-route: right room   0.00 half-chain max   0.00
+3 before, all/restore  |     23   0.08   10   12 |          15  -0.45         |       7    2    0  |       100               97 / 100        |   93  100  100    | top-1 after (K,in) is C:   97 | 276 (hot   68% of rows)
+3 before, hot/restore  | subj-route: right room   0.00 half-chain max   0.00
+3 before, hot/restore  |     23   0.07   10   12 |          15  -0.46         |       7    2    0  |       100               98 / 100        |   92  100  100    | top-1 after (K,in) is C:   97 | 206 (hot   68% of rows)
+3 before, hot/stream   | subj-route: right room   0.00 half-chain max   0.00
+3 before, hot/stream   |     22   0.08   10   10 |          15  -0.45         |       5    7   20  |       100               98 / 100        |   92   87  100    | top-1 after (K,in) is C:   97 | 206 (hot   72% of rows)
+4 after, hot/shuffle   | subj-route: right room   0.00 half-chain max   0.00
+4 after, hot/shuffle   |     24   0.08   11   14 |           8  -0.48         |       5    0   10  |       100               90 /  97        |   92   64   80    | top-1 after (K,in) is C:   87 | 376 (hot   68% of rows)
+5 after, hot/chain     | subj-route: right room   0.00 half-chain max   0.00
+5 after, hot/chain     |     23   0.08   10   10 |          10  -0.46         |       7    3   15  |       100               88 /  88        |   93   44   60    | top-1 after (K,in) is C:   97 | 376 (hot   68% of rows)
+5 before, hot/chain    | subj-route: right room   0.00 half-chain max   0.00
+5 before, hot/chain    |     22   0.07   10   10 |          15  -0.44         |       5    2   15  |       100               97 /  98        |   92   89   80    | top-1 after (K,in) is C:   97 | 206 (hot   72% of rows)
+5 after, all/chain     | subj-route: right room   0.00 half-chain max   0.00
+5 after, all/chain     |     23   0.07   10   12 |          10  -0.45         |       3    0    0  |       100               97 /  97        |   99  100  100    | top-1 after (K,in) is C:   97 | 549 (hot   68% of rows)
+S 1 none               | subj-route: right room   0.44 half-chain max   2.73
+S 1 none               |      7   0.04   12    8 |          23  -0.43         |       2    0    0  |       100              100 / 100        |   93   99  100    | top-1 after (K,in) is C:  100 | 0 (hot   70% of rows)
+S 2 after, all/restore | subj-route: right room   0.44 half-chain max   2.72
+S 2 after, all/restore |      7   0.04   12    8 |          23  -0.43         |       0    0    0  |       100              100 / 100        |   99  100  100    | top-1 after (K,in) is C:  100 | 549 (hot   70% of rows)
+S 2 after, hot/stream  | subj-route: right room   0.44 half-chain max   2.72
+S 2 after, hot/stream  |      7   0.04   12    8 |          23  -0.43         |       5    7   20  |       100               97 /  98        |   92   39   70    | top-1 after (K,in) is C:  100 | 382 (hot   70% of rows)
+C 2 after, hot (no S)  | subj-route: right room   0.00 half-chain max   0.00
+C 2 after, hot (no S)  |     25   0.09   10   30 |          10  -0.44         |      23   20   15  |       100               98 /  98        |   87  100  100    | top-1 after (K,in) is C:   97 | 521 (hot   68% of rows)
+C 2 after, all (no S)  | subj-route: right room   0.00 half-chain max   0.00
+C 2 after, all (no S)  |     25   0.09   10   25 |          10  -0.45         |      25   17   10  |       100              100 / 100        |   90  100  100    | top-1 after (K,in) is C:   97 | 549 (hot   68% of rows)
+S+C 2 after, hot       | subj-route: right room  18.72 half-chain max   2.73
+S+C 2 after, hot       |     35   0.25   12   35 |          20  -0.43         |      30   22    5  |       100              100 / 100        |   88  100  100    | top-1 after (K,in) is C:  100 | 519 (hot   70% of rows)
+S+C 2 after, all       | subj-route: right room  13.18 half-chain max   2.73
+S+C 2 after, all       |     25   0.19   10   27 |          20  -0.42         |      28   17    0  |       100              100 / 100        |   85   99  100    | top-1 after (K,in) is C:  100 | 549 (hot   70% of rows)
+S+C 3 before, hot      | subj-route: right room   0.44 half-chain max   2.73
+S+C 3 before, hot      |      7   0.05   12    8 |          23  -0.42         |       2    0    5  |       100              100 / 100        |   90  100  100    | top-1 after (K,in) is C:  100 | 263 (hot   71% of rows)
+S+C 3 before, all      | subj-route: right room   0.44 half-chain max   2.73
+S+C 3 before, all      |      7   0.05   20   10 |          18  -0.42         |       3    3    5  |       100              100 / 100        |   89  100  100    | top-1 after (K,in) is C:  100 | 276 (hot   71% of rows)
+S+rC 4 after, hot      | subj-route: right room   2.37 half-chain max   5.67
+S+rC 4 after, hot      |     12   0.05    8   17 |          15  -0.44         |       2    5   10  |        95              100 / 100        |   91   93  100    | top-1 after (K,in) is C:   95 | 521 (hot   70% of rows)
+
+Join queries: input to right room minus mean input to other rooms, by source route (summed weights)
+condition              |     sym    seq    day   time    who  whereweather   subj  joint
+1 none                 |    2.79   0.02   0.00   0.00   0.00   0.00   0.00   0.00   1.85
+2 after, all/restore   |    2.72   0.02   0.00   0.00   0.00   0.00   0.00   0.00   1.84
+2 after, hot/restore   |    2.73   0.02   0.00   0.00   0.00   0.00   0.00   0.00   1.84
+2 after, hot/stream    |    2.73   0.02   0.00   0.00   0.00   0.00   0.00   0.00   1.85
+3 before, all/restore  |    2.89   0.02   0.00   0.00   0.00   0.00   0.00   0.00   1.85
+3 before, hot/restore  |    2.78   0.02   0.00   0.00   0.00   0.00   0.00   0.00   1.85
+3 before, hot/stream   |    2.91   0.02   0.00   0.00   0.00   0.00   0.00   0.00   1.85
+4 after, hot/shuffle   |    3.10  -0.05   0.00   0.00   0.00   0.00   0.00   0.00   1.85
+5 after, hot/chain     |    2.97   0.02   0.00   0.00   0.00   0.00   0.00   0.00   1.85
+5 before, hot/chain    |    2.69   0.02   0.00   0.00   0.00   0.00   0.00   0.00   1.85
+5 after, all/chain     |    2.72   0.02   0.00   0.00   0.00   0.00   0.00   0.00   1.84
+S 1 none               |    2.69   0.02   0.00   0.00   0.00   0.00   0.00  -0.38   0.08
+S 2 after, all/restore |    2.63   0.02   0.00   0.00   0.00   0.00   0.00  -0.38   0.08
+S 2 after, hot/stream  |    2.64   0.02   0.00   0.00   0.00   0.00   0.00  -0.38   0.08
+C 2 after, hot (no S)  |    2.73   0.16   0.00   0.00   0.00   0.00   0.00   0.00   2.52
+C 2 after, all (no S)  |    2.76   0.16   0.00   0.00   0.00   0.00   0.00   0.00   2.52
+S+C 2 after, hot       |    2.68   0.02   0.00   0.00   0.00   0.00   0.00  17.54  -0.01
+S+C 2 after, all       |    2.62   0.02   0.00   0.00   0.00   0.00   0.00  12.27   0.08
+S+C 3 before, hot      |    2.87   0.02   0.00   0.00   0.00   0.00   0.00  -0.44   0.06
+S+C 3 before, all      |    2.90   0.02   0.00   0.00   0.00   0.00   0.00  -0.44   0.06
+S+rC 4 after, hot      |    2.68  -0.10   0.00   0.00   0.00   0.00   0.00   0.60   0.03
+
+[18.1 s]

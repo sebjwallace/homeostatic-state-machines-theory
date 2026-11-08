@@ -1,0 +1,12 @@
+[package]
+name = "m006-state-with-assemblies"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+description = "m006-state-with-assemblies"
+
+[dependencies]
+hsm-core = { path = "../../core" }
+
+[dev-dependencies]
+m003-shared-assemblies = { path = "../m003-shared-assemblies" }

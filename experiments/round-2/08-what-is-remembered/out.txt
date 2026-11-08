@@ -1,0 +1,78 @@
+
+=== 50 days, seeds 1,2,3 (summed voting, time of day; sketch 06 settings) ===
+events 3820; one-step recall overall   96%; heat==0 at the time:   36%
+
+Recall (one-step, full context, learning off) by surprise at the time (heat)  : recall% (n) | GK bigram right% | GK hard-only right%
+  heat 0           91 ( 1371) |   85 |   86
+  heat (0,.25]     55 (   40) |   45 |   68
+  heat (.25,.5]    60 (    5) |   20 |   20
+  heat (.5,.75]   100 (    4) |    0 |   50
+  heat (.75,1]    100 ( 2400) |   37 |   30
+Recall by predictability from GK (bigram, leave-one-out p(true next | prev,cur))  : recall% (n) | mean heat at time
+  p=1          99 (  885) | 0.12
+  [.5,1)       93 (  244) | 0.45
+  [.2,.5)      92 (  583) | 0.64
+  (0,.2)       94 (  489) | 0.84
+  p=0          96 (  940) | 0.95
+  n/a(once)    97 (  679) | 0.76
+Recall by GK hard-only readout right / wrong                                     : recall% (n)
+  hard-only right    95 ( 1928)
+  hard-only wrong    97 ( 1892)
+Recall, heat group (top >.5, mid (0,.5], bottom 0) x GK bigram right/wrong (the "specific memory" cell is top x GK wrong)
+  top     GK right  100 (  876) | GK wrong  100 ( 1528)
+  mid     GK right   63 (   19) | GK wrong   50 (   26)
+  bottom  GK right   94 ( 1172) | GK wrong   69 (  199)
+Lost events (one-step recall wrong): share by heat group  top    4% mid   13% bottom   83%  (n=156)
+
+Gist (free run from opening cue, position-aligned): correct% (n)   [synced = before the day's first error]
+  surprise top     all   73 ( 1882) | synced  100 ( 1328)
+  surprise mid     all   39 (   38) | synced   50 (   28)
+  surprise bottom  all   77 ( 1156) | synced   93 (  919)
+  GK bigram right  all   80 ( 1565) | synced   97 ( 1248)
+  GK bigram wrong  all   68 ( 1511) | synced   95 ( 1027)
+Errors: typical = GK bigram mode in the automaton's own context; plausible = seen after (prev,cur) but not the mode; novel = never seen there
+  first error of day                     n=   85 | typical   12 plausible   59 novel   29 | = hard-only answer   16 | chance-typical 18
+    first, at mid/bottom heat            n=   81 | typical   12 plausible   58 novel   30 | = hard-only answer   17 | chance-typical 19
+  all errors                             n=  791 | typical   45 plausible   45 novel   10 | = hard-only answer   35 | chance-typical 50
+    of which top-surprise positions      n=  500 | typical   48 plausible   44 novel    8 | = hard-only answer   39 | chance-typical 54
+    of which bottom-surprise positions   n=  268 | typical   40 plausible   46 novel   15 | = hard-only answer   29 | chance-typical 44
+
+=== 200 days, seeds 1,2,3 (summed voting, time of day; sketch 06 settings) ===
+events 15297; one-step recall overall   95%; heat==0 at the time:   41%
+
+Recall (one-step, full context, learning off) by surprise at the time (heat)  : recall% (n) | GK bigram right% | GK hard-only right%
+  heat 0           90 ( 6265) |   83 |   87
+  heat (0,.25]     66 (  328) |   35 |   66
+  heat (.25,.5]    77 (   44) |   27 |   61
+  heat (.5,.75]    93 (   27) |   41 |   30
+  heat (.75,1]    100 ( 8633) |   30 |   30
+Recall by predictability from GK (bigram, leave-one-out p(true next | prev,cur))  : recall% (n) | mean heat at time
+  p=1          99 ( 3357) | 0.05
+  [.5,1)       91 ( 1118) | 0.35
+  [.2,.5)      91 ( 2862) | 0.56
+  (0,.2)       93 ( 3957) | 0.81
+  p=0          97 ( 2232) | 0.96
+  n/a(once)    97 ( 1771) | 0.66
+Recall by GK hard-only readout right / wrong                                     : recall% (n)
+  hard-only right    94 ( 8321)
+  hard-only wrong    96 ( 6976)
+Recall, heat group (top >.5, mid (0,.5], bottom 0) x GK bigram right/wrong (the "specific memory" cell is top x GK wrong)
+  top     GK right  100 ( 2617) | GK wrong   99 ( 6043)
+  mid     GK right   71 (  127) | GK wrong   65 (  245)
+  bottom  GK right   94 ( 5216) | GK wrong   71 ( 1049)
+Lost events (one-step recall wrong): share by heat group  top    5% mid   16% bottom   79%  (n=774)
+
+Gist (free run from opening cue, position-aligned): correct% (n)   [synced = before the day's first error]
+  surprise top     all   67 ( 6806) | synced  100 ( 4274)
+  surprise mid     all   50 (  309) | synced   68 (  203)
+  surprise bottom  all   73 ( 5188) | synced   92 ( 3880)
+  GK bigram right  all   76 ( 5998) | synced   96 ( 4478)
+  GK bigram wrong  all   63 ( 6305) | synced   94 ( 3879)
+Errors: typical = GK bigram mode in the automaton's own context; plausible = seen after (prev,cur) but not the mode; novel = never seen there
+  first error of day                     n=  388 | typical   15 plausible   70 novel   15 | = hard-only answer   15 | chance-typical 19
+    first, at mid/bottom heat            n=  371 | typical   15 plausible   70 novel   16 | = hard-only answer   13 | chance-typical 19
+  all errors                             n= 3778 | typical   39 plausible   56 novel    5 | = hard-only answer   40 | chance-typical 43
+    of which top-surprise positions      n= 2230 | typical   42 plausible   54 novel    4 | = hard-only answer   45 | chance-typical 47
+    of which bottom-surprise positions   n= 1392 | typical   36 plausible   58 novel    6 | = hard-only answer   34 | chance-typical 39
+
+[8.8 s]

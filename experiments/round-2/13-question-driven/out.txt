@@ -1,0 +1,127 @@
+== world=fwd trial=fwd skipempty=0
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+gap  join   n= 60 | right%   60 | resolved%   62 | wrong-confident%    2 | hops 1.60 (1-hop   40%) | gap heat start  0.98 end  0.38
+gap  half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.75 (1-hop   25%) | gap heat start  0.97 end  0.94
+gap  direct n= 60 | right%   98 | resolved%  100 | wrong-confident%    2 | hops 0.98 (1-hop   98%) | gap heat start  0.96 end  0.00
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+rand join   n= 60 | right%   25 | resolved%   27 | wrong-confident%    2 | hops 1.55 (1-hop   45%) | gap heat start  0.98 end  0.71
+rand half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.60 (1-hop   40%) | gap heat start  0.97 end  0.97
+rand direct n= 60 | right%   42 | resolved%   43 | wrong-confident%    2 | hops 0.98 (1-hop   98%) | gap heat start  0.96 end  0.55
+== world=fwd trial=fwd skipempty=1
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+gap  join   n= 60 | right%   98 | resolved%  100 | wrong-confident%    2 | hops 1.98 (1-hop    2%) | gap heat start  0.98 end  0.00
+gap  half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.94
+gap  direct n= 60 | right%   98 | resolved%  100 | wrong-confident%    2 | hops 0.98 (1-hop   98%) | gap heat start  0.96 end  0.00
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+rand join   n= 60 | right%   98 | resolved%  100 | wrong-confident%    2 | hops 1.98 (1-hop    2%) | gap heat start  0.98 end  0.00
+rand half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.94
+rand direct n= 60 | right%   98 | resolved%  100 | wrong-confident%    2 | hops 0.98 (1-hop   98%) | gap heat start  0.96 end  0.00
+== world=fwd trial=sit skipempty=0
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+gap  join   n= 60 | right%   33 | resolved%  100 | wrong-confident%   67 | hops 1.97 (1-hop    3%) | gap heat start  0.98 end  0.00
+gap  half   n= 20 | right%    5 | resolved%  100 | wrong-confident%   95 | hops 1.90 (1-hop   10%) | gap heat start  0.97 end  0.00
+gap  direct n= 60 | right%   90 | resolved%  100 | wrong-confident%   10 | hops 0.98 (1-hop   98%) | gap heat start  0.96 end  0.00
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+rand join   n= 60 | right%   25 | resolved%  100 | wrong-confident%   75 | hops 1.97 (1-hop    3%) | gap heat start  0.98 end  0.00
+rand half   n= 20 | right%   10 | resolved%  100 | wrong-confident%   90 | hops 1.90 (1-hop   10%) | gap heat start  0.97 end  0.00
+rand direct n= 60 | right%   62 | resolved%  100 | wrong-confident%   38 | hops 1.33 (1-hop   63%) | gap heat start  0.96 end  0.00
+== world=fwd trial=sit skipempty=1
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+gap  join   n= 60 | right%   33 | resolved%  100 | wrong-confident%   67 | hops 1.97 (1-hop    3%) | gap heat start  0.98 end  0.00
+gap  half   n= 20 | right%    5 | resolved%  100 | wrong-confident%   95 | hops 1.90 (1-hop   10%) | gap heat start  0.97 end  0.00
+gap  direct n= 60 | right%   90 | resolved%  100 | wrong-confident%   10 | hops 0.98 (1-hop   98%) | gap heat start  0.96 end  0.00
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+rand join   n= 60 | right%   23 | resolved%  100 | wrong-confident%   77 | hops 1.97 (1-hop    3%) | gap heat start  0.98 end  0.00
+rand half   n= 20 | right%   15 | resolved%  100 | wrong-confident%   85 | hops 1.90 (1-hop   10%) | gap heat start  0.97 end  0.00
+rand direct n= 60 | right%   62 | resolved%  100 | wrong-confident%   38 | hops 1.33 (1-hop   63%) | gap heat start  0.96 end  0.00
+== world=fwd trial=seg skipempty=0
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+gap  join   n= 60 | right%   98 | resolved%  100 | wrong-confident%    2 | hops 1.98 (1-hop    2%) | gap heat start  0.98 end  0.00
+gap  half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.80 (1-hop   20%) | gap heat start  0.97 end  0.94
+gap  direct n= 60 | right%   98 | resolved%  100 | wrong-confident%    2 | hops 0.98 (1-hop   98%) | gap heat start  0.96 end  0.00
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+rand join   n= 60 | right%   82 | resolved%   83 | wrong-confident%    2 | hops 1.98 (1-hop    2%) | gap heat start  0.98 end  0.16
+rand half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.90 (1-hop   10%) | gap heat start  0.97 end  0.94
+rand direct n= 60 | right%   60 | resolved%   62 | wrong-confident%    2 | hops 1.37 (1-hop   60%) | gap heat start  0.96 end  0.37
+== world=fwd trial=seg skipempty=1
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+gap  join   n= 60 | right%   98 | resolved%  100 | wrong-confident%    2 | hops 1.98 (1-hop    2%) | gap heat start  0.98 end  0.00
+gap  half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.94
+gap  direct n= 60 | right%   98 | resolved%  100 | wrong-confident%    2 | hops 0.98 (1-hop   98%) | gap heat start  0.96 end  0.00
+frame fit (mean over seeds): rooms  1.00  containers  0.04
+rand join   n= 60 | right%   98 | resolved%  100 | wrong-confident%    2 | hops 1.98 (1-hop    2%) | gap heat start  0.98 end  0.00
+rand half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.94
+rand direct n= 60 | right%   65 | resolved%   67 | wrong-confident%    2 | hops 0.98 (1-hop   98%) | gap heat start  0.96 end  0.32
+== world=rev trial=fwd skipempty=0
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+gap  join   n= 60 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.98 end  0.98
+gap  half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.97
+gap  direct n= 60 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.37 (1-hop   63%) | gap heat start  0.97 end  0.96
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+rand join   n= 60 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.98 end  0.98
+rand half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.97
+rand direct n= 60 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.32 (1-hop   68%) | gap heat start  0.97 end  0.97
+== world=rev trial=fwd skipempty=1
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+gap  join   n= 60 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 0.00 (1-hop    0%) | gap heat start  0.98 end  0.98
+gap  half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 0.00 (1-hop    0%) | gap heat start  0.97 end  0.97
+gap  direct n= 60 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.96
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+rand join   n= 60 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 0.00 (1-hop    0%) | gap heat start  0.98 end  0.98
+rand half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 0.00 (1-hop    0%) | gap heat start  0.97 end  0.97
+rand direct n= 60 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.96
+== world=rev trial=sit skipempty=0
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+gap  join   n= 60 | right%   18 | resolved%   98 | wrong-confident%   80 | hops 2.00 (1-hop    0%) | gap heat start  0.98 end  0.02
+gap  half   n= 20 | right%   15 | resolved%  100 | wrong-confident%   85 | hops 2.00 (1-hop    0%) | gap heat start  0.97 end  0.00
+gap  direct n= 60 | right%   97 | resolved%   98 | wrong-confident%    2 | hops 1.03 (1-hop   97%) | gap heat start  0.97 end  0.02
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+rand join   n= 60 | right%   27 | resolved%   98 | wrong-confident%   72 | hops 2.00 (1-hop    0%) | gap heat start  0.98 end  0.02
+rand half   n= 20 | right%   25 | resolved%  100 | wrong-confident%   75 | hops 2.00 (1-hop    0%) | gap heat start  0.97 end  0.00
+rand direct n= 60 | right%   35 | resolved%   98 | wrong-confident%   63 | hops 1.75 (1-hop   25%) | gap heat start  0.97 end  0.02
+== world=rev trial=sit skipempty=1
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+gap  join   n= 60 | right%   18 | resolved%   98 | wrong-confident%   80 | hops 1.98 (1-hop    2%) | gap heat start  0.98 end  0.02
+gap  half   n= 20 | right%   15 | resolved%  100 | wrong-confident%   85 | hops 2.00 (1-hop    0%) | gap heat start  0.97 end  0.00
+gap  direct n= 60 | right%   97 | resolved%   98 | wrong-confident%    2 | hops 1.02 (1-hop   98%) | gap heat start  0.97 end  0.02
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+rand join   n= 60 | right%   27 | resolved%   98 | wrong-confident%   72 | hops 1.98 (1-hop    2%) | gap heat start  0.98 end  0.02
+rand half   n= 20 | right%   25 | resolved%  100 | wrong-confident%   75 | hops 2.00 (1-hop    0%) | gap heat start  0.97 end  0.00
+rand direct n= 60 | right%   42 | resolved%   98 | wrong-confident%   57 | hops 1.70 (1-hop   30%) | gap heat start  0.97 end  0.02
+== world=rev trial=seg skipempty=0
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+gap  join   n= 60 | right%   97 | resolved%   97 | wrong-confident%    0 | hops 2.00 (1-hop    0%) | gap heat start  0.98 end  0.03
+gap  half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 2.00 (1-hop    0%) | gap heat start  0.97 end  0.94
+gap  direct n= 60 | right%   97 | resolved%   97 | wrong-confident%    0 | hops 1.03 (1-hop   97%) | gap heat start  0.97 end  0.03
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+rand join   n= 60 | right%   33 | resolved%   33 | wrong-confident%    0 | hops 2.00 (1-hop    0%) | gap heat start  0.98 end  0.64
+rand half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 2.00 (1-hop    0%) | gap heat start  0.97 end  0.94
+rand direct n= 60 | right%   30 | resolved%   30 | wrong-confident%    0 | hops 1.60 (1-hop   40%) | gap heat start  0.97 end  0.67
+== world=rev trial=seg skipempty=1
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+gap  join   n= 60 | right%   97 | resolved%   97 | wrong-confident%    0 | hops 1.97 (1-hop    3%) | gap heat start  0.98 end  0.03
+gap  half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.94
+gap  direct n= 60 | right%   97 | resolved%   97 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.03
+frame fit (mean over seeds): rooms  1.00  containers  0.03
+rand join   n= 60 | right%   97 | resolved%   97 | wrong-confident%    0 | hops 1.97 (1-hop    3%) | gap heat start  0.98 end  0.03
+rand half   n= 20 | right%    0 | resolved%    0 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.94
+rand direct n= 60 | right%   27 | resolved%   27 | wrong-confident%    0 | hops 1.00 (1-hop  100%) | gap heat start  0.97 end  0.71
+
+== world fwd
+Sketch 12 (settling retrieval), on sketch 10/11: 16 chains (12 full, 4 half), 6 rooms (chance 17%), seeds 1,2,3,4,5. Queries with all machine states empty.
+condition              | join: right% bits perm% day-state% | half-chain ctrl: right% bits | free-run reaches room: empty / day-state / half-chain any room | direct: K in->C(rank)% C in->R decode/rank% | went% rule% ruleGen% | rows replayed
+S 1 none               |     15   0.05    7   13 |          15  -0.46         |       2    0    0  |       100               98 / 100        |   94  100  100    | top-1 after (K,in) is C:  100 | 0 (hot   68% of rows)
+S+C 2 after, hot       |     37   0.21   13   33 |          15  -0.46         |      35   25   10  |       100               98 /  98        |   87  100  100    | top-1 after (K,in) is C:  100 | 515 (hot   68% of rows)
+S+E 2 after, hot       |     15   0.05    7   12 |          15  -0.46         |       2    0    0  |       100               98 / 100        |   98  100  100    | top-1 after (K,in) is C:  100 | 530 (hot   68% of rows)
+S+EX after, hot        |     32   0.16    5   30 |          20  -0.44         |      17   15    5  |       100               98 / 100        |   77   99  100    | top-1 after (K,in) is C:  100 | 537 (hot   68% of rows)
+
+Join queries: input to right room minus mean input to other rooms, by source route (summed weights)
+== world rev
+Sketch 12 (settling retrieval), on sketch 10/11: 16 chains (12 full, 4 half), 6 rooms (chance 17%), seeds 1,2,3,4,5. Queries with all machine states empty.
+condition              | join: right% bits perm% day-state% | half-chain ctrl: right% bits | free-run reaches room: empty / day-state / half-chain any room | direct: K in->C(rank)% C in->R decode/rank% | went% rule% ruleGen% | rows replayed
+S 1 none               |      8   0.05    5   10 |          45  -0.37         |       3    0   45  |         8                2 /   9        |   96  100  100    | top-1 after (K,in) is C:    3 | 0 (hot   73% of rows)
+S+C 2 after, hot       |      8   0.05    7    8 |          43  -0.37         |      10    2   40  |        10                5 /  12        |   67   96  100    | top-1 after (K,in) is C:    5 | 569 (hot   73% of rows)
+S+E 2 after, hot       |      8   0.05    5   10 |          45  -0.37         |       3    0   50  |         8                5 /   9        |   93  100  100    | top-1 after (K,in) is C:    5 | 557 (hot   73% of rows)
+S+EX after, hot        |     10   0.06   17   13 |          35  -0.38         |       7    5   40  |         8                3 /   9        |   76  100  100    | top-1 after (K,in) is C:    7 | 569 (hot   73% of rows)
+
+Join queries: input to right room minus mean input to other rooms, by source route (summed weights)

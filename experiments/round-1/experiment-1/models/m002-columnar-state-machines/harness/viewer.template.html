@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Columnar State Machines</title>
+<style>
+  :root { --bg:#f6f5f1; --fg:#1d1d1b; --mut:#6b6a64; --line:#d8d6cf; --panel:#ffffff; --acc:#c2410c; --cool:#2563eb; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#151514; --fg:#ecebe6; --mut:#9a988f; --line:#33322f; --panel:#1e1e1c; --acc:#fb923c; --cool:#60a5fa; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.45 system-ui, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  p.sub { color: var(--mut); margin: 0 0 14px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+  .row { display:flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  button { font: inherit; padding: 5px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer; }
+  button:hover { border-color: var(--mut); }
+  #text { font: 15px/1.6 ui-monospace, Menlo, monospace; white-space: pre-wrap; word-break: break-all; }
+  #text span.past { color: var(--mut); }
+  #text span.cur { background: var(--acc); color: #fff; border-radius: 2px; }
+  .lbl { color: var(--mut); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
+  canvas { width: 100%; display:block; }
+  .stats { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+  .stat b { display:block; font-size: 18px; font-variant-numeric: tabular-nums; }
+  .stat span { color: var(--mut); font-size: 12px; }
+  #chain { font: 13px ui-monospace, Menlo, monospace; }
+  #chain div { padding: 1px 0; }
+  .legend { color: var(--mut); font-size: 12px; }
+  .sw { display:inline-block; width: 10px; height: 10px; border-radius: 2px; vertical-align: -1px; margin: 0 3px 0 10px; }
+  input[type=range] { width: 160px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Columnar homeostatic state machines (m002)</h1>
+  <p class="sub">A recorded stretch of the online run. One column per character; each square is a cell (that character in one learnt context). Colour shows temperature: blue = frozen, orange/red = hot. Outlined squares are the active state chain; dots mark the state each column is holding.</p>
+
+  <div class="panel">
+    <div class="row">
+      <button id="play">Play</button>
+      <button id="back">Step back</button>
+      <button id="step">Step</button>
+      <label class="legend">speed <input id="speed" type="range" min="1" max="30" value="8"></label>
+      <span id="tlabel" class="legend"></span>
+    </div>
+  </div>
+
+  <div class="panel"><div class="lbl">Incoming text</div><div id="text"></div></div>
+
+  <div class="panel">
+    <div class="stats">
+      <div class="stat"><b id="sch"></b><span>character arriving</span></div>
+      <div class="stat"><b id="sbits"></b><span>surprise (bits)</span></div>
+      <div class="stat"><b id="sheat"></b><span>mean heat of active cells</span></div>
+      <div class="stat"><b id="spred"></b><span>what was primed (top 4)</span></div>
+      <div class="stat"><b id="srec"></b><span>fresh cell recruited for context</span></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="lbl">Energy over the recorded stretch: surprise (bits, thin) and active-cell heat (thick)</div>
+    <canvas id="energy" height="120"></canvas>
+  </div>
+
+  <div class="panel">
+    <div class="lbl">Columns and their cells</div>
+    <canvas id="cols" height="420"></canvas>
+    <div class="legend" style="margin-top:6px">
+      <span class="sw" style="background:#2563eb"></span>frozen
+      <span class="sw" style="background:#9ca3af"></span>cool, not yet frozen
+      <span class="sw" style="background:#f97316"></span>warm
+      <span class="sw" style="background:#dc2626"></span>hot
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="lbl">Active chain after this step (general to specific); the label is the context the cell stands for</div>
+    <div id="chain"></div>
+  </div>
+
+  <div class="panel">
+    <div class="lbl">Whole run: bits per char per 1000-char window (line) and cells recruited per window (bars)</div>
+    <canvas id="whole" height="140"></canvas>
+  </div>
+</main>
+<script>
+const TRACE = /*__TRACE__*/null;
+const F = TRACE.frames, AL = TRACE.alphabet;
+// Rebuild the full per-column cell picture for each frame from the deltas.
+// cells are [heat*25 (0..50), frozenness*10 (0..10)]
+(function rebuild() {
+  let cols = AL.split('').map(() => []);
+  for (const f of F) {
+    cols = cols.map((c) => c.slice());
+    for (const [c, kind, v] of f.d) {
+      if (kind === 'all') { const a = []; for (let k = 0; k < v.length; k += 2) a.push([v[k], v[k + 1]]); cols[c] = a; }
+      else for (let k = 0; k < v.length; k += 3) cols[c][v[k]] = [v[k + 1], v[k + 2]];
+    }
+    f.cols = cols.map((cells, c) => ({ cells, held: f.held[c] }));
+  }
+})();
+let i = 0, playing = false, acc = 0;
+const $ = (id) => document.getElementById(id);
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+function fit(c) {
+  const r = c.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+  const h = +c.getAttribute('height');
+  c.width = r.width * d; c.height = h * d; c.style.height = h + 'px';
+  const x = c.getContext('2d'); x.setTransform(d, 0, 0, d, 0, 0); return [x, r.width, h];
+}
+function cellColor(h, F, flick) {
+  // h: heat*25, F: frozenness*10
+  if (F >= 8) return '#2563eb';
+  const heat = h / 25;
+  if (heat > 1) return flick ? '#ef4444' : '#dc2626';
+  if (heat > 0.4) return flick ? '#fb923c' : '#f97316';
+  return F > 4 ? '#7c93c4' : '#9ca3af';
+}
+
+function drawText() {
+  const f = F[i], rel = f.t - TRACE.start;
+  const s = TRACE.text, a = Math.max(0, rel - 160), b = Math.min(s.length, rel + 60);
+  const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  $('text').innerHTML = `<span class="past">${esc(s.slice(a, rel))}</span><span class="cur">${s[rel] === ' ' ? '&nbsp;' : esc(s[rel])}</span>${esc(s.slice(rel + 1, b))}`;
+}
+function drawEnergy() {
+  const [x, w, h] = fit($('energy'));
+  const n = F.length, mx = 6;
+  x.strokeStyle = css('--line'); x.beginPath(); x.moveTo(0, h - 0.5); x.lineTo(w, h - 0.5); x.stroke();
+  const line = (key, color, lw) => {
+    x.strokeStyle = color; x.lineWidth = lw; x.beginPath();
+    F.forEach((f, k) => { const px = k / (n - 1) * w, py = h - Math.min(mx, f[key]) / mx * (h - 6); k ? x.lineTo(px, py) : x.moveTo(px, py); });
+    x.stroke();
+  };
+  line('bits', css('--mut'), 1);
+  line('heat', css('--acc'), 2.5);
+  const px = i / (n - 1) * w;
+  x.strokeStyle = css('--fg'); x.lineWidth = 1; x.beginPath(); x.moveTo(px, 0); x.lineTo(px, h); x.stroke();
+}
+function drawCols(tick) {
+  const [x, w, h] = fit($('cols'));
+  const f = F[i], nc = AL.length, cw = w / nc, top = 18;
+  // choose the largest square size at which the fullest column still fits
+  const most = Math.max(...f.cols.map((c) => c.cells.length));
+  let s = 9, per = 1;
+  for (; s > 1; s--) { per = Math.max(1, Math.floor((cw - 2) / (s + 1))); if (top + Math.ceil(most / per) * (s + 1) <= h) break; }
+  const active = new Map(f.active.map((a) => [a.col + ':' + a.k, a]));
+  x.font = '12px ui-monospace, monospace'; x.textAlign = 'center';
+  for (let c = 0; c < nc; c++) {
+    const col = f.cols[c], x0 = c * cw + 1;
+    x.fillStyle = c === AL.indexOf(f.ch) ? css('--acc') : css('--mut');
+    x.fillText(AL[c] === ' ' ? '␣' : AL[c], x0 + cw / 2, 12);
+    col.cells.forEach(([hh, FF], k) => {
+      const cx = x0 + (k % per) * (s + 1), cy = top + Math.floor(k / per) * (s + 1);
+      if (cy > h - s) return;
+      const flick = hh > 10 && FF < 8 && ((tick + k) & 1);
+      x.fillStyle = cellColor(hh, FF, flick);
+      x.fillRect(cx, cy, s, s);
+      if (active.has(c + ':' + k)) { x.strokeStyle = css('--fg'); x.lineWidth = 2; x.strokeRect(cx - 1, cy - 1, s + 2, s + 2); }
+      if (col.held === k) { x.fillStyle = css('--fg'); x.beginPath(); x.arc(cx + s / 2, cy + s / 2, 1.5, 0, 7); x.fill(); }
+    });
+  }
+}
+function drawWhole() {
+  const [x, w, h] = fit($('whole'));
+  const W = TRACE.windows, n = W.length, mxb = Math.max(...W.map((v) => v.bpc)), mxr = Math.max(...W.map((v) => v.recruits));
+  W.forEach((v, k) => {
+    const bw = w / n; x.fillStyle = css('--line');
+    const bh = v.recruits / mxr * (h - 20); x.fillRect(k * bw + 1, h - bh, bw - 2, bh);
+  });
+  x.strokeStyle = css('--acc'); x.lineWidth = 2; x.beginPath();
+  W.forEach((v, k) => { const px = (k + 0.5) / n * w, py = h - v.bpc / mxb * (h - 20); k ? x.lineTo(px, py) : x.moveTo(px, py); });
+  x.stroke();
+  x.fillStyle = css('--mut'); x.font = '12px system-ui'; x.textAlign = 'left';
+  x.fillText(`bpc ${W[0].bpc} at start, ${W[n - 1].bpc} at end; cells ${W[n - 1].cells}`, 6, 14);
+  const tr = (TRACE.start + F.length / 2) / W[n - 1].t * w;
+  x.fillStyle = css('--cool'); x.fillRect(TRACE.start / W[n - 1].t * w, h - 4, F.length / W[n - 1].t * w, 4);
+}
+function drawInfo() {
+  const f = F[i];
+  $('sch').textContent = JSON.stringify(f.ch);
+  $('sbits').textContent = f.bits.toFixed(2);
+  $('sheat').textContent = f.heat.toFixed(2);
+  $('spred').textContent = f.top.map(([c, p]) => `${c === ' ' ? '␣' : c} ${Math.round(p * 100)}%`).join('  ');
+  $('srec').textContent = f.recruited ? JSON.stringify(f.recruited) : '—';
+  $('tlabel').textContent = `step ${i + 1} / ${F.length} (stream position ${f.t})`;
+  $('chain').innerHTML = f.active.slice().reverse().map((a) =>
+    `<div>column ${JSON.stringify(AL[a.col])} cell #${a.k} · context ${JSON.stringify(a.label)} · heat ${a.h.toFixed(2)} · frozen ${Math.round(a.F * 100)}%</div>`).join('');
+}
+let tick = 0;
+function render() { drawText(); drawInfo(); drawEnergy(); drawCols(tick); }
+function loop() {
+  tick++;
+  if (playing) { acc += +$('speed').value / 30; while (acc >= 1) { acc -= 1; i = (i + 1) % F.length; } }
+  render(); setTimeout(() => requestAnimationFrame(loop), 60);
+}
+$('play').onclick = () => { playing = !playing; $('play').textContent = playing ? 'Pause' : 'Play'; };
+$('step').onclick = () => { playing = false; $('play').textContent = 'Play'; i = Math.min(F.length - 1, i + 1); render(); };
+$('back').onclick = () => { playing = false; $('play').textContent = 'Play'; i = Math.max(0, i - 1); render(); };
+window.onresize = () => { render(); drawWhole(); };
+drawWhole(); loop();
+</script>
+</body>
+</html>

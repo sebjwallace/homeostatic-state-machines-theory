@@ -1,0 +1,29 @@
+Sketch 10: earned joins. 16 chains (12 full, 4 half), 6 rooms (chance 17%), seeds 1,2,3,4,5. Queries with all machine states empty.
+condition              | join: right% bits perm% day-state% | half-chain ctrl: right% bits | free-run reaches room: empty / day-state / half-chain any room | direct: K in->C(rank)% C in->R decode/rank% | went% rule% ruleGen% | rows replayed
+1 none                 |     23   0.08   10   12 |          10  -0.45         |       7    2    0  |       100               95 /  97        |   92  100  100    | top-1 after (K,in) is C:   97 | 0 (hot   68% of rows)
+2 after, all/restore   |     23   0.07   10   12 |          10  -0.45         |       3    0    0  |       100               95 /  97        |   99  100  100    | top-1 after (K,in) is C:   97 | 549 (hot   68% of rows)
+2 after, hot/restore   |     23   0.07   10   12 |          10  -0.45         |       7    2    0  |       100               97 /  97        |   93  100  100    | top-1 after (K,in) is C:   97 | 376 (hot   68% of rows)
+2 after, hot/stream    |     23   0.07   10   12 |          10  -0.45         |       7    7   20  |       100               95 /  95        |   92   34   70    | top-1 after (K,in) is C:   97 | 376 (hot   68% of rows)
+3 before, all/restore  |     23   0.08   10   12 |          15  -0.45         |       7    2    0  |       100               97 / 100        |   93  100  100    | top-1 after (K,in) is C:   97 | 276 (hot   68% of rows)
+3 before, hot/restore  |     23   0.07   10   12 |          15  -0.46         |       7    2    0  |       100               98 / 100        |   92  100  100    | top-1 after (K,in) is C:   97 | 206 (hot   68% of rows)
+3 before, hot/stream   |     22   0.08   10   10 |          15  -0.45         |       5    7   20  |       100               98 / 100        |   92   87  100    | top-1 after (K,in) is C:   97 | 206 (hot   72% of rows)
+4 after, hot/shuffle   |     24   0.08   11   14 |           8  -0.48         |       5    0   10  |       100               90 /  97        |   92   64   80    | top-1 after (K,in) is C:   87 | 376 (hot   68% of rows)
+5 after, hot/chain     |     23   0.08   10   10 |          10  -0.46         |       7    3   15  |       100               88 /  88        |   93   44   60    | top-1 after (K,in) is C:   97 | 376 (hot   68% of rows)
+5 before, hot/chain    |     22   0.07   10   10 |          15  -0.44         |       5    2   15  |       100               97 /  98        |   92   89   80    | top-1 after (K,in) is C:   97 | 206 (hot   72% of rows)
+5 after, all/chain     |     23   0.07   10   12 |          10  -0.45         |       3    0    0  |       100               97 /  97        |   99  100  100    | top-1 after (K,in) is C:   97 | 549 (hot   68% of rows)
+
+Join queries: input to right room minus mean input to other rooms, by source route (summed weights)
+condition              |     sym    seq    day   time    who  whereweather  joint
+1 none                 |    2.79   0.02   0.00   0.00   0.00   0.00   0.00   1.85
+2 after, all/restore   |    2.72   0.02   0.00   0.00   0.00   0.00   0.00   1.84
+2 after, hot/restore   |    2.73   0.02   0.00   0.00   0.00   0.00   0.00   1.84
+2 after, hot/stream    |    2.73   0.02   0.00   0.00   0.00   0.00   0.00   1.85
+3 before, all/restore  |    2.89   0.02   0.00   0.00   0.00   0.00   0.00   1.85
+3 before, hot/restore  |    2.78   0.02   0.00   0.00   0.00   0.00   0.00   1.85
+3 before, hot/stream   |    2.91   0.02   0.00   0.00   0.00   0.00   0.00   1.85
+4 after, hot/shuffle   |    3.10  -0.05   0.00   0.00   0.00   0.00   0.00   1.85
+5 after, hot/chain     |    2.97   0.02   0.00   0.00   0.00   0.00   0.00   1.85
+5 before, hot/chain    |    2.69   0.02   0.00   0.00   0.00   0.00   0.00   1.85
+5 after, all/chain     |    2.72   0.02   0.00   0.00   0.00   0.00   0.00   1.84
+
+[7.7 s]

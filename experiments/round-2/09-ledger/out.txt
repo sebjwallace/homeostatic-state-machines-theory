@@ -1,0 +1,114 @@
+
+===== 50 days, seeds 1,2,3 =====
+
+(1+3) Whole-day reconstruction from the opening cue: ledger read where a row matches the exact situation, automaton otherwise
+consolidation | ledger           | rows % | perfect% events% | steps read from ledger %
+none          | none (automaton) |    0   |   43      75   |    0
+none          | all              |  100   |  100     100   |  100
+none          | fail             |   63   |   45      76   |   50
+none          | soft             |   75   |   75      90   |   67
+none          | heat             |   64   |   52      79   |   52
+none          | surprise         |   63   |   45      76   |   50
+none          | random           |   75   |   83      94   |   72
+none          | predSoft         |   12   |   72      89   |   10
+none          | pred             |   37   |   96      98   |   39
+none          | randomPred       |   37   |   56      80   |   33
+none          | oracle           |    4   |  100     100   |    4
+none          | pred, last 20% d |    8   |   49      77   |    9
+all           | none (automaton) |    0   |   63      87   |    0
+all           | all              |  100   |  100     100   |  100
+all           | fail             |   63   |   66      88   |   55
+all           | soft             |   73   |   85      94   |   67
+all           | heat             |   64   |   71      90   |   57
+all           | surprise         |   62   |   66      88   |   55
+all           | random           |   73   |   88      96   |   69
+all           | predSoft         |   10   |   81      92   |    9
+all           | pred             |   37   |   94      98   |   39
+all           | randomPred       |   38   |   76      91   |   36
+all           | oracle           |    3   |  100     100   |    3
+all           | pred, last 20% d |    8   |   64      87   |    9
+soft          | none (automaton) |    0   |   55      81   |    0
+soft          | all              |  100   |  100     100   |  100
+soft          | fail             |   63   |   57      82   |   52
+soft          | soft             |   73   |   76      89   |   65
+soft          | heat             |   64   |   63      85   |   55
+soft          | surprise         |   63   |   57      82   |   52
+soft          | random           |   73   |   85      95   |   71
+soft          | predSoft         |   10   |   73      87   |    9
+soft          | pred             |   37   |   94      98   |   38
+soft          | randomPred       |   37   |   63      86   |   33
+soft          | oracle           |    3   |  100     100   |    3
+soft          | pred, last 20% d |    8   |   57      82   |    9
+
+(2) Content-addressable lookup on the full ledger (3 targets per day, any non-clock row)
+cue                       | exact row% | right day+place% | right day% | mean ties | misses land on
+weather+who+time          |      23    |        38        |      57    |      7.8  | other day, same who+where 38%, same day, other place 31%, other day, same who 31%
+weather+who+time+/-1      |       3    |        17        |      38    |     25.8  | other day, same who 30%, same day, other place 25%, other day, same who+where 25%, other day, other who+where 18%, other day, same where 2%
+who+where+weather+time    |      47    |        74        |      74    |      4.7  | other day, same who+where 100%
+all 7, one wrong          |      95    |        96        |      96    |      1.1  | other day, same who+where 74%, other day, same where 26%
+all 7, day wrong          |      85    |        85        |      85    |      1.5  | other day, same who+where 89%, other day, same where 11%
+day+where (clean)         |      20    |       100        |     100    |      7.1  | 
+
+(4+5) Automaton after nightly replay of that day's ledger rows (learning on). old = first 80% of days (their rows pruned)
+consolidation | gen place-rule all/hard | one-step all | old days: specific(meet/move) rule | alone perf: old/new | pred ledger pruned: old-day perf | %hard day/joint/where
+none          |         81 /   17       |       96     |          92            94    |     36 /  73    |        36  (n gen=259)  |    0    0   20
+all           |         80 /   98       |       97     |          95            94    |     58 /  83    |        58  (n gen=259)  |    3    1   34
+soft          |         80 /   98       |       97     |          95            94    |     49 /  77    |        49  (n gen=259)  |    3    1   34
+
+===== 200 days, seeds 1,2,3 =====
+
+(1+3) Whole-day reconstruction from the opening cue: ledger read where a row matches the exact situation, automaton otherwise
+consolidation | ledger           | rows % | perfect% events% | steps read from ledger %
+none          | none (automaton) |    0   |   36      70   |    0
+none          | all              |  100   |  100     100   |  100
+none          | fail             |   57   |   37      71   |   40
+none          | soft             |   68   |   61      84   |   56
+none          | heat             |   59   |   43      75   |   44
+none          | surprise         |   57   |   37      71   |   40
+none          | random           |   68   |   70      88   |   61
+none          | predSoft         |   11   |   58      82   |    8
+none          | pred             |   43   |   95      98   |   44
+none          | randomPred       |   43   |   56      81   |   38
+none          | oracle           |    5   |  100     100   |    6
+none          | pred, last 20% d |    9   |   43      74   |   10
+all           | none (automaton) |    0   |   50      79   |    0
+all           | all              |  100   |  100     100   |  100
+all           | fail             |   58   |   54      80   |   46
+all           | soft             |   68   |   70      89   |   59
+all           | heat             |   60   |   57      83   |   50
+all           | surprise         |   58   |   53      80   |   46
+all           | random           |   68   |   81      92   |   64
+all           | predSoft         |   10   |   65      86   |    8
+all           | pred             |   42   |   93      97   |   43
+all           | randomPred       |   42   |   65      86   |   38
+all           | oracle           |    3   |  100     100   |    4
+all           | pred, last 20% d |    9   |   54      80   |    9
+soft          | none (automaton) |    0   |   39      73   |    0
+soft          | all              |  100   |  100     100   |  100
+soft          | fail             |   58   |   42      74   |   43
+soft          | soft             |   68   |   57      82   |   56
+soft          | heat             |   60   |   49      78   |   48
+soft          | surprise         |   58   |   42      74   |   43
+soft          | random           |   68   |   74      89   |   62
+soft          | predSoft         |   10   |   53      80   |    7
+soft          | pred             |   42   |   94      98   |   43
+soft          | randomPred       |   42   |   57      82   |   36
+soft          | oracle           |    4   |  100     100   |    5
+soft          | pred, last 20% d |    9   |   47      76   |    9
+
+(2) Content-addressable lookup on the full ledger (3 targets per day, any non-clock row)
+cue                       | exact row% | right day+place% | right day% | mean ties | misses land on
+weather+who+time          |      10    |        18        |      28    |     20.6  | other day, same who 47%, other day, same who+where 40%, same day, other place 12%
+weather+who+time+/-1      |       2    |         9        |      20    |     47.9  | other day, same who 49%, other day, same who+where 30%, same day, other place 12%, other day, other who+where 9%, other day, same where 0%
+who+where+weather+time    |      34    |        54        |      54    |     12.0  | other day, same who+where 100%
+all 7, one wrong          |      92    |        92        |      92    |      1.5  | other day, same who+where 86%, other day, same where 10%, other day, same who 3%, same day, other place 1%
+all 7, day wrong          |      68    |        68        |      68    |      2.9  | other day, same who+where 96%, other day, same where 4%
+day+where (clean)         |      20    |       100        |     100    |      6.9  | 
+
+(4+5) Automaton after nightly replay of that day's ledger rows (learning on). old = first 80% of days (their rows pruned)
+consolidation | gen place-rule all/hard | one-step all | old days: specific(meet/move) rule | alone perf: old/new | pred ledger pruned: old-day perf | %hard day/joint/where
+none          |         68 /   83       |       95     |          91            86    |     30 /  58    |        30  (n gen=701)  |    1    0   27
+all           |         61 /   69       |       97     |          95            91    |     44 /  77    |        44  (n gen=701)  |    5    4   44
+soft          |         61 /   69       |       96     |          94            90    |     34 /  61    |        34  (n gen=701)  |    5    4   44
+
+[87.5 s]

@@ -1,0 +1,27 @@
+# Rust build output
+target/
+
+# Go build output
+exp04/external/bin/
+*.exe
+*.test
+
+# Harness scratch runs (per-model iteration output; the main results stay)
+results/runs/
+
+# Large grid-world traces (keep if you want them replayable from the repo)
+gridworld/results/traces/
+gridworld/models/*/results/traces/
+
+# Node (none used yet, but sketches may grow)
+node_modules/
+
+# Archives
+*.zip
+
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

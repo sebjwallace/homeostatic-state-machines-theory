@@ -1,0 +1,2218 @@
+{
+ "config": {
+  "seed": 1,
+  "length": 40000,
+  "model": {},
+  "heatSpread": {
+   "sigma": 1,
+   "nEval": 8,
+   "tau": 1.5
+  },
+  "window": 1000,
+  "trackWords": [
+   "the",
+   "she",
+   "cat",
+   "dog",
+   "saw",
+   "sat",
+   "on",
+   "a",
+   "quick",
+   "lazy",
+   "shells",
+   "house"
+  ],
+  "traceStart": 30000,
+  "traceLen": 400,
+  "thinkLen": 3000,
+  "quietSteps": 20,
+  "modelParams": {
+   "N": 4096,
+   "a": 4,
+   "theta": 0.75,
+   "kappa": 0.3,
+   "sigma": 0,
+   "hSplit": 0.25,
+   "minUses": 1,
+   "nEval": 12,
+   "tau": 2,
+   "phi": 0.05,
+   "split": true,
+   "freezeOnFail": true,
+   "burstFallback": true
+  }
+ },
+ "prediction": {
+  "chars": 40028,
+  "bpc": {
+   "model": {
+    "full": 1.378,
+    "final20": 1.213
+   },
+   "order2": {
+    "full": 1.834,
+    "final20": 1.587
+   },
+   "order3": {
+    "full": 1.783,
+    "final20": 1.385
+   },
+   "wittenBell5_reference": {
+    "full": 1.016,
+    "final20": 0.87
+   }
+  },
+  "curve": [
+   {
+    "t": 1000,
+    "model": 2.916,
+    "order2": 3.663,
+    "order3": 3.842,
+    "wittenBell5_reference": 2.842,
+    "energy": 0.631,
+    "splits": 221,
+    "newAssemblies": 243
+   },
+   {
+    "t": 2000,
+    "model": 2.057,
+    "order2": 2.921,
+    "order3": 3.199,
+    "wittenBell5_reference": 1.557,
+    "energy": 0.486,
+    "splits": 194,
+    "newAssemblies": 194
+   },
+   {
+    "t": 3000,
+    "model": 1.719,
+    "order2": 2.478,
+    "order3": 2.803,
+    "wittenBell5_reference": 1.393,
+    "energy": 0.422,
+    "splits": 112,
+    "newAssemblies": 112
+   },
+   {
+    "t": 4000,
+    "model": 1.614,
+    "order2": 2.299,
+    "order3": 2.534,
+    "wittenBell5_reference": 1.218,
+    "energy": 0.396,
+    "splits": 88,
+    "newAssemblies": 88
+   },
+   {
+    "t": 5000,
+    "model": 1.603,
+    "order2": 2.231,
+    "order3": 2.389,
+    "wittenBell5_reference": 1.068,
+    "energy": 0.406,
+    "splits": 92,
+    "newAssemblies": 92
+   },
+   {
+    "t": 6000,
+    "model": 1.452,
+    "order2": 2.083,
+    "order3": 2.23,
+    "wittenBell5_reference": 1.153,
+    "energy": 0.376,
+    "splits": 35,
+    "newAssemblies": 32
+   },
+   {
+    "t": 7000,
+    "model": 1.43,
+    "order2": 2.039,
+    "order3": 2.155,
+    "wittenBell5_reference": 1.088,
+    "energy": 0.374,
+    "splits": 41,
+    "newAssemblies": 41
+   },
+   {
+    "t": 8000,
+    "model": 1.445,
+    "order2": 2.012,
+    "order3": 2.098,
+    "wittenBell5_reference": 1.085,
+    "energy": 0.374,
+    "splits": 37,
+    "newAssemblies": 37
+   },
+   {
+    "t": 9000,
+    "model": 1.539,
+    "order2": 2.002,
+    "order3": 2.046,
+    "wittenBell5_reference": 1.208,
+    "energy": 0.379,
+    "splits": 31,
+    "newAssemblies": 35
+   },
+   {
+    "t": 10000,
+    "model": 1.347,
+    "order2": 1.852,
+    "order3": 1.907,
+    "wittenBell5_reference": 0.979,
+    "energy": 0.371,
+    "splits": 36,
+    "newAssemblies": 35
+   },
+   {
+    "t": 11000,
+    "model": 1.373,
+    "order2": 1.865,
+    "order3": 1.891,
+    "wittenBell5_reference": 1.026,
+    "energy": 0.374,
+    "splits": 22,
+    "newAssemblies": 22
+   },
+   {
+    "t": 12000,
+    "model": 1.253,
+    "order2": 1.727,
+    "order3": 1.727,
+    "wittenBell5_reference": 0.931,
+    "energy": 0.362,
+    "splits": 15,
+    "newAssemblies": 15
+   },
+   {
+    "t": 13000,
+    "model": 1.38,
+    "order2": 1.854,
+    "order3": 1.82,
+    "wittenBell5_reference": 0.911,
+    "energy": 0.386,
+    "splits": 36,
+    "newAssemblies": 36
+   },
+   {
+    "t": 14000,
+    "model": 1.346,
+    "order2": 1.732,
+    "order3": 1.751,
+    "wittenBell5_reference": 0.991,
+    "energy": 0.375,
+    "splits": 22,
+    "newAssemblies": 22
+   },
+   {
+    "t": 15000,
+    "model": 1.284,
+    "order2": 1.673,
+    "order3": 1.665,
+    "wittenBell5_reference": 0.93,
+    "energy": 0.371,
+    "splits": 20,
+    "newAssemblies": 20
+   },
+   {
+    "t": 16000,
+    "model": 1.309,
+    "order2": 1.68,
+    "order3": 1.663,
+    "wittenBell5_reference": 0.965,
+    "energy": 0.37,
+    "splits": 20,
+    "newAssemblies": 20
+   },
+   {
+    "t": 17000,
+    "model": 1.334,
+    "order2": 1.781,
+    "order3": 1.699,
+    "wittenBell5_reference": 0.957,
+    "energy": 0.38,
+    "splits": 20,
+    "newAssemblies": 20
+   },
+   {
+    "t": 18000,
+    "model": 1.331,
+    "order2": 1.722,
+    "order3": 1.666,
+    "wittenBell5_reference": 0.96,
+    "energy": 0.376,
+    "splits": 22,
+    "newAssemblies": 22
+   },
+   {
+    "t": 19000,
+    "model": 1.359,
+    "order2": 1.694,
+    "order3": 1.613,
+    "wittenBell5_reference": 0.988,
+    "energy": 0.397,
+    "splits": 23,
+    "newAssemblies": 23
+   },
+   {
+    "t": 20000,
+    "model": 1.352,
+    "order2": 1.806,
+    "order3": 1.657,
+    "wittenBell5_reference": 0.842,
+    "energy": 0.379,
+    "splits": 16,
+    "newAssemblies": 16
+   },
+   {
+    "t": 21000,
+    "model": 1.284,
+    "order2": 1.63,
+    "order3": 1.541,
+    "wittenBell5_reference": 0.929,
+    "energy": 0.376,
+    "splits": 16,
+    "newAssemblies": 16
+   },
+   {
+    "t": 22000,
+    "model": 1.296,
+    "order2": 1.657,
+    "order3": 1.585,
+    "wittenBell5_reference": 0.95,
+    "energy": 0.371,
+    "splits": 12,
+    "newAssemblies": 11
+   },
+   {
+    "t": 23000,
+    "model": 1.266,
+    "order2": 1.697,
+    "order3": 1.546,
+    "wittenBell5_reference": 0.854,
+    "energy": 0.376,
+    "splits": 5,
+    "newAssemblies": 5
+   },
+   {
+    "t": 24000,
+    "model": 1.24,
+    "order2": 1.577,
+    "order3": 1.483,
+    "wittenBell5_reference": 0.865,
+    "energy": 0.364,
+    "splits": 4,
+    "newAssemblies": 4
+   },
+   {
+    "t": 25000,
+    "model": 1.223,
+    "order2": 1.623,
+    "order3": 1.472,
+    "wittenBell5_reference": 0.828,
+    "energy": 0.366,
+    "splits": 4,
+    "newAssemblies": 4
+   },
+   {
+    "t": 26000,
+    "model": 1.252,
+    "order2": 1.639,
+    "order3": 1.506,
+    "wittenBell5_reference": 0.914,
+    "energy": 0.375,
+    "splits": 7,
+    "newAssemblies": 7
+   },
+   {
+    "t": 27000,
+    "model": 1.276,
+    "order2": 1.605,
+    "order3": 1.525,
+    "wittenBell5_reference": 0.929,
+    "energy": 0.369,
+    "splits": 7,
+    "newAssemblies": 7
+   },
+   {
+    "t": 28000,
+    "model": 1.239,
+    "order2": 1.643,
+    "order3": 1.478,
+    "wittenBell5_reference": 0.877,
+    "energy": 0.362,
+    "splits": 5,
+    "newAssemblies": 5
+   },
+   {
+    "t": 29000,
+    "model": 1.277,
+    "order2": 1.639,
+    "order3": 1.498,
+    "wittenBell5_reference": 0.914,
+    "energy": 0.38,
+    "splits": 6,
+    "newAssemblies": 6
+   },
+   {
+    "t": 30000,
+    "model": 1.216,
+    "order2": 1.613,
+    "order3": 1.439,
+    "wittenBell5_reference": 0.881,
+    "energy": 0.364,
+    "splits": 5,
+    "newAssemblies": 4
+   },
+   {
+    "t": 31000,
+    "model": 1.203,
+    "order2": 1.648,
+    "order3": 1.447,
+    "wittenBell5_reference": 0.796,
+    "energy": 0.355,
+    "splits": 14,
+    "newAssemblies": 14
+   },
+   {
+    "t": 32000,
+    "model": 1.194,
+    "order2": 1.589,
+    "order3": 1.39,
+    "wittenBell5_reference": 0.859,
+    "energy": 0.363,
+    "splits": 5,
+    "newAssemblies": 5
+   },
+   {
+    "t": 33000,
+    "model": 1.213,
+    "order2": 1.626,
+    "order3": 1.41,
+    "wittenBell5_reference": 0.86,
+    "energy": 0.371,
+    "splits": 2,
+    "newAssemblies": 2
+   },
+   {
+    "t": 34000,
+    "model": 1.185,
+    "order2": 1.595,
+    "order3": 1.4,
+    "wittenBell5_reference": 0.85,
+    "energy": 0.362,
+    "splits": 8,
+    "newAssemblies": 8
+   },
+   {
+    "t": 35000,
+    "model": 1.2,
+    "order2": 1.546,
+    "order3": 1.389,
+    "wittenBell5_reference": 0.898,
+    "energy": 0.368,
+    "splits": 3,
+    "newAssemblies": 3
+   },
+   {
+    "t": 36000,
+    "model": 1.181,
+    "order2": 1.565,
+    "order3": 1.395,
+    "wittenBell5_reference": 0.894,
+    "energy": 0.361,
+    "splits": 6,
+    "newAssemblies": 6
+   },
+   {
+    "t": 37000,
+    "model": 1.207,
+    "order2": 1.585,
+    "order3": 1.351,
+    "wittenBell5_reference": 0.809,
+    "energy": 0.367,
+    "splits": 5,
+    "newAssemblies": 5
+   },
+   {
+    "t": 38000,
+    "model": 1.243,
+    "order2": 1.608,
+    "order3": 1.354,
+    "wittenBell5_reference": 0.866,
+    "energy": 0.379,
+    "splits": 14,
+    "newAssemblies": 14
+   },
+   {
+    "t": 39000,
+    "model": 1.254,
+    "order2": 1.578,
+    "order3": 1.399,
+    "wittenBell5_reference": 0.951,
+    "energy": 0.391,
+    "splits": 16,
+    "newAssemblies": 16
+   },
+   {
+    "t": 40000,
+    "model": 1.216,
+    "order2": 1.595,
+    "order3": 1.382,
+    "wittenBell5_reference": 0.837,
+    "energy": 0.365,
+    "splits": 10,
+    "newAssemblies": 10
+   },
+   {
+    "t": 40028,
+    "model": 1.345,
+    "order2": 1.504,
+    "order3": 1.368,
+    "wittenBell5_reference": 0.882,
+    "energy": 0.404,
+    "splits": 0,
+    "newAssemblies": 0
+   }
+  ],
+  "stats": {
+   "steps": 40028,
+   "reuse": 38256,
+   "burst": 343,
+   "base": 172,
+   "split": 1257,
+   "splitOk": 479,
+   "splitFail": 8,
+   "recruitedCells": 5140,
+   "assemblies": 1277,
+   "synapses": 147751
+  },
+  "ms": 3103,
+  "autocompletions": [
+   {
+    "prefix": "the quick brown f",
+    "model": "ok his bird.",
+    "order3": "ounder his bird."
+   },
+   {
+    "prefix": "she sells sea sh",
+    "model": "e sat big bird.",
+    "order3": "e sat slept today."
+   },
+   {
+    "prefix": "once upon a ti",
+    "model": "me tree sat sat sat sat sat sat sat sat ",
+    "order3": "me the sat slept today."
+   },
+   {
+    "prefix": "the rain in sp",
+    "model": "ain.",
+    "order3": "ain."
+   },
+   {
+    "prefix": "the cat sat o",
+    "model": "n the boy.",
+    "order3": "n his bird."
+   },
+   {
+    "prefix": "she saw a d",
+    "model": "og se sat sat sat sat sat sat sat sat sa",
+    "order3": "og slept today."
+   },
+   {
+    "prefix": "the little old h",
+    "model": "ouse sat sat sat sat sat sat sat sat sat",
+    "order3": "is bird."
+   }
+  ],
+  "ablations": {
+   "noSplit (no residual-heat recruitment)": {
+    "bpc": {
+     "full": 2.615,
+     "final20": 2.578
+    },
+    "assemblies": 28,
+    "splits": 0,
+    "ms": 1478
+   },
+   "heatSpread (sigma=1)": {
+    "bpc": {
+     "full": 1.62,
+     "final20": 1.463
+    },
+    "assemblies": 2006,
+    "splits": 2091,
+    "ms": 5656
+   },
+   "noFreezeOnFail": {
+    "bpc": {
+     "full": 1.375,
+     "final20": 1.221
+    },
+    "assemblies": 1286,
+    "splits": 1268,
+    "ms": 2754
+   },
+   "N=16384": {
+    "bpc": {
+     "full": 1.289,
+     "final20": 1.075
+    },
+    "assemblies": 1745,
+    "splits": 1729,
+    "ms": 2351
+   }
+  },
+  "otherSeeds": {
+   "seed2": {
+    "model": {
+     "full": 1.398,
+     "final20": 1.252
+    },
+    "order2": {
+     "full": 1.84,
+     "final20": 1.596
+    },
+    "order3": {
+     "full": 1.783,
+     "final20": 1.39
+    },
+    "wittenBell5_reference": {
+     "full": 1.003,
+     "final20": 0.861
+    }
+   },
+   "seed3": {
+    "model": {
+     "full": 1.467,
+     "final20": 1.313
+    },
+    "order2": {
+     "full": 1.846,
+     "final20": 1.583
+    },
+    "order3": {
+     "full": 1.785,
+     "final20": 1.385
+    },
+    "wittenBell5_reference": {
+     "full": 1.001,
+     "final20": 0.849
+    }
+   }
+  }
+ },
+ "completion": {
+  "synthetic": {
+   "patternSize": 40,
+   "population": 4096,
+   "rows": [
+    {
+     "stored": 100,
+     "half": {
+      "meanOverlap": 1,
+      "exact": 1
+     },
+     "quarter": {
+      "meanOverlap": 1,
+      "exact": 1
+     },
+     "eighth": {
+      "meanOverlap": 1,
+      "exact": 1
+     },
+     "half+noise": {
+      "meanOverlap": 1,
+      "exact": 1
+     }
+    },
+    {
+     "stored": 1000,
+     "half": {
+      "meanOverlap": 1,
+      "exact": 1
+     },
+     "quarter": {
+      "meanOverlap": 1,
+      "exact": 1
+     },
+     "eighth": {
+      "meanOverlap": 1,
+      "exact": 1
+     },
+     "half+noise": {
+      "meanOverlap": 1,
+      "exact": 1
+     }
+    },
+    {
+     "stored": 4000,
+     "half": {
+      "meanOverlap": 1,
+      "exact": 1
+     },
+     "quarter": {
+      "meanOverlap": 1,
+      "exact": 1
+     },
+     "eighth": {
+      "meanOverlap": 1,
+      "exact": 1
+     },
+     "half+noise": {
+      "meanOverlap": 1,
+      "exact": 1
+     }
+    },
+    {
+     "stored": 8000,
+     "half": {
+      "meanOverlap": 1,
+      "exact": 1
+     },
+     "quarter": {
+      "meanOverlap": 1,
+      "exact": 1
+     },
+     "eighth": {
+      "meanOverlap": 0.198,
+      "exact": 0
+     },
+     "half+noise": {
+      "meanOverlap": 0.996,
+      "exact": 0.9
+     }
+    },
+    {
+     "stored": 16000,
+     "half": {
+      "meanOverlap": 0.619,
+      "exact": 0
+     },
+     "quarter": {
+      "meanOverlap": 0.25,
+      "exact": 0
+     },
+     "eighth": {
+      "meanOverlap": 0.123,
+      "exact": 0
+     },
+     "half+noise": {
+      "meanOverlap": 0.241,
+      "exact": 0
+     }
+    }
+   ]
+  },
+  "trainedAssemblies": {
+   "tested": 556,
+   "exactlyRecalled": 510,
+   "recallRate": 0.917,
+   "note": "cue = half of each identifiable assembly (cells used by exactly one assembly), completion restricted to the assembly field"
+  }
+ },
+ "sequences": {
+  "default": {
+   "label": "default (sigma=0)",
+   "curve": [
+    {
+     "exposures": 10,
+     "xabcdy": {
+      "model_pCorrect": 0.488,
+      "baseline3_pCorrect": 0.158
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.488,
+      "baseline3_pCorrect": 0.158
+     }
+    },
+    {
+     "exposures": 20,
+     "xabcdy": {
+      "model_pCorrect": 0.546,
+      "baseline3_pCorrect": 0.25
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.447,
+      "baseline3_pCorrect": 0.208
+     }
+    },
+    {
+     "exposures": 30,
+     "xabcdy": {
+      "model_pCorrect": 0.532,
+      "baseline3_pCorrect": 0.293
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.465,
+      "baseline3_pCorrect": 0.259
+     }
+    },
+    {
+     "exposures": 40,
+     "xabcdy": {
+      "model_pCorrect": 0.474,
+      "baseline3_pCorrect": 0.294
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.524,
+      "baseline3_pCorrect": 0.324
+     }
+    },
+    {
+     "exposures": 50,
+     "xabcdy": {
+      "model_pCorrect": 0.499,
+      "baseline3_pCorrect": 0.333
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.499,
+      "baseline3_pCorrect": 0.333
+     }
+    },
+    {
+     "exposures": 60,
+     "xabcdy": {
+      "model_pCorrect": 0.516,
+      "baseline3_pCorrect": 0.364
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.483,
+      "baseline3_pCorrect": 0.341
+     }
+    },
+    {
+     "exposures": 70,
+     "xabcdy": {
+      "model_pCorrect": 0.528,
+      "baseline3_pCorrect": 0.388
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.471,
+      "baseline3_pCorrect": 0.347
+     }
+    },
+    {
+     "exposures": 80,
+     "xabcdy": {
+      "model_pCorrect": 0.512,
+      "baseline3_pCorrect": 0.389
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.487,
+      "baseline3_pCorrect": 0.37
+     }
+    }
+   ],
+   "replay": {
+    "xabcdy": "xabcdy ",
+    "zabcdw": "zabcdy "
+   },
+   "stats": {
+    "steps": 560,
+    "reuse": 539,
+    "burst": 0,
+    "base": 12,
+    "split": 9,
+    "splitOk": 9,
+    "splitFail": 0,
+    "recruitedCells": 72,
+    "assemblies": 18,
+    "synapses": 224
+   }
+  },
+  "heatSpread": {
+   "label": "heat spreads back (sigma=1)",
+   "curve": [
+    {
+     "exposures": 10,
+     "xabcdy": {
+      "model_pCorrect": 0.488,
+      "baseline3_pCorrect": 0.158
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.488,
+      "baseline3_pCorrect": 0.158
+     }
+    },
+    {
+     "exposures": 20,
+     "xabcdy": {
+      "model_pCorrect": 0.613,
+      "baseline3_pCorrect": 0.25
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.598,
+      "baseline3_pCorrect": 0.208
+     }
+    },
+    {
+     "exposures": 30,
+     "xabcdy": {
+      "model_pCorrect": 0.709,
+      "baseline3_pCorrect": 0.293
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.731,
+      "baseline3_pCorrect": 0.259
+     }
+    },
+    {
+     "exposures": 40,
+     "xabcdy": {
+      "model_pCorrect": 0.761,
+      "baseline3_pCorrect": 0.294
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.776,
+      "baseline3_pCorrect": 0.324
+     }
+    },
+    {
+     "exposures": 50,
+     "xabcdy": {
+      "model_pCorrect": 0.779,
+      "baseline3_pCorrect": 0.333
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.801,
+      "baseline3_pCorrect": 0.333
+     }
+    },
+    {
+     "exposures": 60,
+     "xabcdy": {
+      "model_pCorrect": 0.816,
+      "baseline3_pCorrect": 0.364
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.83,
+      "baseline3_pCorrect": 0.341
+     }
+    },
+    {
+     "exposures": 70,
+     "xabcdy": {
+      "model_pCorrect": 0.835,
+      "baseline3_pCorrect": 0.388
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.838,
+      "baseline3_pCorrect": 0.347
+     }
+    },
+    {
+     "exposures": 80,
+     "xabcdy": {
+      "model_pCorrect": 0.848,
+      "baseline3_pCorrect": 0.389
+     },
+     "zabcdw": {
+      "model_pCorrect": 0.86,
+      "baseline3_pCorrect": 0.37
+     }
+    }
+   ],
+   "replay": {
+    "xabcdy": "xabcdy ",
+    "zabcdw": "zabcdw "
+   },
+   "stats": {
+    "steps": 560,
+    "reuse": 513,
+    "burst": 0,
+    "base": 12,
+    "split": 35,
+    "splitOk": 34,
+    "splitFail": 1,
+    "recruitedCells": 176,
+    "assemblies": 43,
+    "synapses": 672
+   }
+  }
+ },
+ "noise": {
+  "rate_0": {
+   "chars": 4099,
+   "model": {
+    "bpc": 1.217,
+    "recoveryBpc": null
+   },
+   "order2": {
+    "bpc": 1.519,
+    "recoveryBpc": null
+   },
+   "order3": {
+    "bpc": 1.335,
+    "recoveryBpc": null
+   },
+   "wittenBell5_reference": {
+    "bpc": 0.899,
+    "recoveryBpc": null
+   }
+  },
+  "rate_0.05": {
+   "chars": 4089,
+   "model": {
+    "bpc": 2.289,
+    "recoveryBpc": 3.765
+   },
+   "order2": {
+    "bpc": 2.124,
+    "recoveryBpc": 2.992
+   },
+   "order3": {
+    "bpc": 1.95,
+    "recoveryBpc": 2.964
+   },
+   "wittenBell5_reference": {
+    "bpc": 2.805,
+    "recoveryBpc": 5.145
+   }
+  },
+  "rate_0.1": {
+   "chars": 4076,
+   "model": {
+    "bpc": 3.284,
+    "recoveryBpc": 3.887
+   },
+   "order2": {
+    "bpc": 2.644,
+    "recoveryBpc": 3.068
+   },
+   "order3": {
+    "bpc": 2.482,
+    "recoveryBpc": 3.034
+   },
+   "wittenBell5_reference": {
+    "bpc": 4.372,
+    "recoveryBpc": 5.374
+   }
+  }
+ },
+ "words": {
+  "the": {
+   "exposures": 553,
+   "stableAfter": 190,
+   "frozenAfter": 30,
+   "frozenHistory": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     3,
+     0.013
+    ],
+    [
+     4,
+     0.013
+    ],
+    [
+     5,
+     0.054
+    ],
+    [
+     6,
+     0.013
+    ],
+    [
+     7,
+     0.095
+    ],
+    [
+     8,
+     0.042
+    ],
+    [
+     9,
+     0.054
+    ],
+    [
+     10,
+     0
+    ],
+    [
+     11,
+     0.085
+    ],
+    [
+     12,
+     0.063
+    ],
+    [
+     13,
+     0.092
+    ],
+    [
+     14,
+     0.127
+    ],
+    [
+     15,
+     0.105
+    ],
+    [
+     16,
+     0.162
+    ],
+    [
+     17,
+     0.147
+    ],
+    [
+     18,
+     0.194
+    ],
+    [
+     19,
+     0
+    ],
+    [
+     20,
+     0.127
+    ]
+   ]
+  },
+  "she": {
+   "exposures": 164,
+   "stableAfter": 7,
+   "frozenAfter": 24,
+   "frozenHistory": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0.013
+    ],
+    [
+     3,
+     0.01
+    ],
+    [
+     4,
+     0.034
+    ],
+    [
+     5,
+     0.053
+    ],
+    [
+     6,
+     0.075
+    ],
+    [
+     7,
+     0.013
+    ],
+    [
+     8,
+     0.044
+    ],
+    [
+     9,
+     0.077
+    ],
+    [
+     10,
+     0.11
+    ],
+    [
+     11,
+     0.143
+    ],
+    [
+     12,
+     0.176
+    ],
+    [
+     13,
+     0.207
+    ],
+    [
+     14,
+     0.238
+    ],
+    [
+     15,
+     0.269
+    ],
+    [
+     16,
+     0.299
+    ],
+    [
+     17,
+     0.327
+    ],
+    [
+     18,
+     0.354
+    ],
+    [
+     19,
+     0.4
+    ],
+    [
+     20,
+     0.421
+    ]
+   ]
+  },
+  "cat": {
+   "exposures": 152,
+   "stableAfter": null,
+   "frozenAfter": 5,
+   "frozenHistory": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0.068
+    ],
+    [
+     3,
+     0.116
+    ],
+    [
+     4,
+     0.04
+    ],
+    [
+     5,
+     0.525
+    ],
+    [
+     6,
+     0.5
+    ],
+    [
+     7,
+     0.01
+    ],
+    [
+     8,
+     0.01
+    ],
+    [
+     9,
+     0.025
+    ],
+    [
+     10,
+     0.031
+    ],
+    [
+     11,
+     0.073
+    ],
+    [
+     12,
+     0.104
+    ],
+    [
+     13,
+     0.151
+    ],
+    [
+     14,
+     0.013
+    ],
+    [
+     15,
+     0.05
+    ],
+    [
+     16,
+     0.165
+    ],
+    [
+     17,
+     0.196
+    ],
+    [
+     18,
+     0.067
+    ],
+    [
+     19,
+     0.212
+    ],
+    [
+     20,
+     0.234
+    ]
+   ]
+  },
+  "dog": {
+   "exposures": 163,
+   "stableAfter": 7,
+   "frozenAfter": 13,
+   "frozenHistory": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     3,
+     0.02
+    ],
+    [
+     4,
+     0.04
+    ],
+    [
+     5,
+     0.073
+    ],
+    [
+     6,
+     0.072
+    ],
+    [
+     7,
+     0.126
+    ],
+    [
+     8,
+     0.161
+    ],
+    [
+     9,
+     0.196
+    ],
+    [
+     10,
+     0.23
+    ],
+    [
+     11,
+     0.263
+    ],
+    [
+     12,
+     0.296
+    ],
+    [
+     13,
+     0.647
+    ],
+    [
+     14,
+     0.522
+    ],
+    [
+     15,
+     0.663
+    ],
+    [
+     16,
+     0.678
+    ],
+    [
+     17,
+     0.506
+    ],
+    [
+     18,
+     0.693
+    ],
+    [
+     19,
+     0.539
+    ],
+    [
+     20,
+     0.707
+    ]
+   ]
+  },
+  "saw": {
+   "exposures": 87,
+   "stableAfter": null,
+   "frozenAfter": 68,
+   "frozenHistory": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     4,
+     0.02
+    ],
+    [
+     5,
+     0.024
+    ],
+    [
+     6,
+     0
+    ],
+    [
+     7,
+     0.034
+    ],
+    [
+     8,
+     0.053
+    ],
+    [
+     9,
+     0.03
+    ],
+    [
+     10,
+     0.063
+    ],
+    [
+     11,
+     0.085
+    ],
+    [
+     12,
+     0.092
+    ],
+    [
+     13,
+     0.052
+    ],
+    [
+     14,
+     0.076
+    ],
+    [
+     15,
+     0.027
+    ],
+    [
+     16,
+     0.017
+    ],
+    [
+     17,
+     0.059
+    ],
+    [
+     18,
+     0.047
+    ],
+    [
+     19,
+     0.009
+    ],
+    [
+     20,
+     0.14
+    ]
+   ]
+  },
+  "sat": {
+   "exposures": 126,
+   "stableAfter": null,
+   "frozenAfter": 15,
+   "frozenHistory": [
+    [
+     1,
+     0.002
+    ],
+    [
+     2,
+     0.002
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     4,
+     0.019
+    ],
+    [
+     5,
+     0.008
+    ],
+    [
+     6,
+     0.02
+    ],
+    [
+     7,
+     0.011
+    ],
+    [
+     8,
+     0.02
+    ],
+    [
+     9,
+     0.021
+    ],
+    [
+     10,
+     0.041
+    ],
+    [
+     11,
+     0.02
+    ],
+    [
+     12,
+     0.043
+    ],
+    [
+     13,
+     0.031
+    ],
+    [
+     14,
+     0.111
+    ],
+    [
+     15,
+     0.5
+    ],
+    [
+     16,
+     0.053
+    ],
+    [
+     17,
+     0.512
+    ],
+    [
+     18,
+     0.136
+    ],
+    [
+     19,
+     0.075
+    ],
+    [
+     20,
+     0.526
+    ]
+   ]
+  },
+  "on": {
+   "exposures": 115,
+   "stableAfter": null,
+   "frozenAfter": 43,
+   "frozenHistory": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     6,
+     0
+    ],
+    [
+     7,
+     0
+    ],
+    [
+     8,
+     0
+    ],
+    [
+     9,
+     0.042
+    ],
+    [
+     10,
+     0
+    ],
+    [
+     11,
+     0
+    ],
+    [
+     12,
+     0.04
+    ],
+    [
+     13,
+     0
+    ],
+    [
+     14,
+     0
+    ],
+    [
+     15,
+     0.081
+    ],
+    [
+     16,
+     0.039
+    ],
+    [
+     17,
+     0.122
+    ],
+    [
+     18,
+     0
+    ],
+    [
+     19,
+     0.041
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  "a": {
+   "exposures": 496,
+   "stableAfter": 2,
+   "frozenAfter": null,
+   "frozenHistory": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     6,
+     0
+    ],
+    [
+     7,
+     0
+    ],
+    [
+     8,
+     0
+    ],
+    [
+     9,
+     0
+    ],
+    [
+     10,
+     0
+    ],
+    [
+     11,
+     0
+    ],
+    [
+     12,
+     0
+    ],
+    [
+     13,
+     0
+    ],
+    [
+     14,
+     0
+    ],
+    [
+     15,
+     0
+    ],
+    [
+     16,
+     0
+    ],
+    [
+     17,
+     0
+    ],
+    [
+     18,
+     0
+    ],
+    [
+     19,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  "quick": {
+   "exposures": 13,
+   "stableAfter": 2,
+   "frozenAfter": 13,
+   "frozenHistory": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0.004
+    ],
+    [
+     3,
+     0.045
+    ],
+    [
+     4,
+     0.086
+    ],
+    [
+     5,
+     0.127
+    ],
+    [
+     6,
+     0.166
+    ],
+    [
+     7,
+     0.205
+    ],
+    [
+     8,
+     0.242
+    ],
+    [
+     9,
+     0.277
+    ],
+    [
+     10,
+     0.312
+    ],
+    [
+     11,
+     0.345
+    ],
+    [
+     12,
+     0.376
+    ],
+    [
+     13,
+     0.856
+    ]
+   ]
+  },
+  "lazy": {
+   "exposures": 13,
+   "stableAfter": 3,
+   "frozenAfter": 13,
+   "frozenHistory": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     3,
+     0.018
+    ],
+    [
+     4,
+     0.04
+    ],
+    [
+     5,
+     0.064
+    ],
+    [
+     6,
+     0.089
+    ],
+    [
+     7,
+     0.113
+    ],
+    [
+     8,
+     0.138
+    ],
+    [
+     9,
+     0.162
+    ],
+    [
+     10,
+     0.186
+    ],
+    [
+     11,
+     0.209
+    ],
+    [
+     12,
+     0.231
+    ],
+    [
+     13,
+     0.759
+    ]
+   ]
+  },
+  "shells": {
+   "exposures": 18,
+   "stableAfter": 3,
+   "frozenAfter": 13,
+   "frozenHistory": [
+    [
+     1,
+     0.024
+    ],
+    [
+     2,
+     0.153
+    ],
+    [
+     3,
+     0.165
+    ],
+    [
+     4,
+     0.205
+    ],
+    [
+     5,
+     0.243
+    ],
+    [
+     6,
+     0.284
+    ],
+    [
+     7,
+     0.32
+    ],
+    [
+     8,
+     0.359
+    ],
+    [
+     9,
+     0.4
+    ],
+    [
+     10,
+     0.425
+    ],
+    [
+     11,
+     0.45
+    ],
+    [
+     12,
+     0.473
+    ],
+    [
+     13,
+     0.684
+    ],
+    [
+     14,
+     0.701
+    ],
+    [
+     15,
+     0.717
+    ],
+    [
+     16,
+     0.732
+    ],
+    [
+     17,
+     0.747
+    ],
+    [
+     18,
+     0.76
+    ]
+   ]
+  },
+  "house": {
+   "exposures": 184,
+   "stableAfter": null,
+   "frozenAfter": 46,
+   "frozenHistory": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0.003
+    ],
+    [
+     3,
+     0.024
+    ],
+    [
+     4,
+     0.042
+    ],
+    [
+     5,
+     0.071
+    ],
+    [
+     6,
+     0.077
+    ],
+    [
+     7,
+     0.115
+    ],
+    [
+     8,
+     0.122
+    ],
+    [
+     9,
+     0.15
+    ],
+    [
+     10,
+     0.352
+    ],
+    [
+     11,
+     0.26
+    ],
+    [
+     12,
+     0.278
+    ],
+    [
+     13,
+     0.297
+    ],
+    [
+     14,
+     0.321
+    ],
+    [
+     15,
+     0.332
+    ],
+    [
+     16,
+     0.351
+    ],
+    [
+     17,
+     0.377
+    ],
+    [
+     18,
+     0.263
+    ],
+    [
+     19,
+     0.383
+    ],
+    [
+     20,
+     0.399
+    ]
+   ]
+  }
+ },
+ "confusion": {
+  "familiarFixed": 0.343,
+  "seenGrammar": 0.351,
+  "novelWords": 0.825,
+  "novelSentence": "flunx plix gnoth gnoth.",
+  "energyPerRepetitionOfNovelSentence": [
+   0.78,
+   0.676,
+   0.621,
+   0.565,
+   0.526,
+   0.496,
+   0.5,
+   0.509,
+   0.495,
+   0.486,
+   0.471,
+   0.458
+  ],
+  "energyCurve": [
+   {
+    "t": 1000,
+    "energy": 0.631,
+    "newAssemblies": 243
+   },
+   {
+    "t": 2000,
+    "energy": 0.486,
+    "newAssemblies": 194
+   },
+   {
+    "t": 3000,
+    "energy": 0.422,
+    "newAssemblies": 112
+   },
+   {
+    "t": 4000,
+    "energy": 0.396,
+    "newAssemblies": 88
+   },
+   {
+    "t": 5000,
+    "energy": 0.406,
+    "newAssemblies": 92
+   },
+   {
+    "t": 6000,
+    "energy": 0.376,
+    "newAssemblies": 32
+   },
+   {
+    "t": 7000,
+    "energy": 0.374,
+    "newAssemblies": 41
+   },
+   {
+    "t": 8000,
+    "energy": 0.374,
+    "newAssemblies": 37
+   },
+   {
+    "t": 9000,
+    "energy": 0.379,
+    "newAssemblies": 35
+   },
+   {
+    "t": 10000,
+    "energy": 0.371,
+    "newAssemblies": 35
+   },
+   {
+    "t": 11000,
+    "energy": 0.374,
+    "newAssemblies": 22
+   },
+   {
+    "t": 12000,
+    "energy": 0.362,
+    "newAssemblies": 15
+   },
+   {
+    "t": 13000,
+    "energy": 0.386,
+    "newAssemblies": 36
+   },
+   {
+    "t": 14000,
+    "energy": 0.375,
+    "newAssemblies": 22
+   },
+   {
+    "t": 15000,
+    "energy": 0.371,
+    "newAssemblies": 20
+   },
+   {
+    "t": 16000,
+    "energy": 0.37,
+    "newAssemblies": 20
+   },
+   {
+    "t": 17000,
+    "energy": 0.38,
+    "newAssemblies": 20
+   },
+   {
+    "t": 18000,
+    "energy": 0.376,
+    "newAssemblies": 22
+   },
+   {
+    "t": 19000,
+    "energy": 0.397,
+    "newAssemblies": 23
+   },
+   {
+    "t": 20000,
+    "energy": 0.379,
+    "newAssemblies": 16
+   },
+   {
+    "t": 21000,
+    "energy": 0.376,
+    "newAssemblies": 16
+   },
+   {
+    "t": 22000,
+    "energy": 0.371,
+    "newAssemblies": 11
+   },
+   {
+    "t": 23000,
+    "energy": 0.376,
+    "newAssemblies": 5
+   },
+   {
+    "t": 24000,
+    "energy": 0.364,
+    "newAssemblies": 4
+   },
+   {
+    "t": 25000,
+    "energy": 0.366,
+    "newAssemblies": 4
+   },
+   {
+    "t": 26000,
+    "energy": 0.375,
+    "newAssemblies": 7
+   },
+   {
+    "t": 27000,
+    "energy": 0.369,
+    "newAssemblies": 7
+   },
+   {
+    "t": 28000,
+    "energy": 0.362,
+    "newAssemblies": 5
+   },
+   {
+    "t": 29000,
+    "energy": 0.38,
+    "newAssemblies": 6
+   },
+   {
+    "t": 30000,
+    "energy": 0.364,
+    "newAssemblies": 4
+   },
+   {
+    "t": 31000,
+    "energy": 0.355,
+    "newAssemblies": 14
+   },
+   {
+    "t": 32000,
+    "energy": 0.363,
+    "newAssemblies": 5
+   },
+   {
+    "t": 33000,
+    "energy": 0.371,
+    "newAssemblies": 2
+   },
+   {
+    "t": 34000,
+    "energy": 0.362,
+    "newAssemblies": 8
+   },
+   {
+    "t": 35000,
+    "energy": 0.368,
+    "newAssemblies": 3
+   },
+   {
+    "t": 36000,
+    "energy": 0.361,
+    "newAssemblies": 6
+   },
+   {
+    "t": 37000,
+    "energy": 0.367,
+    "newAssemblies": 5
+   },
+   {
+    "t": 38000,
+    "energy": 0.379,
+    "newAssemblies": 14
+   },
+   {
+    "t": 39000,
+    "energy": 0.391,
+    "newAssemblies": 16
+   },
+   {
+    "t": 40000,
+    "energy": 0.365,
+    "newAssemblies": 10
+   },
+   {
+    "t": 40028,
+    "energy": 0.404,
+    "newAssemblies": 0
+   }
+  ]
+ },
+ "thinking": {
+  "from": 32022,
+  "chars": 3000,
+  "quietSteps": 20,
+  "pendingYoungStates": 545,
+  "judgedDuringQuiet": {
+   "ok": 504,
+   "fail": 41
+  },
+  "meanHeatBefore": 0.261,
+  "meanHeatAfter": 0,
+  "bpcControl": 1.196,
+  "bpcAfterQuiet_judgeYoung": 1.308,
+  "bpcAfterQuiet_heatOnly": 1.193
+ },
+ "runtimeMs": 40485
+}

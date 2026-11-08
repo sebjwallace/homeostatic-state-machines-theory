@@ -1,0 +1,1034 @@
+{
+  "model": "m002-columnar-state-machines",
+  "seed": 1,
+  "corpusLen": 40000,
+  "config": {
+    "capacity": 512,
+    "recruitBits": 0.5,
+    "hotSplit": 0.4
+  },
+  "prediction": {
+    "seed": 1,
+    "chars": 40025,
+    "baseline": {
+      "order2": {
+        "full": 1.4097,
+        "final20": 1.3582,
+        "ms": 61
+      },
+      "order3": {
+        "full": 0.99,
+        "final20": 0.9061,
+        "ms": 76
+      },
+      "order4": {
+        "full": 0.8815,
+        "final20": 0.7737,
+        "ms": 105
+      },
+      "order5": {
+        "full": 0.8575,
+        "final20": 0.724,
+        "ms": 88
+      },
+      "order6": {
+        "full": 0.8519,
+        "final20": 0.6824,
+        "ms": 105
+      },
+      "order8": {
+        "full": 0.9327,
+        "final20": 0.7134,
+        "ms": 140
+      }
+    },
+    "model": {
+      "full": 0.8539,
+      "final20": 0.6733,
+      "ms": 878,
+      "snapshot": {
+        "cells": 8618,
+        "frozen": 2406,
+        "hot": 2323,
+        "maxDepth": 12,
+        "recruits": 10382,
+        "refused": 8359,
+        "recycled": 1793,
+        "merged": 0
+      }
+    },
+    "windows": [
+      {
+        "t": 1000,
+        "bpc": 2.3813,
+        "heat": 1.2718,
+        "recruits": 497,
+        "cells": 1481
+      },
+      {
+        "t": 2000,
+        "bpc": 2.0151,
+        "heat": 1.1565,
+        "recruits": 413,
+        "cells": 2835
+      },
+      {
+        "t": 3000,
+        "bpc": 1.0803,
+        "heat": 0.9526,
+        "recruits": 258,
+        "cells": 3764
+      },
+      {
+        "t": 4000,
+        "bpc": 1.2305,
+        "heat": 0.7693,
+        "recruits": 252,
+        "cells": 4545
+      },
+      {
+        "t": 5000,
+        "bpc": 0.9607,
+        "heat": 0.6732,
+        "recruits": 169,
+        "cells": 5137
+      },
+      {
+        "t": 6000,
+        "bpc": 1.0747,
+        "heat": 0.6117,
+        "recruits": 168,
+        "cells": 5587
+      },
+      {
+        "t": 7000,
+        "bpc": 0.9443,
+        "heat": 0.6334,
+        "recruits": 148,
+        "cells": 5979
+      },
+      {
+        "t": 8000,
+        "bpc": 0.9066,
+        "heat": 0.6247,
+        "recruits": 150,
+        "cells": 6357
+      },
+      {
+        "t": 9000,
+        "bpc": 0.8052,
+        "heat": 0.5553,
+        "recruits": 121,
+        "cells": 6667
+      },
+      {
+        "t": 10000,
+        "bpc": 0.8568,
+        "heat": 0.5115,
+        "recruits": 83,
+        "cells": 6867
+      },
+      {
+        "t": 11000,
+        "bpc": 0.8458,
+        "heat": 0.5141,
+        "recruits": 83,
+        "cells": 7056
+      },
+      {
+        "t": 12000,
+        "bpc": 0.7779,
+        "heat": 0.4893,
+        "recruits": 75,
+        "cells": 7238
+      },
+      {
+        "t": 13000,
+        "bpc": 0.8161,
+        "heat": 0.4545,
+        "recruits": 74,
+        "cells": 7420
+      },
+      {
+        "t": 14000,
+        "bpc": 0.6819,
+        "heat": 0.4058,
+        "recruits": 49,
+        "cells": 7535
+      },
+      {
+        "t": 15000,
+        "bpc": 0.8001,
+        "heat": 0.4104,
+        "recruits": 76,
+        "cells": 7673
+      },
+      {
+        "t": 16000,
+        "bpc": 0.7494,
+        "heat": 0.4056,
+        "recruits": 70,
+        "cells": 7813
+      },
+      {
+        "t": 17000,
+        "bpc": 0.766,
+        "heat": 0.395,
+        "recruits": 65,
+        "cells": 7905
+      },
+      {
+        "t": 18000,
+        "bpc": 0.7502,
+        "heat": 0.3752,
+        "recruits": 35,
+        "cells": 7983
+      },
+      {
+        "t": 19000,
+        "bpc": 0.7756,
+        "heat": 0.4045,
+        "recruits": 34,
+        "cells": 8052
+      },
+      {
+        "t": 20000,
+        "bpc": 0.7989,
+        "heat": 0.3663,
+        "recruits": 38,
+        "cells": 8109
+      },
+      {
+        "t": 21000,
+        "bpc": 0.7066,
+        "heat": 0.3666,
+        "recruits": 29,
+        "cells": 8162
+      },
+      {
+        "t": 22000,
+        "bpc": 0.6966,
+        "heat": 0.3417,
+        "recruits": 25,
+        "cells": 8200
+      },
+      {
+        "t": 23000,
+        "bpc": 0.7623,
+        "heat": 0.3549,
+        "recruits": 48,
+        "cells": 8266
+      },
+      {
+        "t": 24000,
+        "bpc": 0.7451,
+        "heat": 0.3727,
+        "recruits": 28,
+        "cells": 8301
+      },
+      {
+        "t": 25000,
+        "bpc": 0.7777,
+        "heat": 0.362,
+        "recruits": 30,
+        "cells": 8345
+      },
+      {
+        "t": 26000,
+        "bpc": 0.6892,
+        "heat": 0.3433,
+        "recruits": 22,
+        "cells": 8377
+      },
+      {
+        "t": 27000,
+        "bpc": 0.7294,
+        "heat": 0.3435,
+        "recruits": 24,
+        "cells": 8395
+      },
+      {
+        "t": 28000,
+        "bpc": 0.8286,
+        "heat": 0.3328,
+        "recruits": 26,
+        "cells": 8418
+      },
+      {
+        "t": 29000,
+        "bpc": 0.6275,
+        "heat": 0.3372,
+        "recruits": 23,
+        "cells": 8432
+      },
+      {
+        "t": 30000,
+        "bpc": 0.7414,
+        "heat": 0.3606,
+        "recruits": 31,
+        "cells": 8461
+      },
+      {
+        "t": 31000,
+        "bpc": 0.6774,
+        "heat": 0.3195,
+        "recruits": 21,
+        "cells": 8477
+      },
+      {
+        "t": 32000,
+        "bpc": 0.7778,
+        "heat": 0.3375,
+        "recruits": 18,
+        "cells": 8498
+      },
+      {
+        "t": 33000,
+        "bpc": 0.7,
+        "heat": 0.3652,
+        "recruits": 19,
+        "cells": 8512
+      },
+      {
+        "t": 34000,
+        "bpc": 0.6395,
+        "heat": 0.3264,
+        "recruits": 20,
+        "cells": 8530
+      },
+      {
+        "t": 35000,
+        "bpc": 0.7351,
+        "heat": 0.3158,
+        "recruits": 23,
+        "cells": 8546
+      },
+      {
+        "t": 36000,
+        "bpc": 0.6752,
+        "heat": 0.335,
+        "recruits": 26,
+        "cells": 8561
+      },
+      {
+        "t": 37000,
+        "bpc": 0.6518,
+        "heat": 0.3615,
+        "recruits": 27,
+        "cells": 8581
+      },
+      {
+        "t": 38000,
+        "bpc": 0.6254,
+        "heat": 0.3015,
+        "recruits": 21,
+        "cells": 8594
+      },
+      {
+        "t": 39000,
+        "bpc": 0.6789,
+        "heat": 0.3306,
+        "recruits": 16,
+        "cells": 8608
+      },
+      {
+        "t": 40000,
+        "bpc": 0.678,
+        "heat": 0.3255,
+        "recruits": 12,
+        "cells": 8618
+      },
+      {
+        "t": 40025,
+        "bpc": 0.6622,
+        "heat": 0.3615,
+        "recruits": 2,
+        "cells": 8618
+      }
+    ],
+    "baselineChosen": "order3"
+  },
+  "predictionOtherSeeds": [
+    {
+      "seed": 2,
+      "model": {
+        "full": 0.8742,
+        "final20": 0.706
+      },
+      "order2": {
+        "full": 1.4068,
+        "final20": 1.342,
+        "ms": 96
+      },
+      "order3": {
+        "full": 0.9904,
+        "final20": 0.9059,
+        "ms": 107
+      },
+      "order5": {
+        "full": 0.8534,
+        "final20": 0.7345,
+        "ms": 177
+      },
+      "order6": {
+        "full": 0.8496,
+        "final20": 0.7052,
+        "ms": 191
+      },
+      "order8": {
+        "full": 0.928,
+        "final20": 0.7308,
+        "ms": 235
+      }
+    },
+    {
+      "seed": 3,
+      "model": {
+        "full": 0.877,
+        "final20": 0.6998
+      },
+      "order2": {
+        "full": 1.3926,
+        "final20": 1.3134,
+        "ms": 91
+      },
+      "order3": {
+        "full": 0.9867,
+        "final20": 0.8999,
+        "ms": 86
+      },
+      "order5": {
+        "full": 0.8573,
+        "final20": 0.734,
+        "ms": 121
+      },
+      "order6": {
+        "full": 0.8551,
+        "final20": 0.7041,
+        "ms": 174
+      },
+      "order8": {
+        "full": 0.9347,
+        "final20": 0.7291,
+        "ms": 202
+      }
+    },
+    {
+      "seed": 4,
+      "model": {
+        "full": 0.8877,
+        "final20": 0.7093
+      },
+      "order2": {
+        "full": 1.3947,
+        "final20": 1.3487,
+        "ms": 117
+      },
+      "order3": {
+        "full": 0.9856,
+        "final20": 0.9025,
+        "ms": 125
+      },
+      "order5": {
+        "full": 0.8532,
+        "final20": 0.7228,
+        "ms": 193
+      },
+      "order6": {
+        "full": 0.8512,
+        "final20": 0.6952,
+        "ms": 213
+      },
+      "order8": {
+        "full": 0.9324,
+        "final20": 0.7274,
+        "ms": 238
+      }
+    }
+  ],
+  "autocomplete": [
+    {
+      "prompt": "the cat sat ",
+      "model": "under the hat.",
+      "baseline": "under the bird slept near the bird slept"
+    },
+    {
+      "prompt": "she ate ",
+      "model": "a bread.",
+      "baseline": "ate ate ate ate ate ate ate ate ate ate "
+    },
+    {
+      "prompt": "the quick brown ",
+      "model": "cow saw the cat slept near the bed.",
+      "baseline": "cow saw the bird slept near the bird sle"
+    },
+    {
+      "prompt": "once upon a ",
+      "model": "time there was a little old house by the",
+      "baseline": "bird slept near the bird slept near the "
+    },
+    {
+      "prompt": "all the birds sang ",
+      "model": "in the trees at dawn, and then they slep",
+      "baseline": "into a bird slept near the bird slept ne"
+    },
+    {
+      "prompt": "tom ran to ",
+      "model": "a barn.",
+      "baseline": "a bird slept near the bird slept near th"
+    },
+    {
+      "prompt": "she sells sea ",
+      "model": "shells by the sea.",
+      "baseline": "she bird slept near the bird slept near "
+    }
+  ],
+  "completion": {
+    "L": 10,
+    "exposures": 3,
+    "rows": [
+      {
+        "patterns": 5,
+        "cueHalf": {
+          "model": 1,
+          "baseline3": 1
+        },
+        "cueHalfOneCharCorrupted": {
+          "model": 0.8,
+          "baseline3": 0.8
+        },
+        "cells": 270
+      },
+      {
+        "patterns": 20,
+        "cueHalf": {
+          "model": 1,
+          "baseline3": 1
+        },
+        "cueHalfOneCharCorrupted": {
+          "model": 0.75,
+          "baseline3": 0.76
+        },
+        "cells": 1031
+      },
+      {
+        "patterns": 50,
+        "cueHalf": {
+          "model": 1,
+          "baseline3": 0.996
+        },
+        "cueHalfOneCharCorrupted": {
+          "model": 0.748,
+          "baseline3": 0.744
+        },
+        "cells": 2590
+      },
+      {
+        "patterns": 100,
+        "cueHalf": {
+          "model": 1,
+          "baseline3": 0.942
+        },
+        "cueHalfOneCharCorrupted": {
+          "model": 0.614,
+          "baseline3": 0.584
+        },
+        "cells": 5233
+      },
+      {
+        "patterns": 200,
+        "cueHalf": {
+          "model": 1,
+          "baseline3": 0.874
+        },
+        "cueHalfOneCharCorrupted": {
+          "model": 0.587,
+          "baseline3": 0.545
+        },
+        "cells": 10106
+      },
+      {
+        "patterns": 400,
+        "cueHalf": {
+          "model": 1,
+          "baseline3": 0.7415
+        },
+        "cueHalfOneCharCorrupted": {
+          "model": 0.5345,
+          "baseline3": 0.434
+        },
+        "cells": 14337
+      }
+    ]
+  },
+  "sequences": [
+    {
+      "middleLen": 2,
+      "exposures": 1,
+      "model": 1,
+      "baseline3": 1,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 2,
+      "exposures": 2,
+      "model": 1,
+      "baseline3": 1,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 2,
+      "exposures": 3,
+      "model": 1,
+      "baseline3": 1,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 2,
+      "exposures": 5,
+      "model": 1,
+      "baseline3": 1,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 2,
+      "exposures": 8,
+      "model": 1,
+      "baseline3": 1,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 2,
+      "exposures": 12,
+      "model": 1,
+      "baseline3": 1,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 4,
+      "exposures": 1,
+      "model": 0.5,
+      "baseline3": 0.5,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 4,
+      "exposures": 2,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 4,
+      "exposures": 3,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 4,
+      "exposures": 5,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 4,
+      "exposures": 8,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 4,
+      "exposures": 12,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 1
+    },
+    {
+      "middleLen": 6,
+      "exposures": 1,
+      "model": 0.5,
+      "baseline3": 0.5,
+      "baseline5": 0.5
+    },
+    {
+      "middleLen": 6,
+      "exposures": 2,
+      "model": 0.5,
+      "baseline3": 0.5,
+      "baseline5": 0.5
+    },
+    {
+      "middleLen": 6,
+      "exposures": 3,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 0.5
+    },
+    {
+      "middleLen": 6,
+      "exposures": 5,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 0.5
+    },
+    {
+      "middleLen": 6,
+      "exposures": 8,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 0.5
+    },
+    {
+      "middleLen": 6,
+      "exposures": 12,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 0.5
+    },
+    {
+      "middleLen": 8,
+      "exposures": 1,
+      "model": 0.5,
+      "baseline3": 0.5,
+      "baseline5": 0.5
+    },
+    {
+      "middleLen": 8,
+      "exposures": 2,
+      "model": 0.5,
+      "baseline3": 0.475,
+      "baseline5": 0.5
+    },
+    {
+      "middleLen": 8,
+      "exposures": 3,
+      "model": 0.5,
+      "baseline3": 0.5,
+      "baseline5": 0.5
+    },
+    {
+      "middleLen": 8,
+      "exposures": 5,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 0.5
+    },
+    {
+      "middleLen": 8,
+      "exposures": 8,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 0.5
+    },
+    {
+      "middleLen": 8,
+      "exposures": 12,
+      "model": 1,
+      "baseline3": 0.5,
+      "baseline5": 0.5
+    }
+  ],
+  "noise": [
+    {
+      "noiseRate": 0,
+      "model": {
+        "bpc": 0.6677,
+        "bpcOnUncorruptedChars": 0.6677
+      },
+      "baseline": {
+        "bpc": 0.9094,
+        "bpcOnUncorruptedChars": 0.9094
+      }
+    },
+    {
+      "noiseRate": 0.03,
+      "model": {
+        "bpc": 1.8606,
+        "bpcOnUncorruptedChars": 1.2779
+      },
+      "baseline": {
+        "bpc": 1.6418,
+        "bpcOnUncorruptedChars": 1.3116
+      }
+    },
+    {
+      "noiseRate": 0.06,
+      "model": {
+        "bpc": 3.3557,
+        "bpcOnUncorruptedChars": 2.0168
+      },
+      "baseline": {
+        "bpc": 2.6515,
+        "bpcOnUncorruptedChars": 1.8563
+      }
+    },
+    {
+      "noiseRate": 0.12,
+      "model": {
+        "bpc": 5.4283,
+        "bpcOnUncorruptedChars": 3.1026
+      },
+      "baseline": {
+        "bpc": 4.2885,
+        "bpcOnUncorruptedChars": 2.7825
+      }
+    }
+  ],
+  "words": [
+    {
+      "word": "the",
+      "cue": " th",
+      "exposures": 1184,
+      "formedAt": 3,
+      "frozenAt": 110,
+      "completedAt": 2,
+      "ambiguous": false
+    },
+    {
+      "word": "she",
+      "cue": " sh",
+      "exposures": 186,
+      "formedAt": 2,
+      "frozenAt": null,
+      "completedAt": 1,
+      "ambiguous": false
+    },
+    {
+      "word": "he",
+      "cue": " h",
+      "exposures": 180,
+      "formedAt": 1,
+      "frozenAt": 43,
+      "completedAt": 1,
+      "ambiguous": true
+    },
+    {
+      "word": "cat",
+      "cue": " ca",
+      "exposures": 157,
+      "formedAt": 3,
+      "frozenAt": 110,
+      "completedAt": 2,
+      "ambiguous": true
+    },
+    {
+      "word": "dog",
+      "cue": " do",
+      "exposures": 206,
+      "formedAt": 3,
+      "frozenAt": 128,
+      "completedAt": 2,
+      "ambiguous": false
+    },
+    {
+      "word": "saw",
+      "cue": " sa",
+      "exposures": 93,
+      "formedAt": 2,
+      "frozenAt": 24,
+      "completedAt": 1,
+      "ambiguous": true
+    },
+    {
+      "word": "sat",
+      "cue": " sa",
+      "exposures": 75,
+      "formedAt": 2,
+      "frozenAt": 34,
+      "completedAt": 1,
+      "ambiguous": true
+    },
+    {
+      "word": "mat",
+      "cue": " ma",
+      "exposures": 62,
+      "formedAt": 2,
+      "frozenAt": 19,
+      "completedAt": 1,
+      "ambiguous": true
+    },
+    {
+      "word": "ran",
+      "cue": " ra",
+      "exposures": 165,
+      "formedAt": 3,
+      "frozenAt": 39,
+      "completedAt": 2,
+      "ambiguous": false
+    },
+    {
+      "word": "garden",
+      "cue": " gar",
+      "exposures": 56,
+      "formedAt": 6,
+      "frozenAt": 23,
+      "completedAt": 1,
+      "ambiguous": false
+    },
+    {
+      "word": "quickly",
+      "cue": " quic",
+      "exposures": 51,
+      "formedAt": 7,
+      "frozenAt": 29,
+      "completedAt": 1,
+      "ambiguous": false
+    },
+    {
+      "word": "horse",
+      "cue": " hor",
+      "exposures": 184,
+      "formedAt": 5,
+      "frozenAt": null,
+      "completedAt": 1,
+      "ambiguous": false
+    },
+    {
+      "word": "shells",
+      "cue": " she",
+      "exposures": 27,
+      "formedAt": 4,
+      "frozenAt": null,
+      "completedAt": null,
+      "ambiguous": true
+    }
+  ],
+  "confusion": [
+    {
+      "case": "seen grammar sentence",
+      "text": "the cat sat on the mat.",
+      "energyBitsPerChar": 0.6668,
+      "internalMisfitPerChar": 1.7807
+    },
+    {
+      "case": "fixed sentence",
+      "text": "she sells sea shells by the sea shore.",
+      "energyBitsPerChar": 0.1848,
+      "internalMisfitPerChar": 2.5587
+    },
+    {
+      "case": "novel combination of known words",
+      "text": "the mat ate a happy tree.",
+      "energyBitsPerChar": 2.6876,
+      "internalMisfitPerChar": 3.3639
+    },
+    {
+      "case": "unseen words",
+      "text": "zorb quix flem vot grun.",
+      "energyBitsPerChar": 10.9186,
+      "internalMisfitPerChar": 3.4333
+    },
+    {
+      "case": "random letters",
+      "text": "xqzjv kwpmy bnfgt.",
+      "energyBitsPerChar": 12.7898,
+      "internalMisfitPerChar": 0.9603
+    }
+  ],
+  "quiet": [
+    {
+      "capacity": 512,
+      "control": {
+        "bpcSecondHalf": 0.7071,
+        "bpcFirst2000After": 0.7014,
+        "cellsBefore": 8109,
+        "cellsMerged": 0
+      },
+      "quiet": {
+        "bpcSecondHalf": 0.7273,
+        "bpcFirst2000After": 0.7389,
+        "cellsBefore": 8109,
+        "cellsMerged": 2695
+      },
+      "improvement": -0.0202
+    },
+    {
+      "capacity": 32,
+      "control": {
+        "bpcSecondHalf": 1.1713,
+        "bpcFirst2000After": 1.1017,
+        "cellsBefore": 766,
+        "cellsMerged": 0
+      },
+      "quiet": {
+        "bpcSecondHalf": 1.1619,
+        "bpcFirst2000After": 1.1112,
+        "cellsBefore": 766,
+        "cellsMerged": 77
+      },
+      "improvement": 0.0094
+    }
+  ],
+  "ablations": [
+    {
+      "variant": "default",
+      "full": 0.8539,
+      "final20": 0.6733,
+      "cells": 8618
+    },
+    {
+      "variant": "no freezing",
+      "full": 0.8546,
+      "final20": 0.6737,
+      "cells": 8637
+    },
+    {
+      "variant": "no heat gate (recruit on every miss)",
+      "full": 0.8613,
+      "final20": 0.6789,
+      "cells": 9153
+    },
+    {
+      "variant": "no hot-predecessor split (hotSplit 0)",
+      "full": 0.8734,
+      "final20": 0.7158,
+      "cells": 5404
+    },
+    {
+      "variant": "no splitting at all (extend only)",
+      "full": 0.8993,
+      "final20": 0.79,
+      "cells": 2201
+    },
+    {
+      "variant": "recruit threshold 1.0 bit",
+      "full": 0.8593,
+      "final20": 0.6745,
+      "cells": 8623
+    },
+    {
+      "variant": "recruit threshold 2.0 bits",
+      "full": 0.8647,
+      "final20": 0.6815,
+      "cells": 8602
+    },
+    {
+      "variant": "capacity 256/column",
+      "full": 0.8676,
+      "final20": 0.7365,
+      "cells": 4671
+    },
+    {
+      "variant": "capacity 32/column",
+      "full": 1.2474,
+      "final20": 1.1798,
+      "cells": 766
+    },
+    {
+      "variant": "capacity 32/column, no freezing",
+      "full": 1.2514,
+      "final20": 1.1899,
+      "cells": 773
+    },
+    {
+      "variant": "maxDepth 3 (= order-3 limit)",
+      "full": 0.9902,
+      "final20": 0.9061,
+      "cells": 656
+    }
+  ],
+  "runtimeSeconds": 35.2
+}
