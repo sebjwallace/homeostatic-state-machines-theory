@@ -92,7 +92,7 @@ Metalworkers have used this for thousands of years. Heat a piece of metal and le
 
 ### Temperature as plasticity
 
-In this theory, temperature is the analogy for **plasticity**: how freely a part of the automaton can change. Where it is hot, connections loosen and assemblies can reform. Where it is cold, structure is frozen. A frozen part of the automaton doesn't change and costs nothing to keep; it just sits there, holding what it has learnt.
+In this theory, temperature is the analogy for **plasticity**: how freely a part of the automaton can change. Where it is hot, connections loosen and assemblies can reform. Where it is cold, structure is frozen. A frozen part of the automaton doesn't change and costs nothing to keep; it just sits there, holding what it has learnt, until enough heat reaches it to loosen it again. How much heat that takes depends on how hard it has set, which is described below.
 
 This gives memory an unusual character. It isn't divided into short-term and long-term. A configuration lasts exactly as long as nothing heats it. It might last a second or a lifetime.
 
@@ -103,6 +103,22 @@ In simulated annealing, the programmer decides the temperature and lowers it on 
 Wherever parts of the automaton don't fit, whether because an input wasn't expected, or because two connected assemblies contradict each other, that region heats up. The tension that defines energy also sets the local temperature. So the parts of the automaton that are failing to fit become the parts that are free to change, and the parts that already fit stay cold and untouched.
 
 And the heat is local. It starts where the misfit is and spreads along connections, not across the whole automaton. A surprise about one thing loosens what is involved in that thing, and leaves everything else frozen in place.
+
+### A machine that repairs itself
+
+Think of a machine running well. Energy flows through it as it should: gears turn, power passes from one part to the next, and nothing builds up. Now a fault appears, say a gear starts to jam. The engine behind it still pushes, but the energy can't flow on. It builds up as heat and stress at the jam. Left alone, that stress spreads: other parts strain, more faults appear, and eventually the whole machine breaks.
+
+An automaton is a machine of this kind, with one difference: **its faults repair themselves.** A misfit is a jam: energy that should flow from one state machine to the next and can't. It shows up as heat, and heat, wherever it builds, makes that part malleable. The jammed parts loosen, jiggle and reconfigure until the energy flows again, and as it flows, the heat drains away and the parts set in their new arrangement.
+
+The automaton never needs to know what the fault was. It doesn't diagnose; it responds to the symptom. Heat appears exactly where something isn't working and nowhere else, so the repair happens exactly there. Confusion, surprise and conflict are all the same signal: somewhere, energy isn't flowing as it should.
+
+### Hardness
+
+If cooling simply froze structure solid forever, the automaton would have a problem of its own making. A frozen connection that later turns out to jam could never be loosened. The only way around it would be to grow new structure that works around the jam, which is patchwork: extra machinery carrying a standing cost. Often all that is really needed is for one small connection to loosen and reset, and everything falls into place.
+
+So freezing is not all-or-nothing. It is **hardness**, and hardness is earned. Each time a connection takes part in settling a disturbance, it hardens a little. Its hardness sets its melting point: how much heat it takes to make it malleable again. A connection that has settled something once has earned a little strength and melts easily if it later jams. A connection that has settled the same kind of disturbance a hundred times barely moves under all but the strongest heat. What has worked again and again is kept; what worked once stays open to revision.
+
+Brains seem to do something like this. When a memory is recalled in a situation it doesn't quite fit, it becomes briefly malleable again, then restabilises in updated form. Psychologists call this reconsolidation. In this theory's terms, the jammed gear is loosened just enough to reset, then locks again.
 
 ---
 
@@ -129,6 +145,8 @@ If they handle it only partly, some heat is left over. Only that **residual heat
 
 If residual heat simply melted old structure and reshaped it, the automaton would forget as fast as it learnt. Instead, residual heat recruits fresh, unused capacity: new, hot, young assemblies that are free to form and can work alongside the old ones. Because sparse representations have so much room, the automaton can afford to keep almost everything it has ever settled on. It grows as the demand for learning grows.
 
+Hardness keeps the balance. Growing new structure is the right response when what exists is hard and still right for its own situations. Melting is the right response when a connection is soft and jammed: it was settled once, it no longer fits, and loosening it costs less than building around it. Between the two, the automaton keeps what it has earned and stays open where it hasn't.
+
 ### Composition
 
 Over time something should change in how the automaton learns. Early on, most residual heat goes into growing new assemblies. Later, as the automaton holds more and more frozen structure, residual heat increasingly goes into connecting existing assemblies that have never worked together. Old pieces are combined into new responses.
@@ -141,7 +159,7 @@ Every frozen assembly was right for the situation that formed it. When a later s
 
 Children learning English show a pattern like this. They first learn "went" as a one-off. Then they discover that past tenses end in "-ed" and start saying "goed": the general rule briefly overrides the specific memory. Later "went" returns for its own case, and the rule handles everything else.
 
-Surprising experiences produce a lot of heat, and the theory suggests they should be learnt strongly and set hard, like a material with a high melting point. They become fixed points that the rest of the automaton has to fit around.
+Surprising experiences produce a lot of heat, and the theory suggests they should be learnt strongly, setting harder than ordinary experiences do, as if they started with a higher melting point. They become fixed points that the rest of the automaton has to fit around.
 
 ---
 
@@ -276,26 +294,44 @@ Not every way of reducing tension is a real resolution. An automaton can quieten
 
 If energy counts the cost of the structure itself, not only the conflicts within it, then coping like this shows up as permanent overhead. A real resolution does better. Often it is the discovery of a hidden context that makes both memories true at once: the sky is blue in the day, red at sunset. Once that context is found, nothing needs suppressing, the extra machinery can fall away, and the energy falls lower than any patch could take it.
 
-Coping holds the tension in place; resolving makes it vanish. Real resolution is a kind of compression: explaining the same experience with fewer, simpler parts.
+Coping holds the tension in place; resolving makes it vanish. Picture two jammed gears and a separate mechanism that nudges them free every time they lock. The jam stops hurting, but it hasn't gone: the gears still lock, and the mechanism has to step in every time, losing a little energy with each intervention. Fix the gears themselves and the mechanism is no longer needed, and neither is the loss. Real resolution is a kind of compression: explaining the same experience with fewer, simpler parts.
 
 ---
 
 ## Part six: where the heat goes
 
-### Circulate or resolve
+### Circulate, encapsulate or resolve
 
 Physical energy is conserved. In a closed box it can move around and change form, but the total never changes. The energy in this theory is different. It is misfit, and **misfit can be destroyed**. When two things come to fit, the tension between them doesn't move anywhere else. It is gone.
 
-That leaves heat with only two things it can do:
+That leaves heat with three things it can do:
 
 - **Circulate.** It is passed on: from one part of an automaton to another, from an automaton to its environment, or from one automaton to the next.
-- **Resolve.** Something reorganises so that things genuinely fit, and the tension disappears into structure.
+- **Encapsulate.** It is held in a patch: an extra mechanism that manages the conflict without removing it. The sharp heat of the jam falls, but a steady, low heat remains, because the patch has to keep stepping in and every intervention loses a little.
+- **Resolve.** Something reorganises so that things genuinely fit, and the tension disappears.
 
 Heat rises; settled things sink. Throughout this document, to sink and to cool are the same movement: a sink is simply a place where heat can come to rest as structure.
 
 Circulation isn't a failure in itself. Heat often has to travel before it can be resolved, because the place where it arises isn't always the place able to resolve it. What matters is whether it eventually reaches somewhere it can sink. Heat that circulates without ever sinking can echo back and forth indefinitely, and it can grow, if each fix makes the neighbour's next fix larger.
 
-New heat can still appear: when structure meets something it doesn't fit, as "Back into heat" describes below. But in a closed world, with no exit, resolution is the only way the total can ever fall. Everything else is heat moving around. This is the difference between learning and coping, between solving a problem and passing it on, and it holds at every scale, from two assemblies inside one automaton to a whole society.
+New heat can still appear: when structure meets something it doesn't fit, as "Back into heat" describes below. But in a closed world, with no exit, resolution is the only way the total can ever fall. Everything else is heat moving around, or heat held at a low simmer. This is the difference between learning and coping, between solving a problem and passing it on, and it holds at every scale, from two assemblies inside one automaton to a whole society.
+
+### Operational heat
+
+Patches suggest that misfit isn't the only kind of heat. A machine also produces heat simply by running. Every moving part loses a little energy as it works, and a badly arranged machine, with extra parts and awkward linkages, loses far more than a well-made one. Mechanical engineers call this loss, and the best engines are the ones with the least of it.
+
+State machines are the same. Each time one runs, firing transitions and handing activity on, it does work, and some of that work is loss. Call this **operational heat**. A clean arrangement that does its job directly runs cool. A patch runs warm: it works only by stepping in every time the underlying jam recurs, and each recurrence is a small misfit, a small loss. So a patched region never quite cools. It isn't jammed, but it isn't settled either.
+
+That warmth matters, because it is local and it keeps the patch malleable. The automaton doesn't need a separate way of finding its inefficiencies; they show up as heat exactly where they are. And because heat loosens structure, a patched region keeps reconfiguring in the background, even at a low simmer, until it finds an arrangement in which the jam no longer recurs at all. Then the patch is no longer needed, it falls away, and the heat there drops to almost nothing.
+
+This makes a sharp distinction between two kinds of growth.
+
+- **Breadth** is structure that covers more of the world. Learning a new place, a new word, a new kind of disturbance adds structure, but it does real work: it removes more misfit than it costs to run. It runs cool.
+- **Patchwork depth** is structure built to manage conflicts: layer on layer of mechanisms that each quieten something without resolving it. Every layer keeps working and keeps losing a little, so patchwork runs warm.
+
+Elegance, in this theory, is simply the lowest loss: the fewest moving parts doing the least wasted work. The measure to drive down is not the amount of structure as such, but the heat it gives off, misfit plus the cost of running. The minimum description length principle says something similar, that the best explanation of some data minimises the size of the model plus the errors it leaves, and Karl Friston's free energy has the same shape: inaccuracy plus complexity. What this theory adds is a mechanism that pursues it from the inside, locally: heat that loosens patches as well as jams, wherever they are.
+
+And here the theory meets its practical aim. These automata run on ordinary computers, and in a computer, operational heat is not a metaphor. The work a state machine does each time it runs is processor time, and processor time is electricity, which ends up as real, physical heat. An automaton that lowers its operational heat is literally using fewer cycles, less time and less power to do what it does. The more elegant its understanding, the cooler the machine it runs on.
 
 ### Into structure
 
@@ -347,7 +383,7 @@ The same design also contains its safety catch. A homeostat has a "done". When t
 
 That catch only works if the automaton can't reach the dial itself. Its learnt expectations are its own to revise; that is just learning, and sometimes acceptance. But if it could set its essential targets, it could close every gap instantly and would never need to do anything, or it could open gaps no one intended. The same goes for faking the reading: changing how its environment is perceived rather than how it is. So in the experiment, an automaton's essential targets, and whatever reports its environment's energy, sit outside its reach.
 
-Within the automaton, the mechanism already guards against the other obvious cheats. Lowering energy by forgetting, falling silent or blurring everything together doesn't work when what has been stored stays frozen and recallable, and representations stay sparse and distinct. Whether that holds in practice is one of the things the experiment will check.
+Within the automaton, the mechanism already guards against the other obvious cheats. Lowering energy by forgetting, falling silent or blurring everything together doesn't work when what has been well settled stays hard and recallable, and representations stay sparse and distinct. Whether that holds in practice is one of the things the experiment will check.
 
 ---
 
@@ -391,12 +427,13 @@ The tests are ordered from simple to ambitious. Each one has something visible t
 17. **Closed worlds.** Put several automata in a closed environment with no exit for heat, and track the total. If it falls, the only possible reason is that something was resolved. If it only moves around, they are passing it on.
 18. **Structure into heat.** Show a subtly anomalous input to an experienced automaton and to a new one, and see whether the experienced one feels more heat. Connect two regions that learnt separately, and see whether heat appears where they meet. Have one automaton read what another wrote that contradicts what it holds, and see whether it warms.
 19. **Settled first.** Give one automaton a quiet period to settle before a disturbance arrives in its environment, and send another in still warm. See whether the settled one handles the disturbance better, and whether it can take on heat passed to it by the other.
+20. **Hardness.** Compare all-or-nothing freezing with earned hardness. See whether hardness lets the automaton keep what it knows while still learning new things, and whether a single jammed connection gets loosened and reset rather than patched around.
 
 ### Measuring it
 
 Because these automata learn continuously, they are tested continuously. Each character is predicted before the automaton learns from it, so every prediction is a fair test and there is no need for a separate set of test data. Results are compared with the simple counting method from test 5, because an automaton that can't beat counting is only counting in a more complicated way.
 
-The experiment will also track the energy inside each automaton and in its environment over time, along with the total across everything, since a fall in one place may only be a rise in another, how much new structure each disturbance creates, and how much computation each step costs. Cheapness is part of the point: the automata run on an ordinary CPU, and most of their structure, being frozen, needs no computation at all.
+The experiment will also track the energy inside each automaton and in its environment over time, along with the total across everything, since a fall in one place may only be a rise in another, how much new structure each disturbance creates, and how much computation each step costs. Heat is measured as misfit plus the work of running, its operational heat, so a lean automaton that does nearly as well shows up as the cooler, better one. Cheapness is part of the point: the automata run on an ordinary CPU, and most of their structure, being frozen, needs no computation at all.
 
 The design of the automata will evolve too. Many variations will be built, each descended from an earlier one, with a record of what changed and why. Every run will be reproducible, so any interesting moment can be replayed and studied.
 
@@ -405,6 +442,7 @@ The design of the automata will evolve too. Many variations will be built, each 
 ## Open questions
 
 - What exactly does it mean for two assemblies to fit? How should energy between them be measured?
+- How should hardness be earned and spent: by how many times a connection has helped settle a disturbance, by how much heat it helped remove, or both?
 - Where do state machines live? Are they fully distributed, superimposed across one shared population of cells? Are they localised in small units, like cortical columns, that combine into something larger? Or both, at different scales?
 - How is a state held in place while nothing is changing it, and what exactly makes it transition?
 - Which states count as involved in an episode, so that cooling freezes what mattered and not what was merely present?
